@@ -1,6 +1,13 @@
-node_modules/
-bower_components/
-*.log
+/platforms/^.*
+/keys
 
-build/
-dist/
+/node_modules
+/assets/components
+
+/www
+
+/.envrc
+/npm-debug.log
+
+# previous setup without this amazing stuff
+/old_setup
