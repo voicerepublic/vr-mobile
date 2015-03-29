@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="<%= BUNDLE_ID %>" 
+        version="<%= BUNDLE_VERSION %>" 
+        android-versionCode="<%= BUNDLE_VERSION.replace(/\./g, '') %>" 
+        ios-bundleVersion="<%= BUNDLE_VERSION %>" 
+        xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
+    <name><%= BUNDLE_NAME %></name>
+    <description>
+      Voicerepublic Mobile
+    </description>
+    <author email="dibran@voicerepublic.com">
+      Dibran Isufi
+    </author>
+
+    <!-- This page will be shown at the beginning when the app is launched. -->
+    <content src="index.html" />
+
+    <!-- Access all origins (watch out for CORS attacks!) -->
+    <access origin="*" subdomains="true" />
+
+    <!-- Some small old and new fixes for cordova  -->
+    <!-- (some of them aren't needed anymore, but let's keep them here anyway) -->
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="KeyboardShrinksView" value="true" />
+
+    <!-- We will hide the splashscreen manually by JS when the app gets loaded -->
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="20000" />
+
+    <!-- Fix error with "error while loading asset index.html" -->
+    <preference name="LoadUrlTimeoutValue" value="70000" />
+
+    <!-- Plugin configuration: https://github.com/driftyco/ionic-plugins-keyboard -->
+    <feature name="Keyboard">
+        <param name="ios-package" value="IonicKeyboard" onload="true" />
+    </feature>
+
+</widget>

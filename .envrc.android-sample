@@ -1,0 +1,6 @@
+# Copy this file as '.envrc' and fill in the variables.
+
+export ANDROID_KEYSTORE_NAME="voicerepublic"
+export ANDROID_KEYSTORE_PASSWORD="voicerepublic_pw1337"
+export ANDROID_ALIAS_NAME="voicerepublic"
+export ANDROID_ALIAS_PASSWORD="voicerepublic_pw1337"

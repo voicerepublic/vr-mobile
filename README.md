@@ -21,7 +21,7 @@ SCRUM is organized via [pivotaltracker](https://www.pivotaltracker.com/projects/
 * A lot of useful gulp tasks, like:
   * `gulp` - watch for changes + browser-sync (http server with livereload) + weinre debugger
   * `gulp cordova:emulate:ios` - run application in iOS emulator
-  * `gulp cordova:run:android` - run application on Android's devise
+  * `gulp cordova:run:android` - run application on Android's device
   * Run `gulp help` or see `gulp/tasks.coffee` for more information about all tasks
 * Useful hooks and tweaks, which allow you to deploy your cordova app out-of-the-box
 * SASS + CoffeeScript + Jade combo
@@ -48,7 +48,8 @@ npm install
 bower install
 brew install imagemagick # or `apt-get install imagemagick`, if you're on linux
 
-gulp # build www/ directory and run http server on 4440 port
+gulp build
+ionic serve # if node v0.12.0 think about sudo ionic serve or sudo gulp serve
 ```
 If you get "too many files" error, try: `ulimit -n 10000`. You may want to add this line to your .bashrc / .zshrc / config.fish.
 

@@ -1,0 +1,7 @@
+ion-view(view-title='Record a talk')
+  ion-content(scroll='false', style='top:45%')
+    ion-button.button.button-large.button-assertive.icon-left.ion-radio-waves(
+    	ng-click="record.start()",
+    	ng-hide="isRecording",
+    	style='display:block;margin-left:10px; margin-right:10px')
+      | Start your talk!

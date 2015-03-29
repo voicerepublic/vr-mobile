@@ -1,0 +1,12 @@
+# Copy this file as '.envrc' and fill in the variables.
+#
+# If you are on Mac OSX, and you want to be able to compile both platforms:
+# - no problem!
+# Just merge this file with '.envrc.android-sample' and rename it to '.envrc'.
+
+# Find the name by `security find-identity |  sed -n 's/.*\("[^"]*"\).*/\1/p' | grep 'iPhone'`
+export IOS_CODE_SIGN_IDENTITY='"iPhone Distribution: John Doe Organization (123JASD82J)"'
+
+# Content of your iPhone Distribution key.
+# As you can see, it can be generated automatically.
+export IOS_SIGN_KEY=`security find-identity | grep "$IOS_CODE_SIGN_IDENTITY" | awk '{print $2}' | head -n 1`

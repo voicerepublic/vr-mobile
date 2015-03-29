@@ -1,0 +1,28 @@
+machine:
+  node:
+    version: 0.10.31
+  post:
+    - npm install -g cordova
+    - npm install -g ionic
+    - npm install -g protractor
+    - npm install -g gulp
+    - webdriver-manager update
+dependencies:
+  #pre:
+  # - bash ./ionic-config.sh
+  post:
+    - npm install -g karma-cli
+test:
+  override:
+    - gulp test:unit
+  post:
+    - gulp serve:
+        background: true
+    - sleep 10
+    - webdriver-manager start
+    - gulp test:e2e
+deployment:
+  tasks:
+    branch: master
+    commands:
+      - ./scripts/circle/deploy.sh --sha1=$CIRCLE_SHA1 --index=$CIRCLE_NODE_INDEX --build-number=$CIRCLE_BUILD_NUM: {parallel: false} #true if available
