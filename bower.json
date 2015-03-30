@@ -15,7 +15,8 @@
   ],
   "dependencies": {
     "ionic": "v1.0.0-beta.14",
-    "angulartics": "~0.17.2"
+    "angulartics": "~0.17.2",
+    "ngCordova": "~0.1.14-alpha"
   },
   "devDependencies": {
     "angular-mocks": "~1.3.6"

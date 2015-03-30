@@ -1,6 +1,6 @@
 {
   "name": "voicerepublic",
-  "app_id": "",
+  "app_id": "01ea03a5",
   "gulpStartupTasks": [
     "watch"
   ],

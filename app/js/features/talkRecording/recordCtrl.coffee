@@ -24,10 +24,10 @@ angular.module("voicerepublic")
 				$scope.recordTime = displayCount()
 				stopCounter = $interval ->
 					lower = ++seconds + ""
+					upper = if bool=seconds % 60 is 0 then (upper = ++minutes + "") else upper
 					lower = "0" + lower if seconds in [1,2,3,4,5,6,7,8,9]
-					upper = if bool=seconds % 60 is 0 then (++minutes) +""
-					seconds = 0 if bool
-					upper = "0" + upper if minutes in [1,2,3,4,5,6,7,8,9]
+					lower = "0" + seconds = 0 if bool
+					upper = "0" + minutes if minutes in [1,2,3,4,5,6,7,8,9]
 					$scope.record.stop() if minutes == 60 #need more than 60 min? is this a Usecase?
 					$scope.recordTime = displayCount upper, lower
 				, 1000

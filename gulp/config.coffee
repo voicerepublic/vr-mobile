@@ -108,7 +108,7 @@ module.exports = new class GulpConfig
       production: {
         ENV: "production"
 
-        BUNDLE_ID: "com.voicerepublic.mobile.production"
+        BUNDLE_ID: "com.voicerepublic.mobile"
         BUNDLE_NAME: "voicerepublic"
 
         COMPRESS_ASSETS: true
@@ -179,7 +179,7 @@ module.exports = new class GulpConfig
           "assets/components/ionic/release/js/ionic-angular.js"
 
           # Here add any vendor files that should be included in vendor.js
-          # (f.e. bower components)
+          "assets/components/ngCordova/dist/ng-cordova.js"
 
           # Google Analytics support (for both in-browser and Cordova app)
           "assets/components/angulartics/src/angulartics.js"
