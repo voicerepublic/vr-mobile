@@ -13,6 +13,6 @@ afterEach ->
     $httpBackend.verifyNoOutstandingRequest()
     $httpBackend.verifyNoOutstandingExpectation()
 
-  sessionStorage.clear()
+  #sessionStorage.clear()
   localStorage.clear()
 
