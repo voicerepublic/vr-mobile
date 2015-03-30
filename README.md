@@ -79,8 +79,9 @@ gulp test:unit --browsers Chrome # or using Google Chrome
 #### e2e tests (protractor & selenium)
 
 ```
-gulp # your www/ directory should be built and served at :4400 port
-node_modules/.bin/webdriver-manager start & # run selenium server in the background
+gulp build # build solution
+gulp serve # served at :4400 port
+node_modules/.bin/webdriver-manager start # runs selenium server in the background
 
 gulp test:e2e # finally, run e2e tests
 ```
