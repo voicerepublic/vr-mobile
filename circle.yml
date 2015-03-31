@@ -16,10 +16,9 @@ dependencies:
     - node_modules
     - www
   override:
-    - npm prune && npm install --peerDependencies
+    - npm prune && npm install
   post:
     - npm install -g karma-cli
-    - npm install -g gulp-cli
     - bower prune && bower install
 test:
   override:
