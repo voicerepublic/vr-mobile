@@ -31,7 +31,9 @@ module.exports = (config) ->
     # use dots reporter, as travis terminal does not support escaping sequences
     # possible values: 'dots', 'progress', 'osx', 'ubuntu'
     # CLI --reporters progress
-    reporters: ['osx', 'dots']
+    reporters: ['osx', 'dots', 'progress', 'coverage']
+
+    coverageReporter: {type: 'text'}
 
     autoWatch: true
 

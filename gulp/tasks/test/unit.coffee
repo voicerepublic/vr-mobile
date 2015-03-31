@@ -46,3 +46,13 @@ gulp.task 'test:unit',
       "browsers=chrome,PhantomJS": "(passed directly to Karma)"
       "reporters=osx,progress": "(passed directly to Karma)"
   }
+
+# Another unit test task especially for CircleCI with --signle-run
+gulp.task 'test:unit:single',
+  "Single run unit tests",
+  ["build-test"],
+  ->
+    args = ['start', 'test/unit/karma.conf.coffee', '--single-run']
+    childProcess.spawn "node_modules/.bin/karma", args,
+      stdio: 'inherit'
+      env: extend({}, process.env, BUILD_DIR: GLOBALS.BUILD_DIR)
