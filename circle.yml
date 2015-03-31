@@ -12,9 +12,6 @@ machine:
     - npm install -g protractor
     - webdriver-manager update
 dependencies:
-  cache_directories:
-    - node_modules
-    - www
   override:
     - npm prune && npm install
   post:
