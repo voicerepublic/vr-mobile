@@ -1,25 +1,27 @@
 machine:
   node:
     version: 0.10.31
+  pre:
+    - npm install -g gulp
   post:
     - npm install -g cordova
     - npm install -g ionic
     - npm install -g protractor
-    - npm install -g gulp
     - webdriver-manager update
 dependencies:
   #pre:
   # - bash ./ionic-config.sh
   post:
     - npm install -g karma-cli
+    - npm install -g gulp-cli
 test:
   override:
-    - node_modules/gulp/bin/gulp.js test:unit
+    - gulp test:unit
   post:
-    - node_modules/gulp/bin/gulp.js serve:
+    - gulp serve:
         background: true
     - sleep 5
     - webdriver-manager start:
         background: true
     - sleep 5
-    - node_modules/gulp/bin/gulp.js test:e2e
+    - gulp test:e2e
