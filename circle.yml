@@ -3,14 +3,15 @@ machine:
     version: 0.10.31
   pre:
     - npm install -g gulp
+    - npm install -g bower
   post:
     - npm install -g cordova
     - npm install -g ionic
     - npm install -g protractor
     - webdriver-manager update
 dependencies:
-  #pre:
-  # - bash ./ionic-config.sh
+  override:
+    - npm install --peerDependencies
   post:
     - npm install -g karma-cli
     - npm install -g gulp-cli
