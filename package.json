@@ -13,7 +13,7 @@
   "keywords": ["voicerepublic", "ionic", "gulp", "cordova"],
   "author": "dibran@voicerepublic.com",
   "license": "",
-  "peerDependencies": {
+  "dependencies": {
     "browser-sync": "~2.0.0-rc3",
     "chai": "^1.9.1",
     "coffee-script": "^1.7.1",
