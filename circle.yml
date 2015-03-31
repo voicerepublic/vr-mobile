@@ -1,4 +1,6 @@
 machine:
+  environment:
+    PATH: ${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin
   node:
     version: 0.10.31
   pre:
@@ -10,18 +12,20 @@ machine:
     - npm install -g protractor
     - webdriver-manager update
 dependencies:
+  cache_directories:
+    - node_modules
+    - www
   override:
-    - npm install --peerDependencies
+    - npm prune && npm install
   post:
     - npm install -g karma-cli
     - npm install -g gulp-cli
+    - bower prune && bower install
 test:
-  pre:
-    - bower install
-    - gulp build
   override:
     - gulp test:unit
   post:
+    - gulp build
     - gulp serve:
         background: true
     - sleep 5
