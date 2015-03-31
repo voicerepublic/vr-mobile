@@ -18,6 +18,8 @@ test:
   override:
     - gulp test:unit:single
   post:
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    - find test-results.xml -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
     - gulp build
     - gulp serve:
         background: true

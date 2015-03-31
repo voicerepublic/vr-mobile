@@ -31,9 +31,12 @@ module.exports = (config) ->
     # use dots reporter, as travis terminal does not support escaping sequences
     # possible values: 'dots', 'progress', 'osx', 'ubuntu'
     # CLI --reporters progress
-    reporters: ['osx', 'dots', 'progress', 'coverage']
+    reporters: ['osx', 'dots', 'progress', 'coverage', 'junit']
 
     coverageReporter: {type: 'text'}
+
+    junitReporter:
+      outputFile: 'test-results.xml'
 
     autoWatch: true
 
