@@ -42,6 +42,7 @@ module.exports = (config) ->
 
     preprocessors:
       '**/*.coffee': ['coffee']
+      'app/features/*/*.coffee': ['coverage']
 
     coffeePreprocessor:
       options:

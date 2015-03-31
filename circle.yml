@@ -2,6 +2,11 @@ machine:
   environment:
     PATH: 
       ${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin
+  pre:
+    - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    - sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - sudo apt-get update 
+    - sudo apt-get install google-chrome-stable
   post:
     - npm install -g gulp
     - npm install -g bower
@@ -13,20 +18,20 @@ dependencies:
   cache_directories:
     - ~/nvm
     - node_modules
+    - assets/components
   override:
     - npm prune && npm install
   post:
     - bower prune && bower install
 test:
-  pre:
-    - gulp build
   override:
     - gulp test:unit:single
   post:
+    - gulp build
     - gulp serve:
         background: true
-    - sleep 10
+    - sleep 5
     - webdriver-manager start:
         background: true
-    - sleep 10
+    - sleep 5
     - gulp test:e2e
