@@ -19,7 +19,7 @@ test:
     - gulp serve:
         background: true
     - sleep 5
-    - webdriver-manager start
+    - webdriver-manager start:
         background: true
     - sleep 5
     - gulp test:e2e
