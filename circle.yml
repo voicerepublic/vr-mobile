@@ -18,11 +18,8 @@ test:
   post:
     - gulp serve:
         background: true
-    - sleep 10
+    - sleep 5
     - webdriver-manager start
+        background: true
+    - sleep 5
     - gulp test:e2e
-deployment:
-  tasks:
-    branch: master
-    commands:
-      - ./scripts/circle/deploy.sh --sha1=$CIRCLE_SHA1 --index=$CIRCLE_NODE_INDEX --build-number=$CIRCLE_BUILD_NUM: {parallel: false} #true if available
