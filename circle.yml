@@ -15,6 +15,9 @@ dependencies:
     - npm install -g karma-cli
     - npm install -g gulp-cli
 test:
+  pre:
+    - bower install
+    - gulp build
   override:
     - gulp test:unit
   post:
