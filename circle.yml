@@ -14,12 +14,12 @@ dependencies:
     - npm install -g karma-cli
 test:
   override:
-    - gulp test:unit
+    - node_modules/gulp/bin/gulp.js test:unit
   post:
-    - gulp serve:
+    - node_modules/gulp/bin/gulp.js serve:
         background: true
     - sleep 5
     - webdriver-manager start:
         background: true
     - sleep 5
-    - gulp test:e2e
+    - node_modules/gulp/bin/gulp.js test:e2e
