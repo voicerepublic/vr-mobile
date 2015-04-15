@@ -1,0 +1,27 @@
+{
+  "name": "voicerepublic_mobile",
+  "homepage": "https://github.com/munen/voicerepublic_mobile/tree/setup-env",
+  "authors": [
+    "Dibran Isufi <dibran@voicerepublic.com>",
+    "Jacek Tomaszewski <jacek@jtom.me>",
+    "driftyco"
+  ],
+  "description": "Voicerepublic mobile app with organized code, tests, bower support and some other stuff. Originated from Ionic & Cordova & Gulp seed .",
+  "license": "individuall",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {
+    "ionic": "v1.0.0-beta.14",
+    "angulartics": "~0.17.2",
+    "ngCordova": "~0.1.14-alpha"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.3.6"
+  },
+  "resolutions": {
+    "angular": "1.3.6"
+  }
+}

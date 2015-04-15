@@ -1,0 +1,15 @@
+{
+  "name": "voicerepublic",
+  "app_id": "01ea03a5",
+  "gulpStartupTasks": [
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/assets/**",
+    "www/css/**",
+    "www/fonts/**",
+    "www/img/**",
+    "www/js/**",
+    "www/*.html"
+  ]
+}

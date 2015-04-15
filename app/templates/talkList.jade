@@ -1,0 +1,22 @@
+ion-view(view-title='Talks overview')
+  ion-content
+    ion-list(show-delete='shouldShowDelete', can-swipe='listCanSwipe')
+      .item.item-divider
+        | Talks to upload
+      ion-item.item-avatar.item-remove-animate(ng-repeat='talk in talksToUpload')
+        img(ng-src='{{talk.img}}')
+        h2 {{talk.title}}
+        p {{"record date: "+talk.recordDate}}
+        ion-option-button.button-assertive(ng-click='talksToUpload.splice($index, 1)')
+          | Delete
+        ion-option-button.button-positive(ng-click='upload(talk)')
+          | Upload
+      .item.item-divider
+        | Uploaded Talks
+      ion-item.item-avatar.item-remove-animate(ng-repeat='talk in uploadedTalks')
+        img(ng-src='{{talk.img}}')
+        h2 {{talk.title}}
+        p {{"upload date: "+talk.uploadDate}}
+        p {{"record date: "+talk.recordDate}}
+        ion-option-button.button-assertive(ng-click='uploadedTalks.splice($index, 1)')
+          | Delete

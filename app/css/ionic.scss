@@ -1,0 +1,49 @@
+// Ionicons
+$ionicons-font-path: "../components/ionic/release/fonts";
+@import "../../assets/components/ionic/scss/ionicons/ionicons.scss";
+
+// Variables
+@import "../../assets/components/ionic/scss/mixins";
+@import "../../assets/components/ionic/scss/variables";
+
+// Base
+@import "../../assets/components/ionic/scss/reset";
+@import "../../assets/components/ionic/scss/scaffolding";
+@import "../../assets/components/ionic/scss/type";
+
+// Components
+@import "../../assets/components/ionic/scss/action-sheet";
+@import "../../assets/components/ionic/scss/backdrop";
+@import "../../assets/components/ionic/scss/bar";
+@import "../../assets/components/ionic/scss/tabs";
+@import "../../assets/components/ionic/scss/menu";
+@import "../../assets/components/ionic/scss/modal";
+@import "../../assets/components/ionic/scss/popover";
+@import "../../assets/components/ionic/scss/popup";
+@import "../../assets/components/ionic/scss/loading";
+@import "../../assets/components/ionic/scss/items";
+@import "../../assets/components/ionic/scss/list";
+@import "../../assets/components/ionic/scss/badge";
+@import "../../assets/components/ionic/scss/slide-box";
+
+// Forms
+@import "../../assets/components/ionic/scss/form";
+@import "../../assets/components/ionic/scss/checkbox";
+@import "../../assets/components/ionic/scss/toggle";
+@import "../../assets/components/ionic/scss/radio";
+@import "../../assets/components/ionic/scss/range";
+@import "../../assets/components/ionic/scss/select";
+@import "../../assets/components/ionic/scss/progress";
+
+// Buttons
+@import "../../assets/components/ionic/scss/button";
+@import "../../assets/components/ionic/scss/button-bar";
+
+// Util
+@import "../../assets/components/ionic/scss/grid";
+@import "../../assets/components/ionic/scss/util";
+@import "../../assets/components/ionic/scss/platform";
+
+// Animations
+@import "../../assets/components/ionic/scss/animations";
+@import "../../assets/components/ionic/scss/transitions";

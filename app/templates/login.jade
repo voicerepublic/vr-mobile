@@ -1,0 +1,16 @@
+ion-view
+  ion-content(scroll='false')
+    img.padding(style='max-height:50%;\
+    min-height:10%; \
+    display: block;\
+    margin-left: auto;\
+    margin-right: auto', src='img/vr_400x400.png')
+    .list.padding-vertical
+      label.item.item-input
+        span.input-label Username
+        input(type='text')
+      label.item.item-input
+        span.input-label Password
+        input(type='password')
+    .padding
+      button.button.button-block.button-positive(ng-click='login()') Log In
