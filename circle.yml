@@ -4,7 +4,8 @@ machine:
       ${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin
   post:
     - npm install -g gulp
-    - webdriver-manager update
+    - npm install -g protractor
+    - webdriver-manager update 
 dependencies:
   cache_directories:
     - ~/nvm
