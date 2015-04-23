@@ -1,4 +1,4 @@
-# Voicerepublic Mobile [![Circle CI](https://circleci.com/gh/munen/voicerepublic_mobile/tree/integration.svg?style=svg&circle-token=c40bfd4f3ded798fe2f51ee5751812d5c19ffebd)](https://circleci.com/gh/munen/voicerepublic_mobile/tree/setup-env)
+# Voicerepublic Mobile [![Circle CI](https://circleci.com/gh/munen/voicerepublic_mobile/tree/integration.svg?style=svg&circle-token=c40bfd4f3ded798fe2f51ee5751812d5c19ffebd)](https://circleci.com/gh/munen/voicerepublic_mobile/tree/integration)
 Cross platform mobile app for voicerepublic.com, based on ionic & cordova.
 
 ## Base functionallity:
