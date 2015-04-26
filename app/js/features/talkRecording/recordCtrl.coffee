@@ -1,7 +1,7 @@
 angular.module("voicerepublic")
 
-.controller "recordCtrl", ($scope, $ionicLoading, $cordovaToast, Recorder, timer) ->
-	#overlay options
+.controller "recordCtrl", ($scope, $ionicLoading, $cordovaToast, Recorder) ->
+	#overlay options 
 	opts =
 		templateUrl : "templates/recordingTemplate.html"
 		scope: $scope
@@ -19,7 +19,7 @@ angular.module("voicerepublic")
 		#start the recorder
 		Recorder.start()
 
-		#$cordovaToast.showLongBottom "Recording started: Feel free to start your talk!"
+		$cordovaToast.showLongBottom "Recording started: Feel free to start your talk!"
 
 	$scope.stop = () ->
 		$scope.isRecording = no
@@ -34,10 +34,10 @@ angular.module("voicerepublic")
 		#show question for uploading => if true show metadata form
 
 	$scope.mute = () ->
-		$scope.isMuted = yes
+		$scope.isMuted = !$scope.isMuted #toggle
 
 		#mute the recording
 		Recorder.mute()
 
-		#$cordovaToast.showShortBottom "Recording muted"
+		$cordovaToast.showShortBottom "Recording muted"
 

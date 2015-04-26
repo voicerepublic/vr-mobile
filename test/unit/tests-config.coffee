@@ -4,6 +4,7 @@
 
 window.GLOBALS =
   ANGULAR_APP_NAME: "voicerepublic"
+  NGCORDOVA: "ngCordova"
   ENV: 'test'
 
 beforeEach module(GLOBALS.ANGULAR_APP_NAME)

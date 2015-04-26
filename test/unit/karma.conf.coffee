@@ -9,15 +9,15 @@ module.exports = (config) ->
     files: [
       "#{BUILD_DIR}/js/vendor.js"
       "assets/components/angular-mocks/angular-mocks.js"
-
       "test/unit/tests-config.coffee"
+      "assets/components/ngCordova/dist/ng-cordova-mocks.js"
 
       # "#{BUILD_DIR}/js/app.js"
       # This is a concatenated list of all scripts from gulpfile.coffee
       # (we need to keep it up to date with it).
       "#{BUILD_DIR}/js/app_templates.js"
-      'app/js/config/**/*.coffee'
-      'app/js/*/**/*.coffee'
+      'app/js/config/*.coffee'
+      'app/js/**/**/*.coffee'
       'app/js/routes.coffee'
 
       "test/unit/helpers/**/*.coffee"
