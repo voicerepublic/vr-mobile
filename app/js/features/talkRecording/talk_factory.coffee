@@ -24,14 +24,14 @@
 ###
 angular.module("voicerepublic")
 
-.factory 'TalkFactory', ($localstorage, $cordovaFile, $log) ->
-  class TalkFactory
+.factory 'TalkFactory', ($window, $localstorage, $cordovaFile, $log) ->
+  new class TalkFactory
     constructor: () ->
       #constructor
 
     createNew: () ->
-      date = new window.Date()
-      prefix = window.cordova.file.dataDirectory
+      date = new $window.Date()
+      prefix = $window.cordova?.file.dataDirectory or "documents://"
       sufix = "talk_on_" + date.toDateString().replace /\s/g, ''
       sufix += ".wav"
 
@@ -46,11 +46,7 @@ angular.module("voicerepublic")
 
       talks = $localstorage.getObject "talks"
 
-      if talks is {}
-        talks = []
-        talks.push talk
-      else
-        talks.push talk
+      talks.push talk
 
       $localstorage.setObject "talks", talks
 
@@ -71,11 +67,11 @@ angular.module("voicerepublic")
       #expose talk which has the id
       talk
 
-    deleteTalk: (id) ->
+    deleteTalkById: (id) ->
       talk = @getTalkById id
       deleted = false
-
-      $cordovaFile.removeFile(window.cordova.file.dataDirectory, talk.filename)
+      path = $window.cordova?.file.dataDirectory or "documents://"
+      $cordovaFile.removeFile(path, talk.filename)
       .then ((success) ->
         deleted = true
       (error) ->
