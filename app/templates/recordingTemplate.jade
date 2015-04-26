@@ -3,13 +3,14 @@
     img(src='img/vr_400x400.png')
     h2(style='color:black') Share your words!
   .item.item-body
-    h1(style='color:black') {{recordTime}}
+    h1(style='color:black')
+      timer {{hours}}:{{minutes}}:{{seconds}}
     ion-spinner(icon='lines')
   .item.tabs.tabs-secondary.tabs-icon-left
-    a.tab-item(ng-click='record.stop()')
+    a.tab-item(ng-click='stop()')
       i.icon.ion-stop.assertive
       | Stop
-    a.tab-item(ng-click='record.mute()')
-      i.icon.ion-ios7-mic(ng-hide='!isMuted')
+    a.tab-item(ng-click='mute()')
+      i.icon.ion-ios7-mic(ng-show='isMuted')
       i.icon.ion-ios7-mic-off(ng-hide='isMuted')
-      | Mute
+      | {{isMuted ? "Unmute" : "Mute"}}
