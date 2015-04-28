@@ -6,6 +6,7 @@ angular.module("voicerepublic")
     $rootScope.$on '$viewContentLoading', (event, viewConfig) ->
         $scope.talksToUpload = TalkFactory.getAllTalks()
 
+    $scope.talksToUpload = TalkFactory.getAllTalks()
     $scope.uploadedTalks = []
     #list options
     $scope.shouldShowDelete = false

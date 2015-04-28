@@ -32,13 +32,14 @@ angular.module("voicerepublic")
     createNew: () ->
       date = new $window.Date()
       prefix = "" #window.cordova?.file.dataDirectory not working!!!?
-      sufix = "talk_from_" + date.toDateString().replace /\s/g, ''
-      
-      if $window.ionic.Platform.isAndroid() then sufix+=".amr"
-      if $window.ionic.Platform.isIOS() then sufix+=".wav"
 
       talkId = $localstorage.get "idCounter", 0
       $localstorage.set "idCounter", ++talkId
+      
+      sufix = "talk" + talkId + "_from_" + date.toDateString().replace /\s/g, ''
+      
+      if $window.ionic.Platform.isAndroid() then sufix+=".amr"
+      if $window.ionic.Platform.isIOS() then sufix+=".wav"
 
       talk =
         id : talkId
