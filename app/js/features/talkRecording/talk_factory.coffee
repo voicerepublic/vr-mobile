@@ -31,9 +31,11 @@ angular.module("voicerepublic")
 
     createNew: () ->
       date = new $window.Date()
-      prefix = $window.cordova?.file.dataDirectory or "documents://"
-      sufix = "talk_on_" + date.toDateString().replace /\s/g, ''
-      sufix += ".wav"
+      prefix = "" #window.cordova?.file.dataDirectory not working!!!?
+      sufix = "talk_from_" + date.toDateString().replace /\s/g, ''
+      
+      if $window.ionic.Platform.isAndroid() then sufix+=".amr"
+      if $window.ionic.Platform.isIOS() then sufix+=".wav"
 
       talkId = $localstorage.get "idCounter", 0
       $localstorage.set "idCounter", ++talkId
@@ -43,6 +45,9 @@ angular.module("voicerepublic")
         src : prefix + sufix
         filename : sufix
         isUploaded : false
+        title : "Talk " + talkId
+        recordDate : date.getUTCDate()+"."+(1+date.getUTCMonth())+"."+date.getUTCFullYear()
+        img : "img/vr_400x400.png"
 
       talks = $localstorage.getObject "talks"
 
@@ -59,23 +64,14 @@ angular.module("voicerepublic")
       #expose talks
       talks
 
-    getTalkById: (id) ->
-      talks = $localstorage.getObject "talks"
-
-      talk = talk for talk in talks when talk.id is id
-
-      #expose talk which has the id
-      talk
-
-    deleteTalkById: (id) ->
-      talk = @getTalkById id
-      deleted = false
-      path = $window.cordova?.file.dataDirectory or "documents://"
+    deleteTalk: (talk) ->
+      isDeleted = false
+      path = $window.cordova?.file.dataDirectory
       $cordovaFile.removeFile(path, talk.filename)
       .then ((success) ->
-        deleted = true
+        isDeleted = true
       (error) ->
-        deleted = false
+        isDeleted = false
         $log.debug error
       )
 
@@ -86,5 +82,14 @@ angular.module("voicerepublic")
 
       $localstorage.setObject "talks", talks
 
-      #expose status of delete
-      deleted
+      #expose status of removing talk
+      isDeleted
+
+    #if needed
+    _getTalkById: (id) ->
+      talks = $localstorage.getObject "talks"
+
+      talk = talk for talk in talks when talk.id is id
+
+      #expose talk which has the id
+      talk

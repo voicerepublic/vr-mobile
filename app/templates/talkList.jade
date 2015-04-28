@@ -1,22 +1,18 @@
-ion-view(view-title='Talks overview')
+ion-view(view-title='Talks overview')  
+  ion-header-bar.bar-assertive
+    .buttons
+      button.button.button-icon.icon.ion-ios-minus-outline(ng-click='shouldShowDelete = !shouldShowDelete;')
+    h1.title Talks overview
   ion-content
     ion-list(show-delete='shouldShowDelete', can-swipe='listCanSwipe')
-      .item.item-divider
-        | Talks to upload
-      ion-item.item-avatar.item-remove-animate(ng-repeat='talk in talksToUpload')
+      ion-item.item-avatar.item-icon-right.item-remove-animate(ng-repeat='talk in talksToUpload')
         img(ng-src='{{talk.img}}')
+        p {{talk.recordDate}}
         h2 {{talk.title}}
-        p {{"record date: "+talk.recordDate}}
+        i.icon.ion-play(ng-click='play(talk)', ng-hide='isPlayingId == talk.id')
+        ion-spinner.spinner-assertive(ng-click='stopPlaying()', icon='ripple', ng-show='isPlayingId == talk.id', style='float:right; margin-top:-20%')
+        ion-delete-button.ion-minus-circled(ng-click='talksToUpload.splice($index, 1)')
         ion-option-button.button-assertive(ng-click='talksToUpload.splice($index, 1)')
           | Delete
-        ion-option-button.button-positive(ng-click='upload(talk)')
+        ion-option-button.button-calm(ng-click='upload(talk)')
           | Upload
-      .item.item-divider
-        | Uploaded Talks
-      ion-item.item-avatar.item-remove-animate(ng-repeat='talk in uploadedTalks')
-        img(ng-src='{{talk.img}}')
-        h2 {{talk.title}}
-        p {{"upload date: "+talk.uploadDate}}
-        p {{"record date: "+talk.recordDate}}
-        ion-option-button.button-assertive(ng-click='uploadedTalks.splice($index, 1)')
-          | Delete

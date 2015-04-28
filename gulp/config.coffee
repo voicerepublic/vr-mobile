@@ -175,15 +175,15 @@ module.exports = new class GulpConfig
       styles: ['app/css/**/*.scss']
       scripts:
         vendor: [
-          "assets/components/ionic/release/js/ionic.js"
+          "assets/components/ionic/js/ionic.js"
           "assets/components/angular/angular.js"
           "assets/components/angular-animate/angular-animate.js"
           "assets/components/angular-sanitize/angular-sanitize.js"
           "assets/components/angular-ui-router/release/angular-ui-router.js"
-          "assets/components/ionic/release/js/ionic-angular.js"
+          "assets/components/ionic/js/ionic-angular.js"
 
           # Here add any vendor files that should be included in vendor.js
-          "assets/components/ngCordova/dist/ng-cordova.js"
+          #"assets/components/ngCordova/dist/ng-cordova.js"
           "assets/components/angular-timer/app/js/_timer.js"
           "assets/components/angular-timer/app/js/i18nService.js"
           "assets/components/humanize-duration/humanize-duration.js"

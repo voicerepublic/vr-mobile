@@ -1,6 +1,9 @@
 angular.module("voicerepublic")
 
-.controller "recordCtrl", ($scope, $ionicLoading, $cordovaToast, Recorder) ->
+.controller "recordCtrl", ($scope, $state, $timeout, $ionicHistory, $ionicLoading, $cordovaToast, Recorder) ->
+	#clear History after login
+	$ionicHistory.clearHistory() 
+	
 	#overlay options 
 	opts =
 		templateUrl : "templates/recordingTemplate.html"
@@ -11,15 +14,20 @@ angular.module("voicerepublic")
 
 	$scope.start = () ->
 		$scope.isRecording = yes
-
-		#notify timer directive
-		$scope.$broadcast "timer-start"
+		
 		#show the overlay
 		$ionicLoading.show opts
+		#notify timer directive
+		$scope.$broadcast "timer-start"
 		#start the recorder
 		Recorder.start()
 
-		$cordovaToast.showLongBottom "Recording started: Feel free to start your talk!"
+		$cordovaToast.showLongBottom("Recording started: Feel free to start your talk!")
+		.then(() ->
+			#success
+		() ->
+			#error
+		)
 
 	$scope.stop = () ->
 		$scope.isRecording = no
@@ -32,12 +40,24 @@ angular.module("voicerepublic")
 		Recorder.stop()
 
 		#show question for uploading => if true show metadata form
+		#but now we go to the list TODO: add animation
+		$timeout () ->
+			$state.go("tab.talkList", {
+			    reload: true
+			})
+		, 1000
 
 	$scope.mute = () ->
 		$scope.isMuted = !$scope.isMuted #toggle
+		toastText = if $scope.isMuted then "Recorder muted" else "Recorder unmuted"
 
-		#mute the recording
-		Recorder.mute()
+		#mute / unMute the recording
+		if $scope.isMuted then Recorder.mute() else Recorder.unMute()
 
-		$cordovaToast.showShortBottom "Recording muted"
+		$cordovaToast.showLongBottom( toastText )
+		.then(() ->
+			#success
+		() ->
+			#error
+		)
 

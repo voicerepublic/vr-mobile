@@ -1,8 +1,6 @@
 describe "TalkFactory", ->
 
-	beforeEach module("ngCordovaMocks")
-
-	describe 'relevant for recording', ->
+	describe 'creating and retrieving', ->
 
 	  it "should create the first talk", ->
 	    inject ($window, $log, $cordovaFile, TalkFactory) ->
@@ -40,10 +38,14 @@ describe "TalkFactory", ->
 
 	    	talk = TalkFactory.createNew()
 	    	
-	    	talkById = TalkFactory.getTalkById talk.id
+	    	talkById = TalkFactory._getTalkById talk.id
 
 	    	expect(talkById).not.to.be.undefined
 	    	expect(talkById.id).to.equal talk.id
+
+	beforeEach module("ngCordovaMocks")
+
+	describe 'removing', ->
 
 	  xit "should delete a talk", ->
 	    inject ($window, $log, $cordovaFile, TalkFactory) ->
@@ -59,7 +61,7 @@ describe "TalkFactory", ->
 	    		#fail
 	    	)
 
-	    	success = TalkFactory.deleteTalkById talk.id
+	    	success = TalkFactory.deleteTalk talk
 
 	    	expect(success).to.be.ok
 

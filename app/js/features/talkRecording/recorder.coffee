@@ -20,26 +20,36 @@
 ###
 angular.module("voicerepublic")
 
-.service 'Recorder', ($cordovaMedia, TalkFactory, ObserverFactory, $log) ->
+.service 'Recorder', ($ionicPlatform, $cordovaMedia, TalkFactory, ObserverFactory, $window, $log) ->
   new class Recorder extends ObserverFactory
     constructor: ->
       @talkMedia = undefined
 
     start : ->
-      talkFile = TalkFactory.createNew()
+      talk = TalkFactory.createNew()
 
-      @talkMedia = $cordovaMedia.newMedia(talkFile.src)
-      .then(() ->
+      @talkMedia = $cordovaMedia.newMedia talk.src
+
+      @talkMedia.then((success) ->
         $log.debug "Successfully recorded file!"
-      () ->
+      (error) ->
         $log.debug "An error occured while recording!"
-        @fireEvent "error", "some params"
+        $window.alert "error while recording:" + error.message
       )
 
-      @talkMedia.startRecord()
+      if typeof @talkMedia.startRecord is "function"
+        @talkMedia.startRecord()
+      else
+        $window.alert "something went wrong!"
 
     mute : -> 
-      #mute recording here
+      @talkMedia.setVolume "0.0"
+
+    unMute : ->
+      @talkMedia.setVolume "1.0"
 
     stop : ->
-      @talkMedia.stopRecord()
+      if typeof @talkMedia.stopRecord is "function"
+        @talkMedia.stopRecord()
+      else
+        $window.alert "something went wrong!"

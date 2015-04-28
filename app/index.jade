@@ -56,22 +56,15 @@ html
       GLOBALS = !{JSON.stringify(GLOBALS)};
 
     script(src="js/vendor.js?v=#{GLOBALS.DEPLOY_TIME}")
+    script(src="js/ng-cordova.js")
     script(src="js/app_templates.js?v=#{GLOBALS.DEPLOY_TIME}")
     script(src="js/app.js?v=#{GLOBALS.DEPLOY_TIME}")
-
     script(id="cordova-js" src="cordova.js")
     //- If you need to include any cordova plugins' js files, add them here:
     //- script(id="cdv-plugin-fb-connect-js" src="cdv-plugin-fb-connect.js")
 
   body
-    //
-            The nav bar that will be updated as we navigate between views
-            Additional attributes set its look, nav-bar animation and icons
-            Icons provided by Ionicons: http://ionicons.com/
-
-    ion-nav-bar.bar-light.nav-title-slide-ios7
-      ion-nav-back-button.button-icon.icon.ion-ios7-arrow-back
-        | Back
+    
     //
             The views will be rendered in the <nav-view> directive below
             Templates are in the /templates folder (but you could also

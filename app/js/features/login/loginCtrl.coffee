@@ -1,6 +1,6 @@
 angular.module("voicerepublic")
 
-.controller "loginCtrl", ($scope, $window) ->
+.controller "loginCtrl", ($scope, $window, $state) ->
 	# log the user in and preset recording view
 	$scope.login = () ->
-		$window.location = "#/tab/record"
+		$state.go 'tab.record'

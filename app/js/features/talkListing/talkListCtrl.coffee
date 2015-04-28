@@ -1,14 +1,30 @@
 angular.module("voicerepublic")
 
-.controller "talkListCtrl", ($scope, Talks) ->
-    #data from service
-    $scope.talksToUpload = Talks.toUpload()
-    $scope.uploadedTalks = Talks.uploadedBefore()
+.controller "talkListCtrl", ($rootScope, $scope, $window, $cordovaToast, TalkFactory, Player) ->
+    $scope.isPlayingId = ""
+    #data from Factory
+    $rootScope.$on '$viewContentLoading', (event, viewConfig) ->
+        $scope.talksToUpload = TalkFactory.getAllTalks()
+
+    $scope.uploadedTalks = []
     #list options
     $scope.shouldShowDelete = false
     $scope.listCanSwipe = true
     #list buttons
-    $scope.delete = (file) ->
-        alert 'Delete file: ' + file.title
-    $scope.upload = (file) ->
-        alert 'Upload file: ' + file.title
+    $scope.delete = (talk) ->
+        TalkFactory.deleteTalk talk
+    $scope.upload = (talk) ->
+        alert 'Upload file: ' + talk.title
+    $scope.play = (talk) ->
+        Player.start talk
+        $scope.isPlayingId = talk.id
+
+        $cordovaToast.showLongBottom("Playing Talk " + talk.id)
+        .then(() ->
+            #success
+        () ->
+            #error
+        )
+    $scope.stopPlaying = () ->
+        Player.stop()
+        $scope.isPlayingId = ""
