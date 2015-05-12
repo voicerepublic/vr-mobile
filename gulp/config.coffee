@@ -100,7 +100,7 @@ module.exports = new class GulpConfig
         ENV: "development"
 
         BUNDLE_ID: "com.voicerepublic.mobile.development"
-        BUNDLE_NAME: "voicerepublic"
+        BUNDLE_NAME: "Voice Republic"
 
         # Automatically connect to weinre on application's startup
         # (this way you can debug your application on your PC even if it's running from mobile ;) )
@@ -112,7 +112,7 @@ module.exports = new class GulpConfig
         ENV: "production"
 
         BUNDLE_ID: "com.voicerepublic.mobile"
-        BUNDLE_NAME: "voicerepublic"
+        BUNDLE_NAME: "Voice Republic"
 
         COMPRESS_ASSETS: true
 
@@ -175,6 +175,7 @@ module.exports = new class GulpConfig
       styles: ['app/css/**/*.scss']
       scripts:
         vendor: [
+          "assets/components/jquery/dist/jquery.js"
           "assets/components/ionic/js/ionic.js"
           "assets/components/angular/angular.js"
           "assets/components/angular-animate/angular-animate.js"

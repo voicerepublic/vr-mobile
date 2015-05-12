@@ -23,5 +23,24 @@
             "type": "registry",
             "id": "org.apache.cordova.file"
         }
+    },
+    "org.apache.cordova.splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.splashscreen"
+        }
+    },
+    "org.apache.cordova.inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.inappbrowser"
+        }
+    },
+    "nl.x-services.plugins.socialsharing": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git",
+            "subdir": "."
+        }
     }
 }

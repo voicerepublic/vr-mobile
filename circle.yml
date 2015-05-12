@@ -1,11 +1,11 @@
 machine:
-  environment:
-    PATH: 
-      ${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin
+  #environment:
+    #PATH: 
+      #${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin
   post:
     - npm install -g gulp
-    - npm install -g protractor
-    - webdriver-manager update 
+    #- npm install -g protractor
+    #- webdriver-manager update 
 dependencies:
   cache_directories:
     - ~/nvm
@@ -18,14 +18,14 @@ dependencies:
 test:
   override:
     - gulp test:unit:single
-  post:
-    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-    - find test-results.xml -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
-    - gulp build
-    - gulp serve:
-        background: true
-    - sleep 5
-    - webdriver-manager start:
-        background: true
-    - sleep 5
-    - gulp test:e2e
+  #post:
+    #- mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    #- find test-results.xml -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+    #- gulp build
+    #- gulp serve:
+        #background: true
+    #- sleep 5
+    #- webdriver-manager start:
+        #background: true
+    #- sleep 5
+    #- gulp test:e2e

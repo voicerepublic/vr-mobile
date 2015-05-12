@@ -1,6 +1,6 @@
 describe "TalkFactory", ->
 
-	describe 'creating and retrieving', ->
+	xdescribe 'creating and retrieving', ->
 
 	  it "should create the first talk", ->
 	    inject ($window, $log, $cordovaFile, TalkFactory) ->
@@ -45,9 +45,9 @@ describe "TalkFactory", ->
 
 	beforeEach module("ngCordovaMocks")
 
-	describe 'removing', ->
+	xdescribe 'removing', ->
 
-	  xit "should delete a talk", ->
+	  it "should delete a talk", ->
 	    inject ($window, $log, $cordovaFile, TalkFactory) ->
 	    	path = "documents://"
 	    	talk = TalkFactory.createNew()

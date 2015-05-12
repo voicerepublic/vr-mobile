@@ -56,6 +56,7 @@ html
       GLOBALS = !{JSON.stringify(GLOBALS)};
 
     script(src="js/vendor.js?v=#{GLOBALS.DEPLOY_TIME}")
+    //- make sure ngCordova is placed in the right order
     script(src="js/ng-cordova.js")
     script(src="js/app_templates.js?v=#{GLOBALS.DEPLOY_TIME}")
     script(src="js/app.js?v=#{GLOBALS.DEPLOY_TIME}")
@@ -64,10 +65,10 @@ html
     //- script(id="cdv-plugin-fb-connect-js" src="cdv-plugin-fb-connect.js")
 
   body
-    
+
     //
             The views will be rendered in the <nav-view> directive below
             Templates are in the /templates folder (but you could also
             have templates inline in this html file if you'd like).
-
+    ion-nav-bar.bar-assertive
     ion-nav-view

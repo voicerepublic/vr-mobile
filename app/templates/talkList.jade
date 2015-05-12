@@ -1,18 +1,40 @@
-ion-view(view-title='Talks overview')  
-  ion-header-bar.bar-assertive
-    .buttons
-      button.button.button-icon.icon.ion-ios-minus-outline(ng-click='shouldShowDelete = !shouldShowDelete;')
-    h1.title Talks overview
-  ion-content
-    ion-list(show-delete='shouldShowDelete', can-swipe='listCanSwipe')
-      ion-item.item-avatar.item-icon-right(ng-repeat='talk in talksToUpload')
+ion-view(view-title='Talks overview')
+  ion-nav-buttons(side='primary')
+    button.button.button-icon.icon.ion-ios-minus-outline(ng-click='toggleDelete()')
+  ion-content(on-swipe-right='onSwipedRight()', on-swipe-left='onSwipedLeft()')
+    .card(ng-show='(talksToUpload.length == 0) && (uploadedTalks.length == 0)')
+      .item.item-text-wrap
+        | There are no talks... You really should start recording them!
+    ion-list(show-delete='shouldShowDelete')
+      ion-item.item-avatar.item-icon-right(ng-repeat='talk in talksToUpload',
+        ng-click='openActionSheet(talk, $index, false)')
         img(ng-src='{{talk.img}}')
-        p {{talk.recordDate}}
-        h2 {{talk.title}}
-        i.icon.ion-play(ng-click='play(talk)', ng-hide='isPlayingId == talk.id')
-        ion-spinner.spinner-assertive(ng-click='stopPlaying()', icon='ripple', ng-show='isPlayingId == talk.id', style='float:right; margin-top:-15%; margin-right:-15%')
-        ion-delete-button.ion-minus-circled(ng-click='talksToUpload.splice($index, 1)')
-        ion-option-button.button-assertive(ng-click='talksToUpload.splice($index, 1)')
-          | Delete
-        ion-option-button.button-calm(ng-click='upload(talk)')
-          | Upload
+        p {{talk.recordDate}} at {{talk.recordTime}}
+        h2 {{talk.title}} took {{talk.duration}}
+        i.icon.ion-android-more-vertical(ng-hide='isPlayingId == talk.id')
+        ion-spinner.spinner-assertive(icon='ripple', ng-show='isPlayingId == talk.id',
+          style='float:right; margin-top:-15%; margin-right:-15%')
+        ion-delete-button.ion-minus-circled(ng-click='delete(talk, $index)')
+    ion-list.padding-top(show-delete='shouldShowDelete')
+      .item.item-divider(ng-hide='(uploadedTalks.length == 0)')
+        | Uploaded talks
+      .list.card(ng-repeat='talk in uploadedTalks')
+        ion-item.item-avatar.item-icon-right(ng-click='openActionSheet(talk, $index, true)')
+          img(ng-src='{{talk.img}}')
+          p {{talk.recordDate}} at {{talk.recordTime}}
+          h2 It took {{talk.duration}}
+          i.icon.ion-android-more-vertical(ng-hide='isPlayingId == talk.id')
+          ion-spinner.spinner-assertive(icon='ripple', ng-show='isPlayingId == talk.id',
+            style='float:right; margin-top:-15%; margin-right:-15%')
+          ion-delete-button.ion-minus-circled(ng-click='delete(talk, $index)')
+        .item.item-body
+          strong {{talk.title}}
+          h3 {{talk.teaser}}
+          p {{talk.description}}
+          p Held at {{talk.venue}} in {{talk.language}}
+          p
+            a.subdued(ng-click='share(talk)', ng-hide='talk.isShared') Not shared yet
+              i.icon.ion-android-share-alt.assertive(ng-show='isAndroid', style='margin-left: 2%')
+              i.icon.ion-share.assertive(ng-show='isIOS', style='margin-left: 2%')
+            a.subdued(ng-click='share(talk)', ng-show='talk.isShared') Shared
+              i.icon.ion-checkmark-circled.balanced(style='margin-left: 2%')

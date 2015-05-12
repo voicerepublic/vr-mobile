@@ -1,16 +1,16 @@
 .list.card
   .item.item-avatar
-    img(src='img/vr_400x400.png')
-    h2(style='color:black') Share your words!
+    img(src='img/VR_Logo_rgb_4.png')
+    h2(style='color:black') Save your words!
+    p Recording...
   .item.item-body
     h1(style='color:black')
       timer {{hhours}}:{{mminutes}}:{{sseconds}}
     ion-spinner(icon='lines')
   .item.tabs.tabs-secondary.tabs-icon-left
+    a.tab-item(ng-click='cancel()')
+      i.icon.ion-close.assertive
+      | Cancel
     a.tab-item(ng-click='stop()')
-      i.icon.ion-stop.assertive
-      | Stop
-    a.tab-item(ng-click='mute()')
-      i.icon.ion-android-microphone(ng-show='isMuted')
-      i.icon.ion-android-microphone-off(ng-hide='isMuted')
-      | {{isMuted ? "Unmute" : "Mute"}}
+      i.icon.ion-archive
+      | Save

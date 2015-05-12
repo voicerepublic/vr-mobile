@@ -31,8 +31,21 @@ angular.module("voicerepublic")
         templateUrl: "templates/talkList.html"
         controller: "talkListCtrl"
 
-  .state "share",
-    url: "/share"
+  .state "tab.upload",
+    url: "/upload/:talkToUploadId"
+    resolve:
+      TalkToUpload: ($stateParams, TalkFactory) ->
+        TalkFactory.getTalkById $stateParams.talkToUploadId
+    views:
+      "tab-talkList":
+        templateUrl: "templates/upload.html"
+        controller: "uploadCtrl"
+
+  .state "tab.share",
+    url: "/share/:talkToShareId"
+    resolve:
+      TalkToShare: ($stateParams, TalkFactory) ->
+        TalkFactory.getTalkById $stateParams.talkToShareId
     views:
       "tab-talkList":
         templateUrl: "templates/share.html"

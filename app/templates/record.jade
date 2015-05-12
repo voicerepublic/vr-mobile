@@ -1,9 +1,10 @@
 ion-view(view-title='Record a talk')
-  ion-header-bar.bar-assertive
-    h1.title Record a talk
-  ion-content(scroll='false', style='top:45%')
-    ion-button.button.button-large.button-assertive.icon-left.ion-android-microphone(
+  ion-content(scroll='false', on-swipe-left='onSwipedLeft()')
+    img(src='img/vintage-microphone.jpg',
       ng-click="start()",
       ng-hide="isRecording",
-      style='display:block;margin-left:10px; margin-right:10px')
-      | Start your talk!
+      style='display:block;\
+      margin-top:5%;\
+      margin-left:auto;\
+      margin-right:auto;\
+      height:100%')

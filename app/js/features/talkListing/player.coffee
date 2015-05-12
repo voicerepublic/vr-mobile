@@ -5,7 +5,7 @@
 @object
 
 @description
-  The Player used to play talks in the List View
+  The Player used to play talks in the List View.
 
   **Note:** 
     Using the following cordova plugins:
@@ -13,7 +13,14 @@
 
 @example
   Player.start talk
-  Player.stop talk
+  Player.stop()
+
+@events
+  Player.on "stopped" ->
+    #stopped
+
+  Player.on "error", (error) ->
+    #stopped with error
 ###
 angular.module("voicerepublic")
 
@@ -23,23 +30,23 @@ angular.module("voicerepublic")
       @talkMedia = undefined
 
     start : (talk) ->
-      @talkMedia = $cordovaMedia.newMedia talk.src
+      self = @
+
+      @talkMedia = $cordovaMedia.newMedia talk.nativeURL
 
       @talkMedia.then((success) ->
         $log.debug "Successfully playing file!"
+        #notify that player stopped
+        self.fireEvent "stopped"
       (error) ->
         $log.debug "An error occured while playing!"
-        $window.alert "error while playing:" + error.message + ", " + error.code
+        self.fireEvent "error", error
       )
 
       if typeof @talkMedia.play is "function"
         @talkMedia.play()
-      else
-        $window.alert "something went wrong!"
 
     stop : ->
       if typeof @talkMedia.stop is "function"
         @talkMedia.stop()
         @talkMedia.release()
-      else
-        $window.alert "something went wrong!"

@@ -23,6 +23,18 @@
                         {
                             "xml": "<feature name=\"Media\"><param name=\"android-package\" value=\"org.apache.cordova.media.AudioHandler\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -32,7 +44,7 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 2
+                            "count": 3
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
@@ -63,6 +75,15 @@
         },
         "org.apache.cordova.media": {
             "PACKAGE_NAME": "com.voicerepublic.mobile"
+        },
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+        },
+        "nl.x-services.plugins.socialsharing": {
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
         }
     },
     "dependent_plugins": {}

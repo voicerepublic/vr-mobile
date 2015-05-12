@@ -1,0 +1,33 @@
+ion-view
+  ion-nav-title
+    | Upload {{talk.title}}
+  ion-nav-buttons(side='left')
+    a.button.icon-left.ion-chevron-left.button-clear.button-light(ng-click='back()')
+  ion-content(scroll='true', on-swipe-right='onSwipedRight()')
+    .list
+      label.item.item-input.item-floating-label
+        span.input-label Title
+        input(type='text', placeholder='Title', required='true', ng-model='talk.title')
+      label.item.item-input.item-floating-label
+        span.input-label Teaser
+        input(type='text', placeholder='Teaser', required='true', ng-model='talk.teaser')
+      label.item.item-input.item-floating-label
+        span.input-label Description
+        input(type='text', placeholder='Description', required='true', ng-model='talk.description')
+      label.item.item-input.item-floating-label
+        span.input-label Venue
+        input(type='text', placeholder='Venue', required='true', ng-model='talk.venue')
+      label.item.item-input.item-select
+        .input-label
+          | Language
+        select(ng-model='talk.language')
+          option Albanian
+          option Bulgarian
+          option Celtic
+          option Dutch
+          option English
+          option French
+          option German
+          option etc.
+      .padding(style='margin-top:10%;')
+        button.button.icon-left.ion-upload.button-block.button-assertive(ng-click='startUpload()') Upload

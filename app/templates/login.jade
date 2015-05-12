@@ -1,11 +1,13 @@
-ion-view
-  ion-content(scroll='false')
-    img.padding(style='max-height:50%;\
-    min-height:10%; \
-    display: block;\
-    margin-left: auto;\
-    margin-right: auto', src='img/vr_400x400.png')
-    .list.padding-vertical
+ion-view(hide-nav-bar='true')
+  ion-content(scroll='true', scrollbar-y='false', has-bouncing='false')
+    .padding
+      img(style='max-height:50%;\
+      max-width:50%; \
+      display: block;\
+      margin-left: auto;\
+      margin-top: 10%;\
+      margin-right: auto', src='img/vr_400x400.png')
+    .list.padding-vertical(style='margin-top:15%')
       label.item.item-input
         span.input-label Username
         input(type='text')
@@ -14,3 +16,5 @@ ion-view
         input(type='password')
     .padding
       button.button.button-block.button-assertive(ng-click='login()') Log In
+      button.button.button-block.button-stable(ng-click='register()') Sign Up
+      button.button.button-clear.button-dark(ng-click='forgot()') Forgot password?

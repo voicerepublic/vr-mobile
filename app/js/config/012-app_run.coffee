@@ -8,14 +8,16 @@ ionic.Platform.ready ->
   angular.bootstrap document, [GLOBALS.ANGULAR_APP_NAME]
 
 
-app.run ($log, $timeout, $ionicPlatform) ->
+app.run ($log, $timeout, $ionicPlatform, $cordovaSplashscreen) ->
   $ionicPlatform.ready ->
-		window.cordova?.plugins.Keyboard?.hideKeyboardAccessoryBar()
-		window.StatusBar?.styleDefault()
+    window.cordova?.plugins.Keyboard?.hideKeyboardAccessoryBar()
+    window.StatusBar?.styleDefault()
+    window.ionic.Platform.isFullScreen = true
 
   $log.debug "Ionic app \"#{GLOBALS.ANGULAR_APP_NAME}\" has just started (app.run)!" unless GLOBALS.ENV == "test"
 
   # Finally, let's show the app, by hiding the splashscreen
   # (it should be visible up until this moment)
   $timeout ->
-    navigator.splashscreen?.hide()
+    $cordovaSplashscreen.hide()
+  , 1000
