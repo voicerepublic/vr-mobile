@@ -13,11 +13,23 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Toast\"><param name=\"android-package\" value=\"nl.xservices.plugins.Toast\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileTransfer\"><param name=\"android-package\" value=\"org.apache.cordova.filetransfer.FileTransfer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
                             "count": 1
                         },
                         {
@@ -29,11 +41,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "xml": "<feature name=\"ProgressIndicator\"><param name=\"android-package\" value=\"org.apache.cordova.plugin.ProgressIndicator\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "xml": "<feature name=\"UniversalAnalytics\"><param name=\"android-package\" value=\"com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -44,7 +56,7 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 3
+                            "count": 4
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
@@ -57,6 +69,20 @@
                         {
                             "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -65,26 +91,39 @@
     },
     "installed_plugins": {
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile"
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+        },
+        "nl.x-services.plugins.socialsharing": {
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
         },
         "nl.x-services.plugins.toast": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile"
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
         },
         "org.apache.cordova.file": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile"
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
         },
-        "org.apache.cordova.media": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile"
-        },
-        "org.apache.cordova.splashscreen": {
+        "org.apache.cordova.file-transfer": {
             "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
         },
         "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
         },
-        "nl.x-services.plugins.socialsharing": {
+        "org.apache.cordova.media": {
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+        },
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+        },
+        "org.pbernasconi.progressindicator": {
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+        },
+        "cordova-plugin-google-analytics": {
             "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "com.google.playservices": {
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+        }
+    }
 }

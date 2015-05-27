@@ -11,6 +11,7 @@ angular.module("voicerepublic")
     url: "/login"
     templateUrl: 'templates/login.html'
     controller: 'loginCtrl'
+    isLogin: true
 
   .state "tab",
     url: "/tab"
@@ -23,6 +24,7 @@ angular.module("voicerepublic")
       "tab-record":
         templateUrl: 'templates/record.html'
         controller: 'recordCtrl'
+    authenticate: false
 
   .state "tab.talkList",
     url: "/talkList"
@@ -30,6 +32,7 @@ angular.module("voicerepublic")
       "tab-talkList":
         templateUrl: "templates/talkList.html"
         controller: "talkListCtrl"
+    authenticate: false
 
   .state "tab.upload",
     url: "/upload/:talkToUploadId"
@@ -40,6 +43,7 @@ angular.module("voicerepublic")
       "tab-talkList":
         templateUrl: "templates/upload.html"
         controller: "uploadCtrl"
+    authenticate: true
 
   .state "tab.share",
     url: "/share/:talkToShareId"
@@ -50,6 +54,7 @@ angular.module("voicerepublic")
       "tab-talkList":
         templateUrl: "templates/share.html"
         controller: "shareCtrl"
+    authenticate: false
 
   # if none of the above states match, use this as the fallback
   $urlRouterProvider.otherwise "/login"

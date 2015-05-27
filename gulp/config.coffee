@@ -59,7 +59,7 @@ module.exports = new class GulpConfig
         HTTP_SERVER_IP: (->
           # Try to detect IP address in user's network.
           # If not, fallback to 127.0.0.1 .
-          localIp = execSync("(ifconfig wlan 2>/dev/null || ifconfig en0) | grep inet | grep -v inet6 | awk '{print $2}' | sed 's/addr://g'").stdout.trim()
+          localIp = execSync("(ifconfig wlan 2>/dev/null || ifconfig en1) | grep inet | grep -v inet6 | awk '{print $2}' | sed 's/addr://g'").stdout.trim()
           localIp = "127.0.0.1" unless parseInt(localIp) > 0
           localIp
         )()
@@ -127,7 +127,7 @@ module.exports = new class GulpConfig
         # Required for the release to be signed with correct certificate.
         IOS_PROVISIONING_PROFILE: "keys/ios/voicerepublicstaging.mobileprovision"
 
-        # CORDOVA_GOOGLE_ANALYTICS_ID: "UA-123123-2"
+        CORDOVA_GOOGLE_ANALYTICS_ID: "UA-46754662-1"
         # GOOGLE_ANALYTICS_ID: "UA-123123-1"
         # GOOGLE_ANALYTICS_HOST: "ionicstarter.com"
       }
@@ -180,6 +180,7 @@ module.exports = new class GulpConfig
           "assets/components/angular/angular.js"
           "assets/components/angular-animate/angular-animate.js"
           "assets/components/angular-sanitize/angular-sanitize.js"
+          "assets/components/angular-cookie/angular-cookie.js"
           "assets/components/angular-ui-router/release/angular-ui-router.js"
           "assets/components/ionic/js/ionic-angular.js"
 
@@ -189,6 +190,7 @@ module.exports = new class GulpConfig
           "assets/components/angular-timer/app/js/i18nService.js"
           "assets/components/humanize-duration/humanize-duration.js"
           "assets/components/momentjs/moment.js"
+          "assets/components/SHA-1/sha1.js"
 
           # Google Analytics support (for both in-browser and Cordova app)
           "assets/components/angulartics/src/angulartics.js"

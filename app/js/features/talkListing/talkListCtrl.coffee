@@ -147,11 +147,11 @@ angular.module("voicerepublic")
     promise.then((success) ->
       unless talk.isUploaded then $scope.talksToUpload.splice position, 1
       else $scope.uploadedTalks.splice position, 1
-      $cordovaToast.showShortBottom "Deleted talk #{talk.id}"
+      $cordovaToast.showShortBottom "Deleted talk #{talk.title}"
     (error) ->
       unless talk.isUploaded then $scope.talksToUpload.splice position, 1
       else $scope.uploadedTalks.splice position, 1
-      $cordovaToast.showShortBottom "Deleted talk #{talk.id}, with error: #{error.message}"
+      $cordovaToast.showShortBottom "Deleted talk #{talk.title}, with error: #{error.message}"
     )
 
   $scope.play = (talk) ->

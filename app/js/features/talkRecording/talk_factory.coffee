@@ -22,6 +22,7 @@
     id : talkId
     fullPath : "/talks/" + fileName
     nativeURL : path + fileName
+    shareURL : "https://voicerepublic.com/talks/testformobile"
     filename : fileName
     isUploaded : false
     isShared : false
@@ -106,6 +107,7 @@ angular.module("voicerepublic")
         isShared : false
         recordDate : recordDate
         recordTime : recordTime
+        unifiedDate : date.toLocaleString()
         duration : ""
         title : "Talk " + talkId
         teaser : ""
@@ -153,7 +155,7 @@ angular.module("voicerepublic")
       #
       #path to the platform specific data directories
       path = $window.cordova.file?.externalDataDirectory if $window.ionic.Platform.isAndroid()
-      path = $window.cordova.file?.dataDirectory if $window.ionic.Platform.isIOS()
+      path = $window.cordova.file?.documentsDirectory if $window.ionic.Platform.isIOS()
       
       #needed Promises
       createDirPromise = undefined
@@ -164,7 +166,10 @@ angular.module("voicerepublic")
       createDirPromise = $cordovaFile.createDir path, "talks", false
       createFilePromise = createDirPromise.then((success) ->
         #first creation
-        nativeURLtoTalksDir = success.nativeURL
+        #get the nativeURL with ANDROID
+        nativeURLtoTalksDir = success?.nativeURL
+        #success is undefined with IOS
+        nativeURLtoTalksDir = path + "/talks/" if $window.ionic.Platform.isIOS()
         talk = self._createTalkDataStructure nativeURLtoTalksDir
 
         #return the next promise and build a chain \(^^)/
@@ -181,9 +186,9 @@ angular.module("voicerepublic")
 
       #handle file creation result
       createFilePromise.then((success) ->
-        #assigning not necessary but why not
-        talk.nativeURL = success.nativeURL
-        talk.fullPath = success.fullPath
+        #assigning not necessary
+        #talk.nativeURL = success?.nativeURL
+        #talk.fullPath = success?.fullPath
         #resolve with talk as param when success
         q.resolve talk
       (error) ->
@@ -241,10 +246,11 @@ angular.module("voicerepublic")
 
       $localstorage.setObject "talks", talks
 
-    setTalkUploaded: (uploadedTalk, metadata...) ->
+    setTalkUploaded: (uploadedTalk, shareUrl, metadata...) ->
       talks = $localstorage.getObject "talks"
 
       uploadedTalk.isUploaded = yes
+      uploadedTalk.shareURL = shareUrl
 
       talks[i] = uploadedTalk for talk, i in talks when talk.id is uploadedTalk.id
 
@@ -277,7 +283,7 @@ angular.module("voicerepublic")
       q = $q.defer()
 
       path = $window.cordova.file?.externalDataDirectory if $window.ionic.Platform.isAndroid()
-      path = $window.cordova.file?.dataDirectory if $window.ionic.Platform.isIOS()
+      path = $window.cordova.file?.documentsDirectory if $window.ionic.Platform.isIOS()
       path = path + "talks/"
       file = talkToDelete.filename
       

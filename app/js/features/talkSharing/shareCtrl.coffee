@@ -42,12 +42,10 @@ angular.module("voicerepublic")
 
   $scope.share = () ->
     #shared stuff
-    message = "My first talk..."
-    subject = "First talk!"
-    file = null
-    link = "https://voicerepublic.com/talks/1"
-
-    TalkFactory.setTalkShared $scope.talk
+    message = TalkToShare.description
+    subject = TalkToShare.title
+    file = TalkToShare.nativeURL
+    link = TalkToShare.shareURL
 
     $cordovaSocialSharing
     .share(message, subject, file, link)

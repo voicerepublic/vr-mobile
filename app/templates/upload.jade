@@ -3,31 +3,63 @@ ion-view
     | Upload {{talk.title}}
   ion-nav-buttons(side='left')
     a.button.icon-left.ion-chevron-left.button-clear.button-light(ng-click='back()')
+  ion-nav-buttons(side='right')
+    a.button.icon-right.ion-upload.button-clear.button-light(ng-click='startUpload()')
   ion-content(scroll='true', on-swipe-right='onSwipedRight()')
     .list
-      label.item.item-input.item-floating-label
-        span.input-label Title
-        input(type='text', placeholder='Title', required='true', ng-model='talk.title')
-      label.item.item-input.item-floating-label
-        span.input-label Teaser
-        input(type='text', placeholder='Teaser', required='true', ng-model='talk.teaser')
-      label.item.item-input.item-floating-label
-        span.input-label Description
-        input(type='text', placeholder='Description', required='true', ng-model='talk.description')
-      label.item.item-input.item-floating-label
-        span.input-label Venue
-        input(type='text', placeholder='Venue', required='true', ng-model='talk.venue')
-      label.item.item-input.item-select
-        .input-label
-          | Language
-        select(ng-model='talk.language')
-          option Albanian
-          option Bulgarian
-          option Celtic
-          option Dutch
-          option English
-          option French
-          option German
-          option etc.
-      .padding(style='margin-top:10%;')
-        button.button.icon-left.ion-upload.button-block.button-assertive(ng-click='startUpload()') Upload
+      form(name='form.upload', novalidate='true')
+        label.item.item-input.item-floating-label
+          span.input-label * Title
+          input(type='text', name='title', placeholder='* Title', required='', ng-model='talk.title')
+          div(ng-show='form.upload.$submitted || form.upload.title.$touched')
+            div.assertive(ng-show='form.upload.title.$error.required')
+              | Please fill in a title
+        label.item.item-input.item-floating-label
+          span.input-label * Teaser
+          input(type='text', name='teaser', placeholder='* Teaser', required='', ng-model='talk.teaser')
+          div(ng-show='form.upload.$submitted || form.upload.teaser.$touched')
+            div.assertive(ng-show='form.upload.teaser.$error.required')
+              | Please fill in a teaser (short description)
+        label.item.item-input.item-floating-label
+          span.input-label * Tags
+          input(type='text', name='tags', placeholder='* tag1, tag2, tag3', required='', ng-model='talk.tags')
+          div(ng-show='form.upload.$submitted || form.upload.tags.$touched')
+            div.assertive(ng-show='form.upload.tags.$error.required')
+              | Please fill in some tags
+        label.item.item-input.item-floating-label
+          span.input-label * Description
+          textarea(type='text', name='description' placeholder='* Description', required='', ng-model='talk.description', rows='4' cols='50')
+          div(ng-show='form.upload.$submitted || form.upload.description.$touched')
+            div.assertive(ng-show='form.upload.description.$error.required')
+              | Please give your awsome talk a description
+        label.item.item-input.item-select
+          .input-label
+            | * Language
+          select(ng-model='talk.language')
+            option Albanian
+            option Arabic
+            option Bulgarian
+            option Bengali
+            option Czech
+            option Dutch
+            option English
+            option French
+            option German
+            option Hungarian
+            option Italian
+            option Japanese
+            option Kongolesian
+            option Mandarin
+            option Marathi
+            option Oriya
+            option Punjabi
+            option Russian
+            option Spanish
+            option Turkish
+            option Telugu
+            option Ukrainian
+            option Vietnamese
+            option Wu
+            option Xiang
+            option Yoruba
+            option Zhuang

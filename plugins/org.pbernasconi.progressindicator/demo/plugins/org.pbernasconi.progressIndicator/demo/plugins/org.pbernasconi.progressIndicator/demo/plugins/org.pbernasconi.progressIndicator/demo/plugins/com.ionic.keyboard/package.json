@@ -1,0 +1,13 @@
+{
+    "version": "1.0.2",
+    "name": "com.ionic.keyboard",
+    "cordova_name": "Keyboard",
+    "description": "Ionic Keyboard Plugin",
+    "repo": "https://github.com/driftyco/ionic-plugins-keyboard.git",
+    "issue": "https://github.com/driftyco/ionic-plugins-keyboard/issues",
+    "license": "MIT",
+    "keywords": [
+        "ionic",
+        "keyboard"
+    ]
+}

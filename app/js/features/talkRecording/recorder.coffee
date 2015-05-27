@@ -57,6 +57,8 @@ angular.module("voicerepublic")
 
     start: (@talk) ->
       self = @
+      #IOS QUIRKS
+      @talk.nativeURL = "documents://" + @talk.fullPath if $window.ionic.Platform.isIOS()
 
       @talkMedia = $cordovaMedia.newMedia @talk.nativeURL
 

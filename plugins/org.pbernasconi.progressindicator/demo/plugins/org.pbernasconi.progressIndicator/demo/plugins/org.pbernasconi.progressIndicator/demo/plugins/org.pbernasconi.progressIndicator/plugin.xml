@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="org.pbernasconi.progressIndicator" version="1.0.0">
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <name>ProgressIndicator</name>
+    <description>Progress Indicator plugin for Cordova 3.X that allows you to show a loading spinner in your Cordova's app.</description>
+    <author>Paolo Bernasconi</author>
+    <keywords>progress,indicator,activity,loading,load,progressindicator</keywords>
+    <license>Apache 2.0 License</license>
+
+    <js-module src="www/progressIndicator.js" name="ProgressIndicator">
+        <clobbers target="ProgressIndicator"/>
+    </js-module>
+
+    <!-- iOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ProgressIndicator">
+                <param name="ios-package" value="ProgressIndicator"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/MBProgressHUD.h"/>
+        <source-file src="src/ios/MBProgressHUD.m"/>
+        <header-file src="src/ios/ProgressIndicator.h"/>
+        <source-file src="src/ios/ProgressIndicator.m"/>
+    </platform>
+
+    <!-- Android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ProgressIndicator">
+                <param name="android-package" value="org.apache.cordova.plugin.ProgressIndicator"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/ProgressIndicator.java" target-dir="src/org/apache/cordova/plugin"/>
+    </platform>
+</plugin>

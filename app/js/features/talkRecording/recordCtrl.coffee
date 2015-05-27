@@ -16,6 +16,9 @@
 angular.module("voicerepublic")
 
 .controller "recordCtrl", ($scope, $state, $window, $timeout, $ionicHistory, $ionicLoading, $cordovaToast, Recorder) ->
+  #clear the history after login
+  $ionicHistory.clearHistory()
+
   #needed as flag for view
   $scope.isRecording = no
   
