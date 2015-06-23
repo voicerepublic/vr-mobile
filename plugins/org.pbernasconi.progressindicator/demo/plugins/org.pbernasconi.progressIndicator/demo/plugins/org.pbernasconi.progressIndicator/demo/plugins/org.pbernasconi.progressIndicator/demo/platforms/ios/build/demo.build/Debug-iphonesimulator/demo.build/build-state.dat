@@ -1,0 +1,923 @@
+Tdemo
+v6
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Info.plist /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/demo-Info.plist
+cPhaseScriptExecution Copy\ www\ directory /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.sh
+cCpResource demo/Resources/icons/icon-76.png build/emulator/demo.app/icon-76.png
+cCpResource demo/Resources/icons/icon-40@2x.png build/emulator/demo.app/icon-40@2x.png
+cCpResource demo/Resources/icons/icon-72.png build/emulator/demo.app/icon-72.png
+cCpResource demo/Resources/icons/icon.png build/emulator/demo.app/icon.png
+cCpResource demo/Resources/icons/icon@2x.png build/emulator/demo.app/icon@2x.png
+cCopyStringsFile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/en.lproj/Localizable.strings demo/Resources/en.lproj/Localizable.strings
+cCompileXIB /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.xib
+cCpResource demo/Resources/icons/icon-50.png build/emulator/demo.app/icon-50.png
+cCpResource demo/Resources/icons/icon-60@2x.png build/emulator/demo.app/icon-60@2x.png
+cCopyStringsFile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/de.lproj/Localizable.strings demo/Resources/de.lproj/Localizable.strings
+cCpResource demo/Resources/icons/icon-small.png build/emulator/demo.app/icon-small.png
+cCpResource demo/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/demo.app/Default-Landscape@2x~ipad.png
+cCpResource demo/Resources/splash/Default-Landscape~ipad.png build/emulator/demo.app/Default-Landscape~ipad.png
+cCpResource demo/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/demo.app/Default-Portrait@2x~ipad.png
+cCpResource demo/Resources/icons/icon-small@2x.png build/emulator/demo.app/icon-small@2x.png
+cCpResource demo/Resources/splash/Default-Portrait~ipad.png build/emulator/demo.app/Default-Portrait~ipad.png
+cCpResource demo/Resources/icons/icon-40.png build/emulator/demo.app/icon-40.png
+cCpResource demo/Resources/splash/Default@2x~iphone.png build/emulator/demo.app/Default@2x~iphone.png
+cCpResource demo/Resources/icons/icon-60.png build/emulator/demo.app/icon-60.png
+cCpResource demo/Resources/splash/Default~iphone.png build/emulator/demo.app/Default~iphone.png
+cCpResource demo/Resources/splash/Default-568h@2x~iphone.png build/emulator/demo.app/Default-568h@2x~iphone.png
+cCpResource demo/Resources/icons/icon-50@2x.png build/emulator/demo.app/icon-50@2x.png
+cCpResource demo/Resources/icons/icon-76@2x.png build/emulator/demo.app/icon-76@2x.png
+cCpResource demo/Resources/icons/icon-72@2x.png build/emulator/demo.app/icon-72@2x.png
+cProcessPCH /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch.pch demo/demo-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ActivityIndicator.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/MBProgressHUD.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
+c00000000533AEEDE00000000000003B4
+t1396371166
+s948
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000533AEEE2000000000000019E
+t1396371170
+s414
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ActivityIndicator.o
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.sh
+c0000000053C7ED55000000000000002D
+t1405611349
+s45
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default-568h@2x~iphone.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default-Landscape@2x~ipad.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default-Landscape~ipad.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default-Portrait@2x~ipad.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default-Portrait~ipad.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default@2x~iphone.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default~iphone.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Info.plist
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/MainViewController.nib
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/PkgInfo
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/de.lproj/Localizable.strings
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/en.lproj/Localizable.strings
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-40.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-40@2x.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-50.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-50@2x.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-60.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-60@2x.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-72.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-72@2x.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-76.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-76@2x.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-small.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-small@2x.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon@2x.png
+t2
+s0
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/AppDelegate.m
+c0000000053C7ED500000000000001763
+t1405611344
+s5987
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.m
+c0000000053C7ED500000000000001265
+t1405611344
+s4709
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.xib
+c0000000053C7ED500000000000001759
+t1405611344
+s5977
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m
+c0000000053C7ED500000000000001357
+t1405611344
+s4951
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m
+c0000000053C7ED500000000000000D93
+t1405611344
+s3475
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m
+c0000000053C7ED500000000000000490
+t1405611344
+s1168
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m
+c0000000053C7ED500000000000000C22
+t1405611344
+s3106
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m
+c0000000053C7ED500000000000000F2D
+t1405611344
+s3885
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/MBProgressHUD.m
+c0000000053C7ED500000000000008108
+t1405611344
+s33032
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/de.lproj/Localizable.strings
+c0000000053C7ED5000000000000004C0
+t1405611344
+s1216
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/en.lproj/Localizable.strings
+c0000000053C7ED5000000000000004AB
+t1405611344
+s1195
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-40.png
+c0000000053C7ED500000000000000FF2
+t1405611344
+s4082
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-40@2x.png
+c0000000053C7ED500000000000001CF3
+t1405611344
+s7411
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-50.png
+c0000000053C7ED50000000000000130A
+t1405611344
+s4874
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-50@2x.png
+c0000000053C7ED50000000000000258B
+t1405611344
+s9611
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-60.png
+c0000000053C7ED5000000000000016B3
+t1405611344
+s5811
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-60@2x.png
+c0000000053C7ED500000000000002E94
+t1405611344
+s11924
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-72.png
+c0000000053C7ED500000000000001350
+t1405611344
+s4944
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-72@2x.png
+c0000000053C7ED500000000000002DBA
+t1405611344
+s11706
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-76.png
+c0000000053C7ED500000000000001B71
+t1405611344
+s7025
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-76@2x.png
+c0000000053C7ED500000000000003B9E
+t1405611344
+s15262
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-small.png
+c0000000053C7ED500000000000000CDE
+t1405611344
+s3294
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-small@2x.png
+c0000000053C7ED5000000000000015E8
+t1405611344
+s5608
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon.png
+c0000000053C7ED500000000000000F3E
+t1405611344
+s3902
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon@2x.png
+c0000000053C7ED500000000000001EBD
+t1405611344
+s7869
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default-568h@2x~iphone.png
+c0000000053C7ED5000000000000085B1
+t1405611344
+s34225
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default-Landscape@2x~ipad.png
+c0000000053C7ED500000000000033D0A
+t1405611344
+s212234
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default-Landscape~ipad.png
+c0000000053C7ED5000000000000166A2
+t1405611344
+s91810
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default-Portrait@2x~ipad.png
+c0000000053C7ED500000000000033F7C
+t1405611344
+s212860
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default-Portrait~ipad.png
+c0000000053C7ED500000000000016641
+t1405611344
+s91713
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default@2x~iphone.png
+c0000000053C7ED500000000000007323
+t1405611344
+s29475
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default~iphone.png
+c0000000053C7ED50000000000000289A
+t1405611344
+s10394
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/demo-Info.plist
+c0000000053C7ED530000000000000A1B
+t1405611347
+s2587
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/demo-Prefix.pch
+c0000000053C7ED5000000000000003B9
+t1405611344
+s953
+
+N/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/main.m
+c0000000053C7ED500000000000000456
+t1405611344
+s1110
+
+N/var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch.pch
+t1405611350
+s5377320
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies4f3e11d52478b941^0f0a12d52478b941^---0#1#1#--18"Check dependencies36"A5D8F885-F732-4A75-967A-241D78CD5724-
+
+CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ActivityIndicator.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427304151.055881
+e427304151.091483
+r0
+xCompileC
+xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ActivityIndicator.o
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDV.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/MBProgressHUD.h
+o[1m/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m:15:17: [0m[0;1;31merror: [0m[1mimplicit conversion
+o      of an Objective-C pointer to 'BOOL *' (aka 'signed char *') is disallowed with ARC[0m
+o    BOOL* dim = [command.arguments objectAtIndex:1];
+o[0;1;32m                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o[0m[1m/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m:15:11: [0m[0;1;35mwarning: [0m[1mincompatible
+o      pointer types initializing 'BOOL *' (aka 'signed char *') with an expression of type 'id' [-Wincompatible-pointer-types][0m
+o    BOOL* dim = [command.arguments objectAtIndex:1];
+o[0;1;32m          ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o[0m[1m/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m:23:14: [0m[0;1;35mwarning: [0m[1mcomparison between
+o      pointer and integer ('BOOL *' (aka 'signed char *') and 'int')[0m
+o    if ([dim == true]) {
+o[0;1;32m         ~~~ ^  ~~~~
+o[0m[1m/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m:23:21: [0m[0;1;31merror: [0m[1mexpected identifier[0m
+o    if ([dim == true]) {
+o[0;1;32m                    ^
+o[0m[1m/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m:26:27: [0m[0;1;31merror: [0m[1mexpected identifier[0m
+o    else if ([dim == false]) {
+o[0;1;32m                          ^
+o[0m[1m/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m:55:56: [0m[0;1;31merror: [0m[1muse of undeclared
+o      identifier 'label'[0m
+o    else if ([type isEqual: @"determinate-label"] && ![label length] == 0) {
+o[0;1;32m                                                       ^
+o[0m2 warnings and 4 errors generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection166"Compile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m249"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ActivityIndicator.o [1mdemo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerc4770ed72478b941^2f6a17d72478b941^-2245"[1m/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m:15:17: [0m[0;1;31merror: [0m[1mimplicit conversion      of an Objective-C pointer to 'BOOL *' (aka 'signed char *') is disallowed with ARC[0m    BOOL* dim = [command.arguments objectAtIndex:1];[0;1;32m                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1m/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m:15:11: [0m[0;1;35mwarning: [0m[1mincompatible      pointer types initializing 'BOOL *' (aka 'signed char *') with an expression of type 'id' [-Wincompatible-pointer-types][0m    BOOL* dim = [command.arguments objectAtIndex:1];[0;1;32m          ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1m/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m:23:14: [0m[0;1;35mwarning: [0m[1mcomparison between      pointer and integer ('BOOL *' (aka 'signed char *') and 'int')[0m    if ([dim == true]) {[0;1;32m         ~~~ ^  ~~~~[0m[1m/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m:23:21: [0m[0;1;31merror: [0m[1mexpected identifier[0m    if ([dim == true]) {[0;1;32m                    ^[0m[1m/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m:26:27: [0m[0;1;31merror: [0m[1mexpected identifier[0m    else if ([dim == false]) {[0;1;32m                          ^[0m[1m/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m:55:56: [0m[0;1;31merror: [0m[1muse of undeclared      identifier 'label'[0m    else if ([type isEqual: @"determinate-label"] && ![label length] == 0) {[0;1;32m                                                       ^[0m2 warnings and 4 errors generated.6(36%IDEClangDiagnosticActivityLogMessage2@102"Implicit conversion of an Objective-C pointer to 'BOOL *' (aka 'signed char *') is disallowed with ARC-427304151#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@165"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m0000000000000000^14#16#14#16#300#0#16"ARC Restrictions1(3@165"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m0000000000000000^14#16#14#51#300#34#-2@102"Incompatible pointer types initializing 'BOOL *' (aka 'signed char *') with an expression of type 'id'-427304151#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@165"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m0000000000000000^14#10#14#10#294#0#14"Semantic Issue1(3@165"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m0000000000000000^14#16#14#51#300#34#-2@81"Comparison between pointer and integer ('BOOL *' (aka 'signed char *') and 'int')-427304151#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@165"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m0000000000000000^22#13#22#13#611#0#14"Semantic Issue2(3@165"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m0000000000000000^22#9#22#12#607#0#3@165"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m0000000000000000^22#16#22#20#614#0#-2@19"Expected identifier-427304151#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic3@165"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m0000000000000000^22#20#22#20#618#0#11"Parse Issue--2@19"Expected identifier-427304151#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic3@165"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m0000000000000000^25#26#25#26#707#0#11"Parse Issue--2@36"Use of undeclared identifier 'label'-427304151#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic3@165"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m0000000000000000^54#55#54#55#1864#0#14"Semantic Issue--0#0#1#-19%DVTDocumentLocation4@165"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m0000000000000000^4748"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ActivityIndicator.o [1mdemo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ActivityIndicator.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ActivityIndicator.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/ActivityIndicator.m -o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ActivityIndicator.o36"7051C11C-A206-4DC3-87A6-FA02284DEC34-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427304150.985375
+e427304151.055575
+r1
+xCompileC
+xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/AppDelegate.m
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/AppDelegate.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Compile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/AppDelegate.m203"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o [1mdemo/Classes/AppDelegate.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler745dfcd62478b941^b03a0ed72478b941^---0#0#1#-19%DVTDocumentLocation2@125"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/AppDelegate.m0000000000000000^4644"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o [1mdemo/Classes/AppDelegate.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/AppDelegate.m -o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o36"60385543-09DB-4000-8E88-AF526EF7F12B-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427304151.055819
+e427304151.192696
+r1
+xCompileC
+xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDV.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection150"Compile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m225"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o [1mdemo/Plugins/org.apache.cordova.device/CDVDevice.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerfe620ed72478b941^04cb31d72478b941^---0#0#1#-19%DVTDocumentLocation2@149"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m0000000000000000^4684"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o [1mdemo/Plugins/org.apache.cordova.device/CDVDevice.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m -o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o36"E0983DEC-845B-42E6-8C33-B9B3E845AEB7-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427304151.046778
+e427304151.192678
+r1
+xCompileC
+xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDV.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection151"Compile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m226"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o [1mdemo/Plugins/org.apache.cordova.console/CDVLogger.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerc91f0cd72478b941^485331d72478b941^---0#0#1#-19%DVTDocumentLocation2@150"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m0000000000000000^4686"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o [1mdemo/Plugins/org.apache.cordova.console/CDVLogger.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m -o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o36"93B05156-F30F-414B-9BA5-AB2B0C3CA526-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427304150.985831
+e427304151.055645
+r1
+xCompileC
+xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection147"Compile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m226"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o [1mdemo/Plugins/com.ionic.keyboard/IonicKeyboard.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler758ffcd62478b941^43e113d72478b941^---0#0#1#-19%DVTDocumentLocation2@146"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m0000000000000000^4694"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o [1mdemo/Plugins/com.ionic.keyboard/IonicKeyboard.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m -o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o36"A0247394-BD79-4A69-A4A7-11BB733687C0-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/MBProgressHUD.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427304151.068256
+e427304151.293686
+r1
+xCompileC
+xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/MBProgressHUD.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/MBProgressHUD.m
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/MBProgressHUD.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection162"Compile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/MBProgressHUD.m241"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o [1mdemo/Plugins/org.pbernasconi.activityIndicator/MBProgressHUD.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerb29b11d72478b941^e8304bd72478b941^---0#0#1#-19%DVTDocumentLocation2@161"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/MBProgressHUD.m0000000000000000^4724"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o [1mdemo/Plugins/org.pbernasconi.activityIndicator/MBProgressHUD.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/org.pbernasconi.activityIndicator/MBProgressHUD.m -o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o36"DBAB61D4-960F-4A6E-9A6B-BC78D2C7BABB-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427304150.985608
+e427304151.046518
+r1
+xCompileC
+xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.m
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection133"Compile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.m217"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o [1mdemo/Classes/MainViewController.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler5184fcd62478b941^21e90bd72478b941^---0#0#1#-19%DVTDocumentLocation2@132"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.m0000000000000000^4686"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o [1mdemo/Classes/MainViewController.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.m -o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o36"8D744A14-422C-46EF-955B-679B685E6685-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427304151.013430
+e427304151.068062
+r1
+xCompileC
+xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection152"Compile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m236"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o [1mdemo/Plugins/com.ionic.keyboard/UIWebViewExtension.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerd49903d72478b941^134914d72478b941^---0#0#1#-19%DVTDocumentLocation2@151"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m0000000000000000^4724"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o [1mdemo/Plugins/com.ionic.keyboard/UIWebViewExtension.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m -o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o36"48B527AA-68F0-46DE-B0A4-0902F68183AD-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427304150.985098
+e427304151.013060
+r1
+xCompileC
+xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/main.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Compile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/main.m181"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o [1mdemo/main.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler1349fcd62478b941^3a5803d72478b941^---0#0#1#-19%DVTDocumentLocation2@110"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/main.m0000000000000000^4586"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o [1mdemo/main.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/main.m -o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o36"93219867-1643-4398-99E9-61427BB12B55-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCompileXIB /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.xib
+s427304149.281392
+e427304150.718724
+r1
+xCompileXIB
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.xib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection137"Compiling /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.xib62"[1mCompileXIB[0m [1mdemo/Classes/MainViewController.xib[0m5c3c48d52478b941^2200b8d62478b941^---0#0#1#-19%DVTDocumentLocation2@134"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.xib0000000000000000^1303"[1mCompileXIB[0m [1mdemo/Classes/MainViewController.xib[0m    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 6.0 --output-format human-readable-text --compile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/MainViewController.nib /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Classes/MainViewController.xib36"EEB054A1-75FD-4A48-BD66-AFA92AE5DFF7-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCopyStringsFile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/de.lproj/Localizable.strings demo/Resources/de.lproj/Localizable.strings
+s427304149.282665
+e427304149.286530
+r1
+xCopyStringsFile
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/de.lproj/Localizable.strings
+xdemo/Resources/de.lproj/Localizable.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy demo/Resources/de.lproj/Localizable.strings120"[1mCopyStringsFile[0m build/emulator/demo.app/de.lproj/Localizable.strings demo/Resources/de.lproj/Localizable.strings5e8148d52478b941^7f8849d52478b941^---0#0#1#-19%DVTDocumentLocation2@142"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/de.lproj/Localizable.strings0000000000000000^1051"[1mCopyStringsFile[0m build/emulator/demo.app/de.lproj/Localizable.strings demo/Resources/de.lproj/Localizable.strings    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/de.lproj -- demo/Resources/de.lproj/Localizable.strings36"1F358FEB-B3CA-4391-A24F-5D6B51E4555D-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCopyStringsFile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/en.lproj/Localizable.strings demo/Resources/en.lproj/Localizable.strings
+s427304149.280868
+e427304149.284435
+r1
+xCopyStringsFile
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/en.lproj/Localizable.strings
+xdemo/Resources/en.lproj/Localizable.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy demo/Resources/en.lproj/Localizable.strings120"[1mCopyStringsFile[0m build/emulator/demo.app/en.lproj/Localizable.strings demo/Resources/en.lproj/Localizable.strings670f48d52478b941^123149d52478b941^---0#0#1#-19%DVTDocumentLocation2@142"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/en.lproj/Localizable.strings0000000000000000^1051"[1mCopyStringsFile[0m build/emulator/demo.app/en.lproj/Localizable.strings demo/Resources/en.lproj/Localizable.strings    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/en.lproj -- demo/Resources/en.lproj/Localizable.strings36"506C8ACC-DC93-49A9-A0DA-D2A4B69D7F42-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon-40.png build/emulator/demo.app/icon-40.png
+s427304149.286950
+e427304149.288109
+r1
+xCpResource
+xdemo/Resources/icons/icon-40.png
+xbuild/emulator/demo.app/icon-40.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/demo.app/icon-40.png87"[1mCpResource[0m demo/Resources/icons/icon-40.png build/emulator/demo.app/icon-40.pngee9549d52478b941^51c149d52478b941^---0#0#1#-19%DVTDocumentLocation2@134"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-40.png0034842ddeffdf42^1109"[1mCpResource[0m demo/Resources/icons/icon-40.png build/emulator/demo.app/icon-40.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-40.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"D255C491-8C72-49CB-BC03-52130430DB87-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon-40@2x.png build/emulator/demo.app/icon-40@2x.png
+s427304149.279452
+e427304149.280684
+r1
+xCpResource
+xdemo/Resources/icons/icon-40@2x.png
+xbuild/emulator/demo.app/icon-40@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/demo.app/icon-40@2x.png93"[1mCpResource[0m demo/Resources/icons/icon-40@2x.png build/emulator/demo.app/icon-40@2x.png669f47d52478b941^cf2d48d52478b941^---0#0#1#-19%DVTDocumentLocation2@137"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-40@2x.png0034842ddeffdf42^1118"[1mCpResource[0m demo/Resources/icons/icon-40@2x.png build/emulator/demo.app/icon-40@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-40@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"182F8F51-9B9C-4A66-8287-9C4D1D92A620-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon-50.png build/emulator/demo.app/icon-50.png
+s427304149.281924
+e427304149.283682
+r1
+xCpResource
+xdemo/Resources/icons/icon-50.png
+xbuild/emulator/demo.app/icon-50.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/demo.app/icon-50.png87"[1mCpResource[0m demo/Resources/icons/icon-50.png build/emulator/demo.app/icon-50.png395f48d52478b941^100749d52478b941^---0#0#1#-19%DVTDocumentLocation2@134"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-50.png0034842ddeffdf42^1109"[1mCpResource[0m demo/Resources/icons/icon-50.png build/emulator/demo.app/icon-50.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-50.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"6E2F5053-ED5E-48FF-8966-960EC56D1F80-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon-50@2x.png build/emulator/demo.app/icon-50@2x.png
+s427304149.288892
+e427304149.289998
+r1
+xCpResource
+xdemo/Resources/icons/icon-50@2x.png
+xbuild/emulator/demo.app/icon-50@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/demo.app/icon-50@2x.png93"[1mCpResource[0m demo/Resources/icons/icon-50@2x.png build/emulator/demo.app/icon-50@2x.png8c144ad52478b941^e63d4ad52478b941^---0#0#1#-19%DVTDocumentLocation2@137"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-50@2x.png0034842ddeffdf42^1118"[1mCpResource[0m demo/Resources/icons/icon-50@2x.png build/emulator/demo.app/icon-50@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-50@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"ED3877DE-FFCC-474E-BF23-4B70740AF8EB-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon-60.png build/emulator/demo.app/icon-60.png
+s427304149.287594
+e427304149.288991
+r1
+xCpResource
+xdemo/Resources/icons/icon-60.png
+xbuild/emulator/demo.app/icon-60.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/demo.app/icon-60.png87"[1mCpResource[0m demo/Resources/icons/icon-60.png build/emulator/demo.app/icon-60.png93c549d52478b941^d5034ad52478b941^---0#0#1#-19%DVTDocumentLocation2@134"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-60.png0034842ddeffdf42^1109"[1mCpResource[0m demo/Resources/icons/icon-60.png build/emulator/demo.app/icon-60.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-60.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"105CC7FA-0C6B-4024-8676-068FCD259EAE-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon-60@2x.png build/emulator/demo.app/icon-60@2x.png
+s427304149.282197
+e427304149.283861
+r1
+xCpResource
+xdemo/Resources/icons/icon-60@2x.png
+xbuild/emulator/demo.app/icon-60@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/demo.app/icon-60@2x.png93"[1mCpResource[0m demo/Resources/icons/icon-60@2x.png build/emulator/demo.app/icon-60@2x.png736948d52478b941^8b1949d52478b941^---0#0#1#-19%DVTDocumentLocation2@137"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-60@2x.png0034842ddeffdf42^1118"[1mCpResource[0m demo/Resources/icons/icon-60@2x.png build/emulator/demo.app/icon-60@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-60@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"117618C9-20E1-4D97-AFEC-6F4B6A30F5D7-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon-72.png build/emulator/demo.app/icon-72.png
+s427304149.279677
+e427304149.281200
+r1
+xCpResource
+xdemo/Resources/icons/icon-72.png
+xbuild/emulator/demo.app/icon-72.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/demo.app/icon-72.png87"[1mCpResource[0m demo/Resources/icons/icon-72.png build/emulator/demo.app/icon-72.pngecbe47d52478b941^3f8c48d52478b941^---0#0#1#-19%DVTDocumentLocation2@134"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-72.png0034842ddeffdf42^1109"[1mCpResource[0m demo/Resources/icons/icon-72.png build/emulator/demo.app/icon-72.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-72.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"9A9A932D-1794-47AD-8936-8887104FF5FD-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon-72@2x.png build/emulator/demo.app/icon-72@2x.png
+s427304149.289948
+e427304149.290980
+r1
+xCpResource
+xdemo/Resources/icons/icon-72@2x.png
+xbuild/emulator/demo.app/icon-72@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/demo.app/icon-72@2x.png93"[1mCpResource[0m demo/Resources/icons/icon-72@2x.png build/emulator/demo.app/icon-72@2x.png7a524ad52478b941^fe7d4ad52478b941^---0#0#1#-19%DVTDocumentLocation2@137"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-72@2x.png0034842ddeffdf42^1118"[1mCpResource[0m demo/Resources/icons/icon-72@2x.png build/emulator/demo.app/icon-72@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-72@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"5423D898-745D-4A6E-AE3D-EFDABF732459-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon-76.png build/emulator/demo.app/icon-76.png
+s427304149.279322
+e427304149.280717
+r1
+xCpResource
+xdemo/Resources/icons/icon-76.png
+xbuild/emulator/demo.app/icon-76.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/demo.app/icon-76.png87"[1mCpResource[0m demo/Resources/icons/icon-76.png build/emulator/demo.app/icon-76.png459b47d52478b941^3f3b48d52478b941^---0#0#1#-19%DVTDocumentLocation2@134"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-76.png0034842ddeffdf42^1109"[1mCpResource[0m demo/Resources/icons/icon-76.png build/emulator/demo.app/icon-76.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-76.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"A6CF3A91-6BE4-43DD-9157-BD55C4D826FB-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon-76@2x.png build/emulator/demo.app/icon-76@2x.png
+s427304149.289449
+e427304149.290873
+r1
+xCpResource
+xdemo/Resources/icons/icon-76@2x.png
+xbuild/emulator/demo.app/icon-76@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/demo.app/icon-76@2x.png93"[1mCpResource[0m demo/Resources/icons/icon-76@2x.png build/emulator/demo.app/icon-76@2x.png8b374ad52478b941^fb764ad52478b941^---0#0#1#-19%DVTDocumentLocation2@137"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-76@2x.png0034842ddeffdf42^1118"[1mCpResource[0m demo/Resources/icons/icon-76@2x.png build/emulator/demo.app/icon-76@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-76@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"A3F1C66C-4EA3-45F6-A977-7390E29BA754-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon-small.png build/emulator/demo.app/icon-small.png
+s427304149.283392
+e427304149.285165
+r1
+xCpResource
+xdemo/Resources/icons/icon-small.png
+xbuild/emulator/demo.app/icon-small.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/demo.app/icon-small.png93"[1mCpResource[0m demo/Resources/icons/icon-small.png build/emulator/demo.app/icon-small.pnga9c148d52478b941^706149d52478b941^---0#0#1#-19%DVTDocumentLocation2@137"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-small.png0034842ddeffdf42^1118"[1mCpResource[0m demo/Resources/icons/icon-small.png build/emulator/demo.app/icon-small.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-small.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"27219432-0136-48DB-8E43-7BC750D9923B-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon-small@2x.png build/emulator/demo.app/icon-small@2x.png
+s427304149.285554
+e427304149.287244
+r1
+xCpResource
+xdemo/Resources/icons/icon-small@2x.png
+xbuild/emulator/demo.app/icon-small@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy build/emulator/demo.app/icon-small@2x.png99"[1mCpResource[0m demo/Resources/icons/icon-small@2x.png build/emulator/demo.app/icon-small@2x.pngd84949d52478b941^649249d52478b941^---0#0#1#-19%DVTDocumentLocation2@140"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon-small@2x.png0034842ddeffdf42^1127"[1mCpResource[0m demo/Resources/icons/icon-small@2x.png build/emulator/demo.app/icon-small@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon-small@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"DF6CDD05-CE5B-4711-BB63-7711CA02AE37-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon.png build/emulator/demo.app/icon.png
+s427304149.280106
+e427304149.282004
+r1
+xCpResource
+xdemo/Resources/icons/icon.png
+xbuild/emulator/demo.app/icon.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Copy build/emulator/demo.app/icon.png81"[1mCpResource[0m demo/Resources/icons/icon.png build/emulator/demo.app/icon.png1adf47d52478b941^f1bc48d52478b941^---0#0#1#-19%DVTDocumentLocation2@131"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon.png0034842ddeffdf42^1100"[1mCpResource[0m demo/Resources/icons/icon.png build/emulator/demo.app/icon.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"CC9FF6B9-B600-4B27-B44E-7BBE4BDB2515-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/icons/icon@2x.png build/emulator/demo.app/icon@2x.png
+s427304149.280462
+e427304149.281966
+r1
+xCpResource
+xdemo/Resources/icons/icon@2x.png
+xbuild/emulator/demo.app/icon@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/demo.app/icon@2x.png87"[1mCpResource[0m demo/Resources/icons/icon@2x.png build/emulator/demo.app/icon@2x.pngafeb47d52478b941^47ad48d52478b941^---0#0#1#-19%DVTDocumentLocation2@134"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/icon@2x.png0034842ddeffdf42^1109"[1mCpResource[0m demo/Resources/icons/icon@2x.png build/emulator/demo.app/icon@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/icons/icon@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"C3CC7A42-C9D9-40D6-B364-BC00540B3707-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/splash/Default-568h@2x~iphone.png build/emulator/demo.app/Default-568h@2x~iphone.png
+s427304149.288417
+e427304149.289616
+r1
+xCpResource
+xdemo/Resources/splash/Default-568h@2x~iphone.png
+xbuild/emulator/demo.app/Default-568h@2x~iphone.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy build/emulator/demo.app/Default-568h@2x~iphone.png118"[1mCpResource[0m demo/Resources/splash/Default-568h@2x~iphone.png build/emulator/demo.app/Default-568h@2x~iphone.png9cf949d52478b941^63254ad52478b941^---0#0#1#-19%DVTDocumentLocation2@149"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default-568h@2x~iphone.png0034842ddeffdf42^1156"[1mCpResource[0m demo/Resources/splash/Default-568h@2x~iphone.png build/emulator/demo.app/Default-568h@2x~iphone.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default-568h@2x~iphone.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"43046C71-BCD0-4744-B34C-14DCACE8A2A1-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/demo.app/Default-Landscape@2x~ipad.png
+s427304149.284043
+e427304149.286573
+r1
+xCpResource
+xdemo/Resources/splash/Default-Landscape@2x~ipad.png
+xbuild/emulator/demo.app/Default-Landscape@2x~ipad.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy build/emulator/demo.app/Default-Landscape@2x~ipad.png124"[1mCpResource[0m demo/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/demo.app/Default-Landscape@2x~ipad.png97e448d52478b941^568249d52478b941^---0#0#1#-19%DVTDocumentLocation2@152"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default-Landscape@2x~ipad.png0034842ddeffdf42^1165"[1mCpResource[0m demo/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/demo.app/Default-Landscape@2x~ipad.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default-Landscape@2x~ipad.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"D8E2482B-3D9D-4258-AE01-74944E93F4D3-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/splash/Default-Landscape~ipad.png build/emulator/demo.app/Default-Landscape~ipad.png
+s427304149.284271
+e427304149.286150
+r1
+xCpResource
+xdemo/Resources/splash/Default-Landscape~ipad.png
+xbuild/emulator/demo.app/Default-Landscape~ipad.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy build/emulator/demo.app/Default-Landscape~ipad.png118"[1mCpResource[0m demo/Resources/splash/Default-Landscape~ipad.png build/emulator/demo.app/Default-Landscape~ipad.pnga1f548d52478b941^0b7c49d52478b941^---0#0#1#-19%DVTDocumentLocation2@149"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default-Landscape~ipad.png0034842ddeffdf42^1156"[1mCpResource[0m demo/Resources/splash/Default-Landscape~ipad.png build/emulator/demo.app/Default-Landscape~ipad.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default-Landscape~ipad.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"CAB4551E-BB16-46BF-8016-9D4FABF450CB-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/demo.app/Default-Portrait@2x~ipad.png
+s427304149.285132
+e427304149.286542
+r1
+xCpResource
+xdemo/Resources/splash/Default-Portrait@2x~ipad.png
+xbuild/emulator/demo.app/Default-Portrait@2x~ipad.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy build/emulator/demo.app/Default-Portrait@2x~ipad.png122"[1mCpResource[0m demo/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/demo.app/Default-Portrait@2x~ipad.pngb01c49d52478b941^e78b49d52478b941^---0#0#1#-19%DVTDocumentLocation2@151"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default-Portrait@2x~ipad.png0034842ddeffdf42^1162"[1mCpResource[0m demo/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/demo.app/Default-Portrait@2x~ipad.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default-Portrait@2x~ipad.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"8FEB6F48-2D3B-431B-B19F-88DBF45ADBC1-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/splash/Default-Portrait~ipad.png build/emulator/demo.app/Default-Portrait~ipad.png
+s427304149.286104
+e427304149.287535
+r1
+xCpResource
+xdemo/Resources/splash/Default-Portrait~ipad.png
+xbuild/emulator/demo.app/Default-Portrait~ipad.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy build/emulator/demo.app/Default-Portrait~ipad.png116"[1mCpResource[0m demo/Resources/splash/Default-Portrait~ipad.png build/emulator/demo.app/Default-Portrait~ipad.png6e6d49d52478b941^9d9c49d52478b941^---0#0#1#-19%DVTDocumentLocation2@148"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default-Portrait~ipad.png0034842ddeffdf42^1153"[1mCpResource[0m demo/Resources/splash/Default-Portrait~ipad.png build/emulator/demo.app/Default-Portrait~ipad.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default-Portrait~ipad.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"93A0A87B-9AD9-44A1-AD7F-5A63374B42ED-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/splash/Default@2x~iphone.png build/emulator/demo.app/Default@2x~iphone.png
+s427304149.287397
+e427304149.288568
+r1
+xCpResource
+xdemo/Resources/splash/Default@2x~iphone.png
+xbuild/emulator/demo.app/Default@2x~iphone.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy build/emulator/demo.app/Default@2x~iphone.png108"[1mCpResource[0m demo/Resources/splash/Default@2x~iphone.png build/emulator/demo.app/Default@2x~iphone.png21b149d52478b941^1add49d52478b941^---0#0#1#-19%DVTDocumentLocation2@144"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default@2x~iphone.png0034842ddeffdf42^1141"[1mCpResource[0m demo/Resources/splash/Default@2x~iphone.png build/emulator/demo.app/Default@2x~iphone.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default@2x~iphone.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"639358BB-15F1-4520-ACC3-4BBF7D2BED00-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CCpResource demo/Resources/splash/Default~iphone.png build/emulator/demo.app/Default~iphone.png
+s427304149.288077
+e427304149.289245
+r1
+xCpResource
+xdemo/Resources/splash/Default~iphone.png
+xbuild/emulator/demo.app/Default~iphone.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Copy build/emulator/demo.app/Default~iphone.png102"[1mCpResource[0m demo/Resources/splash/Default~iphone.png build/emulator/demo.app/Default~iphone.png7fdd49d52478b941^0f0a4ad52478b941^---0#0#1#-19%DVTDocumentLocation2@141"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Default~iphone.png0034842ddeffdf42^1132"[1mCpResource[0m demo/Resources/splash/Default~iphone.png build/emulator/demo.app/Default~iphone.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/Resources/splash/Default~iphone.png /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app36"F528FE2F-8712-4A36-936E-B05B7BD4B0D9-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CGenerateDSYMFile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app.dSYM /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/demo
+r0
+
+CLd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/demo normal i386
+r0
+
+CPhaseScriptExecution Copy\ www\ directory /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.sh
+s427304149.074844
+e427304149.278956
+r1
+xPhaseScriptExecution
+xCopy www directory
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.sh
+o
+oreal	0m0.185s
+ouser	0m0.074s
+osys	0m0.108s
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'134"[1mPhaseScriptExecution[0m Copy\ www\ directory build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.sha46e13d52478b941^986947d52478b941^-42"real	0m0.185suser	0m0.074ssys	0m0.108s3(21%IDEActivityLogMessage2@14"real	0m0.185s-427304149#1#14#-0#-----2@14"user	0m0.074s-427304149#15#14#-0#-----2@13"sys	0m0.108s-427304149#29#13#-0#-----0#0#1#--426"[1mPhaseScriptExecution[0m Copy\ www\ directory build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.sh    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    /bin/sh -c /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.sh36"27590082-579F-4C77-A474-D63C1947A902-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CProcessInfoPlistFile /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Info.plist /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/demo-Info.plist
+s427304149.071271
+e427304149.073523
+r1
+xProcessInfoPlistFile
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Info.plist
+x/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/demo-Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Process /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/demo-Info.plist92"[1mProcessInfoPlistFile[0m build/emulator/demo.app/Info.plist [1mdemo/demo-Info.plist[0m605812d52478b941^b47514d52478b941^---0#0#1#-19%DVTDocumentLocation2@119"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/demo-Info.plist0000000000000000^1231"[1mProcessInfoPlistFile[0m build/emulator/demo.app/Info.plist [1mdemo/demo-Info.plist[0m    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-infoPlistUtility /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/demo-Info.plist -genpkginfo /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app/Info.plist36"B58BC45A-2C40-4298-BCB7-DFA606CFCB19-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CProcessPCH /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch.pch demo/demo-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s427304150.719371
+e427304150.984476
+r1
+xProcessPCH
+x/var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch.pch
+xdemo/demo-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/demo-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile demo/demo-Prefix.pch286"[1mProcessPCH[0m /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch.pch demo/demo-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler4f3fb8d62478b941^dd07fcd62478b941^---0#0#1#-19%DVTDocumentLocation2@119"file:///Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/demo-Prefix.pch0000000000000000^4549"[1mProcessPCH[0m /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch.pch demo/demo-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator --serialize-diagnostics /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch.d -c /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/demo/demo-Prefix.pch -o /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-bgqrqjpohqfoqndztypywbnpemtu/demo-Prefix.pch.pch36"8B321649-8A4C-4F50-BDA0-BE00A867EA76-
+b9CAC6145-20CD-4459-9AF8-DB6813702E93
+
+CTouch /Users/paolob/Desktop/Projects/cordova-plugins/cordova-activityindicator/demo/platforms/ios/build/emulator/demo.app
+r0
+

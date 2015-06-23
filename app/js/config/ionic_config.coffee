@@ -6,7 +6,7 @@ app.config ($ionicConfigProvider) ->
   # $ionicConfigProvider.backButton.icon('ion-ios7-arrow-back')
   # $ionicConfigProvider.backButton.text($translateProvider.instant("GO_BACK"))
   # $ionicConfigProvider.backButton.previousTitleText(false)
-  # $ionicConfigProvider.navBar.alignTitle('center')
+  $ionicConfigProvider.navBar.alignTitle('center')
   # $ionicConfigProvider.navBar.positionPrimaryButtons('left')
   # $ionicConfigProvider.navBar.positionSecondaryButtons('right')
 

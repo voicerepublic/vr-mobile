@@ -1,5 +1,5 @@
 // Ionicons
-$ionicons-font-path: "../components/ionic/release/fonts";
+$ionicons-font-path: "../components/ionic/fonts";
 @import "../../assets/components/ionic/scss/ionicons/ionicons.scss";
 
 // Variables
@@ -25,6 +25,8 @@ $ionicons-font-path: "../components/ionic/release/fonts";
 @import "../../assets/components/ionic/scss/list";
 @import "../../assets/components/ionic/scss/badge";
 @import "../../assets/components/ionic/scss/slide-box";
+@import "../../assets/components/ionic/scss/refresher";
+@import "../../assets/components/ionic/scss/spinner";
 
 // Forms
 @import "../../assets/components/ionic/scss/form";
