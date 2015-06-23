@@ -7,7 +7,7 @@ os = require("os")
 module.exports = new class GulpConfig
   constructor: ->
     @_GLOBALS_DEFAULTS = {
-      defaults: {
+      defaults: { 
         BUNDLE_VERSION: "1.0.0"
 
         # Change to "1" if you want to use Crosswalk on Android.
@@ -22,6 +22,9 @@ module.exports = new class GulpConfig
 
         # The name of your angular app you're going to use in `angular.module("")`
         ANGULAR_APP_NAME: "voicerepublic"
+
+        # ngCordova
+        NGCORDOVA: "ngCordova"
 
         # Base path to this project's directory. Generated automatically.
         APP_ROOT: execSync("pwd").stdout.trim() + "/"
@@ -137,6 +140,7 @@ module.exports = new class GulpConfig
     # The filtered globals will be available under GulpConfig.PUBLIC_GLOBALS.
     @_PUBLIC_GLOBALS_KEYS = [
       "ANGULAR_APP_NAME"
+      "NGCORDOVA"
       "BUNDLE_NAME"
       "BUNDLE_VERSION"
       "CODE_VERSION"
@@ -180,6 +184,10 @@ module.exports = new class GulpConfig
 
           # Here add any vendor files that should be included in vendor.js
           "assets/components/ngCordova/dist/ng-cordova.js"
+          "assets/components/angular-timer/app/js/_timer.js"
+          "assets/components/angular-timer/app/js/i18nService.js"
+          "assets/components/humanize-duration/humanize-duration.js"
+          "assets/components/momentjs/moment.js"
 
           # Google Analytics support (for both in-browser and Cordova app)
           "assets/components/angulartics/src/angulartics.js"

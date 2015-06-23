@@ -6,7 +6,6 @@ os = require 'os'
 
 {GLOBALS, PUBLIC_GLOBALS, PATHS, DESTINATIONS} = require "../../config"
 
-
 gulp.task "build-test", false, (cb) ->
   runSequence ["clean"],
     [
