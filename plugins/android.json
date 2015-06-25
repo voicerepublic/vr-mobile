@@ -41,10 +41,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"ProgressIndicator\"><param name=\"android-package\" value=\"org.apache.cordova.plugin.ProgressIndicator\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"UniversalAnalytics\"><param name=\"android-package\" value=\"com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin\" /></feature>",
                             "count": 1
                         }
@@ -112,9 +108,6 @@
             "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
         },
         "org.apache.cordova.splashscreen": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
-        },
-        "org.pbernasconi.progressindicator": {
             "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
         },
         "cordova-plugin-google-analytics": {

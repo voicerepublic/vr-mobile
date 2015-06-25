@@ -1,1046 +1,0 @@
-Tdemo
-v6
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Info.plist /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/demo-Info.plist
-cPhaseScriptExecution Copy\ www\ directory /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.sh
-cCpResource demo/Resources/icons/icon-76.png build/emulator/demo.app/icon-76.png
-cCpResource demo/Resources/icons/icon-40@2x.png build/emulator/demo.app/icon-40@2x.png
-cCpResource demo/Resources/icons/icon-72.png build/emulator/demo.app/icon-72.png
-cCpResource demo/Resources/icons/icon.png build/emulator/demo.app/icon.png
-cCpResource demo/Resources/icons/icon@2x.png build/emulator/demo.app/icon@2x.png
-cCompileXIB /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.xib
-cCopyStringsFile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/en.lproj/Localizable.strings demo/Resources/en.lproj/Localizable.strings
-cCpResource demo/Resources/icons/icon-50.png build/emulator/demo.app/icon-50.png
-cCpResource demo/Resources/icons/icon-60@2x.png build/emulator/demo.app/icon-60@2x.png
-cCopyStringsFile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/de.lproj/Localizable.strings demo/Resources/de.lproj/Localizable.strings
-cCpResource demo/Resources/icons/icon-small.png build/emulator/demo.app/icon-small.png
-cCpResource demo/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/demo.app/Default-Landscape@2x~ipad.png
-cCpResource demo/Resources/splash/Default-Landscape~ipad.png build/emulator/demo.app/Default-Landscape~ipad.png
-cCpResource demo/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/demo.app/Default-Portrait@2x~ipad.png
-cCpResource demo/Resources/icons/icon-small@2x.png build/emulator/demo.app/icon-small@2x.png
-cCpResource demo/Resources/splash/Default-Portrait~ipad.png build/emulator/demo.app/Default-Portrait~ipad.png
-cCpResource demo/Resources/icons/icon-40.png build/emulator/demo.app/icon-40.png
-cCpResource demo/Resources/splash/Default@2x~iphone.png build/emulator/demo.app/Default@2x~iphone.png
-cCpResource demo/Resources/icons/icon-60.png build/emulator/demo.app/icon-60.png
-cCpResource demo/Resources/splash/Default~iphone.png build/emulator/demo.app/Default~iphone.png
-cCpResource demo/Resources/splash/Default-568h@2x~iphone.png build/emulator/demo.app/Default-568h@2x~iphone.png
-cCpResource demo/Resources/icons/icon-50@2x.png build/emulator/demo.app/icon-50@2x.png
-cCpResource demo/Resources/icons/icon-76@2x.png build/emulator/demo.app/icon-76@2x.png
-cCpResource demo/Resources/icons/icon-72@2x.png build/emulator/demo.app/icon-72@2x.png
-cProcessPCH /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch.pch demo/demo-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/MBProgressHUD.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ProgressIndicator.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/ProgressIndicator.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/demo normal i386
-cGenerateDSYMFile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app.dSYM /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/demo
-cTouch /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
-c00000000536B08300000000000000198
-t1399523376
-s408
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
-c00000000533AEEDE00000000000003B4
-t1396371166
-s948
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
-c00000000533AEEE2000000000000019E
-t1396371170
-s414
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
-c00000000533AEEE20000000000059340
-t1396371170
-s365376
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c00000000536B08070000000000446820
-t1399523335
-s4483104
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
-c00000000533AEEE200000000000F1A80
-t1396371170
-s989824
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-c00000000533AEEE400000000001BE790
-t1396371172
-s1828752
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o
-t1405639882
-s77432
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o
-t1405639882
-s50376
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o
-t1405639882
-s41572
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o
-t1405639882
-s63772
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o
-t1405639882
-s190172
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o
-t1405639882
-s51608
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ProgressIndicator.o
-t1405639882
-s79100
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o
-t1405639882
-s46340
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/demo.LinkFileList
-c0000000053C85CC9000000000000056E
-t1405639881
-s1390
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o
-t1405639882
-s3012
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.sh
-c0000000053C85CC9000000000000002D
-t1405639881
-s45
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app
-t1405639882
-s1020
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app.dSYM
-t2
-s0
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default-568h@2x~iphone.png
-t1405639881
-s34225
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default-Landscape@2x~ipad.png
-t1405639881
-s212234
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default-Landscape~ipad.png
-t1405639881
-s91810
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default-Portrait@2x~ipad.png
-t1405639881
-s212860
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default-Portrait~ipad.png
-t1405639881
-s91713
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default@2x~iphone.png
-t1405639881
-s29475
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default~iphone.png
-t1405639881
-s10394
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Info.plist
-t1405639881
-s1283
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/MainViewController.nib
-t1405639881
-s836
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/PkgInfo
-t2
-s0
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/de.lproj/Localizable.strings
-t1405639881
-s280
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/demo
-t1405639882
-s410812
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/en.lproj/Localizable.strings
-t1405639881
-s166
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-40.png
-t1405639881
-s4082
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-40@2x.png
-t1405639881
-s7411
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-50.png
-t1405639881
-s4874
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-50@2x.png
-t1405639881
-s9611
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-60.png
-t1405639881
-s5811
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-60@2x.png
-t1405639881
-s11924
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-72.png
-t1405639881
-s4944
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-72@2x.png
-t1405639881
-s11706
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-76.png
-t1405639881
-s7025
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-76@2x.png
-t1405639881
-s15262
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-small.png
-t1405639881
-s3294
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-small@2x.png
-t1405639881
-s5608
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon.png
-t1405639881
-s3902
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon@2x.png
-t1405639881
-s7869
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/libCordova.a
-c0000000053C85CC900000000000D46D8
-t1405639881
-s870104
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/AppDelegate.m
-c0000000053C85CB60000000000001763
-t1405639862
-s5987
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.m
-c0000000053C85CB60000000000001265
-t1405639862
-s4709
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.xib
-c0000000053C85CB60000000000001759
-t1405639862
-s5977
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m
-c0000000053C85CB70000000000001357
-t1405639863
-s4951
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m
-c0000000053C85CB70000000000000D93
-t1405639863
-s3475
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m
-c0000000053C85CB70000000000000490
-t1405639863
-s1168
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m
-c0000000053C85CB70000000000000C22
-t1405639863
-s3106
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/MBProgressHUD.m
-c0000000053C85CB70000000000008108
-t1405639863
-s33032
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/ProgressIndicator.m
-c0000000053C85CB700000000000038BD
-t1405639863
-s14525
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/de.lproj/Localizable.strings
-c0000000053C85CB600000000000004C0
-t1405639862
-s1216
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/en.lproj/Localizable.strings
-c0000000053C85CB600000000000004AB
-t1405639862
-s1195
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-40.png
-c0000000053C85CB60000000000000FF2
-t1405639862
-s4082
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-40@2x.png
-c0000000053C85CB60000000000001CF3
-t1405639862
-s7411
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-50.png
-c0000000053C85CB6000000000000130A
-t1405639862
-s4874
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-50@2x.png
-c0000000053C85CB6000000000000258B
-t1405639862
-s9611
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-60.png
-c0000000053C85CB600000000000016B3
-t1405639862
-s5811
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-60@2x.png
-c0000000053C85CB60000000000002E94
-t1405639862
-s11924
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-72.png
-c0000000053C85CB60000000000001350
-t1405639862
-s4944
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-72@2x.png
-c0000000053C85CB60000000000002DBA
-t1405639862
-s11706
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-76.png
-c0000000053C85CB60000000000001B71
-t1405639862
-s7025
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-76@2x.png
-c0000000053C85CB60000000000003B9E
-t1405639862
-s15262
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-small.png
-c0000000053C85CB60000000000000CDE
-t1405639862
-s3294
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-small@2x.png
-c0000000053C85CB600000000000015E8
-t1405639862
-s5608
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon.png
-c0000000053C85CB60000000000000F3E
-t1405639862
-s3902
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon@2x.png
-c0000000053C85CB60000000000001EBD
-t1405639862
-s7869
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default-568h@2x~iphone.png
-c0000000053C85CB600000000000085B1
-t1405639862
-s34225
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default-Landscape@2x~ipad.png
-c0000000053C85CB60000000000033D0A
-t1405639862
-s212234
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default-Landscape~ipad.png
-c0000000053C85CB600000000000166A2
-t1405639862
-s91810
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default-Portrait@2x~ipad.png
-c0000000053C85CB60000000000033F7C
-t1405639862
-s212860
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default-Portrait~ipad.png
-c0000000053C85CB60000000000016641
-t1405639862
-s91713
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default@2x~iphone.png
-c0000000053C85CB60000000000007323
-t1405639862
-s29475
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default~iphone.png
-c0000000053C85CB6000000000000289A
-t1405639862
-s10394
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/demo-Info.plist
-c0000000053C85CC70000000000000A1B
-t1405639879
-s2587
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/demo-Prefix.pch
-c0000000053C85CB600000000000003B9
-t1405639862
-s953
-
-N/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/main.m
-c0000000053C85CB60000000000000456
-t1405639862
-s1110
-
-N/var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch.pch
-t1405639882
-s5376784
-
-CCheck dependencies
-r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesabcc84499478b941^121186499478b941^---0#1#1#--18"Check dependencies36"2793D8B4-4BAC-4F43-9065-0582FA84D9E8-
-
-CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427332682.283844
-e427332682.471439
-r1
-xCompileC
-xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/AppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/AppDelegate.m
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/AppDelegate.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/AppDelegate.m203"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o [1mdemo/Classes/AppDelegate.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler7ae2494a9478b941^8bc4784a9478b941^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/AppDelegate.m0000000000000000^4276"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o [1mdemo/Classes/AppDelegate.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/AppDelegate.m -o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o36"6AC51634-C405-421A-B70B-F043759825CA-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427332682.292191
-e427332682.493812
-r1
-xCompileC
-xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDV.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Compile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m225"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o [1mdemo/Plugins/org.apache.cordova.device/CDVDevice.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler02f54a4a9478b941^bef5814a9478b941^---0#0#1#-19%DVTDocumentLocation2@126"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m0000000000000000^4316"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o [1mdemo/Plugins/org.apache.cordova.device/CDVDevice.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.device/CDVDevice.m -o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o36"89FEF14F-36AD-43B0-81EC-A401F3ED4306-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427332682.291493
-e427332682.451582
-r1
-xCompileC
-xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDV.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Compile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m226"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o [1mdemo/Plugins/org.apache.cordova.console/CDVLogger.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compileradc24a4a9478b941^98a7734a9478b941^---0#0#1#-19%DVTDocumentLocation2@127"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m0000000000000000^4318"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o [1mdemo/Plugins/org.apache.cordova.console/CDVLogger.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.apache.cordova.console/CDVLogger.m -o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o36"67300326-87D7-4276-931C-CD96B2F16356-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427332682.289239
-e427332682.481506
-r1
-xCompileC
-xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Compile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m226"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o [1mdemo/Plugins/com.ionic.keyboard/IonicKeyboard.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilere8314a4a9478b941^e198814a9478b941^---0#0#1#-19%DVTDocumentLocation2@123"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m0000000000000000^4326"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o [1mdemo/Plugins/com.ionic.keyboard/IonicKeyboard.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/IonicKeyboard.m -o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o36"5BEE3EB2-EE1F-4C0A-B8AD-77AAE40BE2C3-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/MBProgressHUD.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427332682.293209
-e427332682.755571
-r1
-xCompileC
-xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/MBProgressHUD.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/MBProgressHUD.m
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/MBProgressHUD.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection139"Compile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/MBProgressHUD.m241"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o [1mdemo/Plugins/org.pbernasconi.progressIndicator/MBProgressHUD.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler12334b4a9478b941^5c56c14a9478b941^---0#0#1#-19%DVTDocumentLocation2@138"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/MBProgressHUD.m0000000000000000^4356"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o [1mdemo/Plugins/org.pbernasconi.progressIndicator/MBProgressHUD.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/MBProgressHUD.m -o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o36"7BA43446-D165-4F6B-AEC9-A4F53794387F-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427332682.287804
-e427332682.479126
-r1
-xCompileC
-xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.m
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.m217"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o [1mdemo/Classes/MainViewController.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler18ce494a9478b941^a9bf7a4a9478b941^---0#0#1#-19%DVTDocumentLocation2@109"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.m0000000000000000^4318"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o [1mdemo/Classes/MainViewController.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.m -o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o36"60E4FED8-BCEC-4827-A652-69F844583BA4-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ProgressIndicator.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/ProgressIndicator.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427332682.366129
-e427332682.531097
-r1
-xCompileC
-xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ProgressIndicator.o
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/ProgressIndicator.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/ProgressIndicator.m
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDV.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/ProgressIndicator.h
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/MBProgressHUD.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection143"Compile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/ProgressIndicator.m249"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ProgressIndicator.o [1mdemo/Plugins/org.pbernasconi.progressIndicator/ProgressIndicator.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler55df5d4a9478b941^4df6874a9478b941^---0#0#1#-19%DVTDocumentLocation2@142"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/ProgressIndicator.m0000000000000000^4380"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ProgressIndicator.o [1mdemo/Plugins/org.pbernasconi.progressIndicator/ProgressIndicator.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ProgressIndicator.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ProgressIndicator.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/org.pbernasconi.progressIndicator/ProgressIndicator.m -o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ProgressIndicator.o36"FAFFFE32-C0D1-44D6-B58D-5321CA313E6A-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427332682.290417
-e427332682.450310
-r1
-xCompileC
-xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection129"Compile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m236"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o [1mdemo/Plugins/com.ionic.keyboard/UIWebViewExtension.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerd8824a4a9478b941^535a734a9478b941^---0#0#1#-19%DVTDocumentLocation2@128"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m0000000000000000^4356"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o [1mdemo/Plugins/com.ionic.keyboard/UIWebViewExtension.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Plugins/com.ionic.keyboard/UIWebViewExtension.m -o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o36"1B958C61-D581-4202-9DB2-58424C207FCA-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCompileC build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427332682.283369
-e427332682.365786
-r1
-xCompileC
-xbuild/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/main.m
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/main.m181"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o [1mdemo/main.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler57b5484a9478b941^feee614a9478b941^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/main.m0000000000000000^4218"[1mCompileC[0m build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o [1mdemo/main.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -include /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch -MMD -MT dependencies -MF /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.dia -c /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/main.m -o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o36"4C4227F9-239A-454B-B2B2-BBC321C6815D-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCompileXIB /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.xib
-s427332681.832303
-e427332681.859733
-r1
-xCompileXIB
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.xib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compiling /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.xib62"[1mCompileXIB[0m [1mdemo/Classes/MainViewController.xib[0ma7add5499478b941^7218dc499478b941^---0#0#1#-19%DVTDocumentLocation2@111"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.xib0000000000000000^1234"[1mCompileXIB[0m [1mdemo/Classes/MainViewController.xib[0m    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 6.0 --output-format human-readable-text --compile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/MainViewController.nib /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Classes/MainViewController.xib36"732BF3DE-71DE-49CD-819D-0D392CDA018B-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCopyStringsFile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/de.lproj/Localizable.strings demo/Resources/de.lproj/Localizable.strings
-s427332681.835887
-e427332681.844785
-r1
-xCopyStringsFile
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/de.lproj/Localizable.strings
-xdemo/Resources/de.lproj/Localizable.strings
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy demo/Resources/de.lproj/Localizable.strings120"[1mCopyStringsFile[0m build/emulator/demo.app/de.lproj/Localizable.strings demo/Resources/de.lproj/Localizable.strings971dd6499478b941^d82bd8499478b941^---0#0#1#-19%DVTDocumentLocation2@119"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/de.lproj/Localizable.strings0000000000000000^1005"[1mCopyStringsFile[0m build/emulator/demo.app/de.lproj/Localizable.strings demo/Resources/de.lproj/Localizable.strings    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/de.lproj -- demo/Resources/de.lproj/Localizable.strings36"8ED7D36D-C091-45CE-B1A8-8A8600E9E579-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCopyStringsFile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/en.lproj/Localizable.strings demo/Resources/en.lproj/Localizable.strings
-s427332681.832851
-e427332681.845200
-r1
-xCopyStringsFile
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/en.lproj/Localizable.strings
-xdemo/Resources/en.lproj/Localizable.strings
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy demo/Resources/en.lproj/Localizable.strings120"[1mCopyStringsFile[0m build/emulator/demo.app/en.lproj/Localizable.strings demo/Resources/en.lproj/Localizable.strings374fd5499478b941^d8bad8499478b941^---0#0#1#-19%DVTDocumentLocation2@119"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/en.lproj/Localizable.strings0000000000000000^1005"[1mCopyStringsFile[0m build/emulator/demo.app/en.lproj/Localizable.strings demo/Resources/en.lproj/Localizable.strings    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/en.lproj -- demo/Resources/en.lproj/Localizable.strings36"9EBEEB1C-6EB5-4CD8-8CA3-013C8E82E9F0-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon-40.png build/emulator/demo.app/icon-40.png
-s427332681.840970
-e427332681.844054
-r1
-xCpResource
-xdemo/Resources/icons/icon-40.png
-xbuild/emulator/demo.app/icon-40.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/demo.app/icon-40.png87"[1mCpResource[0m demo/Resources/icons/icon-40.png build/emulator/demo.app/icon-40.pngc363d7499478b941^0b09d8499478b941^---0#0#1#-19%DVTDocumentLocation2@111"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-40.png0034842ddeffdf42^1040"[1mCpResource[0m demo/Resources/icons/icon-40.png build/emulator/demo.app/icon-40.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-40.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"D4007154-64E2-4AFD-9747-8DAA52B543C5-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon-40@2x.png build/emulator/demo.app/icon-40@2x.png
-s427332681.830367
-e427332681.833840
-r1
-xCpResource
-xdemo/Resources/icons/icon-40@2x.png
-xbuild/emulator/demo.app/icon-40@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/demo.app/icon-40@2x.png93"[1mCpResource[0m demo/Resources/icons/icon-40@2x.png build/emulator/demo.app/icon-40@2x.png802bd5499478b941^5793d7499478b941^---0#0#1#-19%DVTDocumentLocation2@114"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-40@2x.png0034842ddeffdf42^1049"[1mCpResource[0m demo/Resources/icons/icon-40@2x.png build/emulator/demo.app/icon-40@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-40@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"655E0BB1-E581-49C5-B0EA-33BEEA7436DB-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon-50.png build/emulator/demo.app/icon-50.png
-s427332681.832573
-e427332681.835779
-r1
-xCpResource
-xdemo/Resources/icons/icon-50.png
-xbuild/emulator/demo.app/icon-50.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/demo.app/icon-50.png87"[1mCpResource[0m demo/Resources/icons/icon-50.png build/emulator/demo.app/icon-50.pngfdc0d5499478b941^a6b7d7499478b941^---0#0#1#-19%DVTDocumentLocation2@111"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-50.png0034842ddeffdf42^1040"[1mCpResource[0m demo/Resources/icons/icon-50.png build/emulator/demo.app/icon-50.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-50.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"D97358F0-248A-47AE-96F1-93ACE6E5B2DB-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon-50@2x.png build/emulator/demo.app/icon-50@2x.png
-s427332681.849443
-e427332681.852557
-r1
-xCpResource
-xdemo/Resources/icons/icon-50@2x.png
-xbuild/emulator/demo.app/icon-50@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/demo.app/icon-50@2x.png93"[1mCpResource[0m demo/Resources/icons/icon-50@2x.png build/emulator/demo.app/icon-50@2x.png9acfd9499478b941^dc4bda499478b941^---0#0#1#-19%DVTDocumentLocation2@114"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-50@2x.png0034842ddeffdf42^1049"[1mCpResource[0m demo/Resources/icons/icon-50@2x.png build/emulator/demo.app/icon-50@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-50@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"7F2B9DED-B4DB-44FC-8D73-4639059656D6-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon-60.png build/emulator/demo.app/icon-60.png
-s427332681.845796
-e427332681.847291
-r1
-xCpResource
-xdemo/Resources/icons/icon-60.png
-xbuild/emulator/demo.app/icon-60.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/demo.app/icon-60.png87"[1mCpResource[0m demo/Resources/icons/icon-60.png build/emulator/demo.app/icon-60.pnga1a0d8499478b941^20b5d9499478b941^---0#0#1#-19%DVTDocumentLocation2@111"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-60.png0034842ddeffdf42^1040"[1mCpResource[0m demo/Resources/icons/icon-60.png build/emulator/demo.app/icon-60.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-60.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"F2EA8C8F-FA97-4EEA-AFDF-46970C51572E-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon-60@2x.png build/emulator/demo.app/icon-60@2x.png
-s427332681.834461
-e427332681.836684
-r1
-xCpResource
-xdemo/Resources/icons/icon-60@2x.png
-xbuild/emulator/demo.app/icon-60@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/demo.app/icon-60@2x.png93"[1mCpResource[0m demo/Resources/icons/icon-60@2x.png build/emulator/demo.app/icon-60@2x.png8dd2d5499478b941^30bbd7499478b941^---0#0#1#-19%DVTDocumentLocation2@114"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-60@2x.png0034842ddeffdf42^1049"[1mCpResource[0m demo/Resources/icons/icon-60@2x.png build/emulator/demo.app/icon-60@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-60@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"C40281A2-6DCF-4A03-A49F-EE093B00342B-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon-72.png build/emulator/demo.app/icon-72.png
-s427332681.830645
-e427332681.833646
-r1
-xCpResource
-xdemo/Resources/icons/icon-72.png
-xbuild/emulator/demo.app/icon-72.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/demo.app/icon-72.png87"[1mCpResource[0m demo/Resources/icons/icon-72.png build/emulator/demo.app/icon-72.png2ac7d4499478b941^5b7bd7499478b941^---0#0#1#-19%DVTDocumentLocation2@111"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-72.png0034842ddeffdf42^1040"[1mCpResource[0m demo/Resources/icons/icon-72.png build/emulator/demo.app/icon-72.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-72.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"B4BFE005-C34C-4B09-934D-BCFDAF520663-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon-72@2x.png build/emulator/demo.app/icon-72@2x.png
-s427332681.850831
-e427332681.852844
-r1
-xCpResource
-xdemo/Resources/icons/icon-72@2x.png
-xbuild/emulator/demo.app/icon-72@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/demo.app/icon-72@2x.png93"[1mCpResource[0m demo/Resources/icons/icon-72@2x.png build/emulator/demo.app/icon-72@2x.pngac01da499478b941^0855da499478b941^---0#0#1#-19%DVTDocumentLocation2@114"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-72@2x.png0034842ddeffdf42^1049"[1mCpResource[0m demo/Resources/icons/icon-72@2x.png build/emulator/demo.app/icon-72@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-72@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"8776030A-D91A-45C4-9555-578333D756DB-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon-76.png build/emulator/demo.app/icon-76.png
-s427332681.830259
-e427332681.833658
-r1
-xCpResource
-xdemo/Resources/icons/icon-76.png
-xbuild/emulator/demo.app/icon-76.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/demo.app/icon-76.png87"[1mCpResource[0m demo/Resources/icons/icon-76.png build/emulator/demo.app/icon-76.pngc2c3d4499478b941^876dd7499478b941^---0#0#1#-19%DVTDocumentLocation2@111"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-76.png0034842ddeffdf42^1040"[1mCpResource[0m demo/Resources/icons/icon-76.png build/emulator/demo.app/icon-76.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-76.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"3627D3CC-5E39-4CA9-B7A7-AD5093ABDCCA-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon-76@2x.png build/emulator/demo.app/icon-76@2x.png
-s427332681.849731
-e427332681.852103
-r1
-xCpResource
-xdemo/Resources/icons/icon-76@2x.png
-xbuild/emulator/demo.app/icon-76@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/demo.app/icon-76@2x.png93"[1mCpResource[0m demo/Resources/icons/icon-76@2x.png build/emulator/demo.app/icon-76@2x.pngfcc4d9499478b941^dc2cda499478b941^---0#0#1#-19%DVTDocumentLocation2@114"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-76@2x.png0034842ddeffdf42^1049"[1mCpResource[0m demo/Resources/icons/icon-76@2x.png build/emulator/demo.app/icon-76@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-76@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"7B483893-2557-4A08-B4B3-7057D17CC498-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon-small.png build/emulator/demo.app/icon-small.png
-s427332681.836832
-e427332681.838659
-r1
-xCpResource
-xdemo/Resources/icons/icon-small.png
-xbuild/emulator/demo.app/icon-small.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/demo.app/icon-small.png93"[1mCpResource[0m demo/Resources/icons/icon-small.png build/emulator/demo.app/icon-small.pnga75bd6499478b941^3cc0d7499478b941^---0#0#1#-19%DVTDocumentLocation2@114"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-small.png0034842ddeffdf42^1049"[1mCpResource[0m demo/Resources/icons/icon-small.png build/emulator/demo.app/icon-small.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-small.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"42FA37C2-E0E9-441B-8095-58DDF1916150-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon-small@2x.png build/emulator/demo.app/icon-small@2x.png
-s427332681.839045
-e427332681.843176
-r1
-xCpResource
-xdemo/Resources/icons/icon-small@2x.png
-xbuild/emulator/demo.app/icon-small@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy build/emulator/demo.app/icon-small@2x.png99"[1mCpResource[0m demo/Resources/icons/icon-small@2x.png build/emulator/demo.app/icon-small@2x.png9d13d7499478b941^83dad7499478b941^---0#0#1#-19%DVTDocumentLocation2@117"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon-small@2x.png0034842ddeffdf42^1058"[1mCpResource[0m demo/Resources/icons/icon-small@2x.png build/emulator/demo.app/icon-small@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon-small@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"F6430D23-9F6A-49CD-AB8A-82C18F70DF3F-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon.png build/emulator/demo.app/icon.png
-s427332681.830993
-e427332681.834297
-r1
-xCpResource
-xdemo/Resources/icons/icon.png
-xbuild/emulator/demo.app/icon.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Copy build/emulator/demo.app/icon.png81"[1mCpResource[0m demo/Resources/icons/icon.png build/emulator/demo.app/icon.pnged2dd5499478b941^76a7d7499478b941^---0#0#1#-19%DVTDocumentLocation2@108"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon.png0034842ddeffdf42^1031"[1mCpResource[0m demo/Resources/icons/icon.png build/emulator/demo.app/icon.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"0A3C1F74-7605-445C-B868-AA733F2B96C6-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/icons/icon@2x.png build/emulator/demo.app/icon@2x.png
-s427332681.832284
-e427332681.835078
-r1
-xCpResource
-xdemo/Resources/icons/icon@2x.png
-xbuild/emulator/demo.app/icon@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/demo.app/icon@2x.png87"[1mCpResource[0m demo/Resources/icons/icon@2x.png build/emulator/demo.app/icon@2x.png986bd5499478b941^ffb2d7499478b941^---0#0#1#-19%DVTDocumentLocation2@111"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/icon@2x.png0034842ddeffdf42^1040"[1mCpResource[0m demo/Resources/icons/icon@2x.png build/emulator/demo.app/icon@2x.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/icons/icon@2x.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"B43E6041-4C82-444C-9ED6-8CA0726D7D7A-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/splash/Default-568h@2x~iphone.png build/emulator/demo.app/Default-568h@2x~iphone.png
-s427332681.849139
-e427332681.852554
-r1
-xCpResource
-xdemo/Resources/splash/Default-568h@2x~iphone.png
-xbuild/emulator/demo.app/Default-568h@2x~iphone.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy build/emulator/demo.app/Default-568h@2x~iphone.png118"[1mCpResource[0m demo/Resources/splash/Default-568h@2x~iphone.png build/emulator/demo.app/Default-568h@2x~iphone.pngb378d9499478b941^e90ada499478b941^---0#0#1#-19%DVTDocumentLocation2@126"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default-568h@2x~iphone.png0034842ddeffdf42^1087"[1mCpResource[0m demo/Resources/splash/Default-568h@2x~iphone.png build/emulator/demo.app/Default-568h@2x~iphone.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default-568h@2x~iphone.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"91CCAC7C-23F9-4297-8363-D1C3333D7A13-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/demo.app/Default-Landscape@2x~ipad.png
-s427332681.837309
-e427332681.840732
-r1
-xCpResource
-xdemo/Resources/splash/Default-Landscape@2x~ipad.png
-xbuild/emulator/demo.app/Default-Landscape@2x~ipad.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy build/emulator/demo.app/Default-Landscape@2x~ipad.png124"[1mCpResource[0m demo/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/demo.app/Default-Landscape@2x~ipad.pngd57bd6499478b941^65c6d7499478b941^---0#0#1#-19%DVTDocumentLocation2@129"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default-Landscape@2x~ipad.png0034842ddeffdf42^1096"[1mCpResource[0m demo/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/demo.app/Default-Landscape@2x~ipad.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default-Landscape@2x~ipad.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"80F91ADB-857B-4E17-A736-D502D38D575C-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/splash/Default-Landscape~ipad.png build/emulator/demo.app/Default-Landscape~ipad.png
-s427332681.837941
-e427332681.845060
-r1
-xCpResource
-xdemo/Resources/splash/Default-Landscape~ipad.png
-xbuild/emulator/demo.app/Default-Landscape~ipad.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy build/emulator/demo.app/Default-Landscape~ipad.png118"[1mCpResource[0m demo/Resources/splash/Default-Landscape~ipad.png build/emulator/demo.app/Default-Landscape~ipad.pnga434d7499478b941^7d7ad8499478b941^---0#0#1#-19%DVTDocumentLocation2@126"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default-Landscape~ipad.png0034842ddeffdf42^1087"[1mCpResource[0m demo/Resources/splash/Default-Landscape~ipad.png build/emulator/demo.app/Default-Landscape~ipad.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default-Landscape~ipad.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"65B6A282-AF31-463F-B775-B389859C5FD4-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/demo.app/Default-Portrait@2x~ipad.png
-s427332681.838209
-e427332681.845050
-r1
-xCpResource
-xdemo/Resources/splash/Default-Portrait@2x~ipad.png
-xbuild/emulator/demo.app/Default-Portrait@2x~ipad.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy build/emulator/demo.app/Default-Portrait@2x~ipad.png122"[1mCpResource[0m demo/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/demo.app/Default-Portrait@2x~ipad.png08aed6499478b941^ed45d8499478b941^---0#0#1#-19%DVTDocumentLocation2@128"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default-Portrait@2x~ipad.png0034842ddeffdf42^1093"[1mCpResource[0m demo/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/demo.app/Default-Portrait@2x~ipad.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default-Portrait@2x~ipad.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"10B9CC31-DAFA-49E1-A0E7-13D4BBFA91CE-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/splash/Default-Portrait~ipad.png build/emulator/demo.app/Default-Portrait~ipad.png
-s427332681.839482
-e427332681.845017
-r1
-xCpResource
-xdemo/Resources/splash/Default-Portrait~ipad.png
-xbuild/emulator/demo.app/Default-Portrait~ipad.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy build/emulator/demo.app/Default-Portrait~ipad.png116"[1mCpResource[0m demo/Resources/splash/Default-Portrait~ipad.png build/emulator/demo.app/Default-Portrait~ipad.pngd905d7499478b941^992ed8499478b941^---0#0#1#-19%DVTDocumentLocation2@125"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default-Portrait~ipad.png0034842ddeffdf42^1084"[1mCpResource[0m demo/Resources/splash/Default-Portrait~ipad.png build/emulator/demo.app/Default-Portrait~ipad.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default-Portrait~ipad.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"B82ADF10-93C3-4B01-B9BC-0B6452355330-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/splash/Default@2x~iphone.png build/emulator/demo.app/Default@2x~iphone.png
-s427332681.843345
-e427332681.847121
-r1
-xCpResource
-xdemo/Resources/splash/Default@2x~iphone.png
-xbuild/emulator/demo.app/Default@2x~iphone.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy build/emulator/demo.app/Default@2x~iphone.png108"[1mCpResource[0m demo/Resources/splash/Default@2x~iphone.png build/emulator/demo.app/Default@2x~iphone.png8256d8499478b941^96b1d9499478b941^---0#0#1#-19%DVTDocumentLocation2@121"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default@2x~iphone.png0034842ddeffdf42^1072"[1mCpResource[0m demo/Resources/splash/Default@2x~iphone.png build/emulator/demo.app/Default@2x~iphone.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default@2x~iphone.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"4CBB66FD-E5D7-418B-BBBA-E7E6D2A17550-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CCpResource demo/Resources/splash/Default~iphone.png build/emulator/demo.app/Default~iphone.png
-s427332681.845818
-e427332681.849661
-r1
-xCpResource
-xdemo/Resources/splash/Default~iphone.png
-xbuild/emulator/demo.app/Default~iphone.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Copy build/emulator/demo.app/Default~iphone.png102"[1mCpResource[0m demo/Resources/splash/Default~iphone.png build/emulator/demo.app/Default~iphone.png7236d9499478b941^99b8d9499478b941^---0#0#1#-19%DVTDocumentLocation2@118"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Default~iphone.png0034842ddeffdf42^1063"[1mCpResource[0m demo/Resources/splash/Default~iphone.png build/emulator/demo.app/Default~iphone.png    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/Resources/splash/Default~iphone.png /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"CDA8B42D-8629-41C4-B531-534C9F7CE53A-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CGenerateDSYMFile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app.dSYM /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/demo
-s427332682.912685
-e427332683.012855
-r1
-xGenerateDSYMFile
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app.dSYM
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/demo
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Generate /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app.dSYM90"[1mGenerateDSYMFile[0m [1mbuild/emulator/demo.app.dSYM[0m build/emulator/demo.app/demo2bbee94a9478b941^3561034b9478b941^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app.dSYM0034842ddeffdf42^1035"[1mGenerateDSYMFile[0m [1mbuild/emulator/demo.app.dSYM[0m build/emulator/demo.app/demo    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/demo -o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app.dSYM36"F620D42A-1EA9-4C88-ACA8-B6AAF656834B-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CLd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/demo normal i386
-s427332682.758100
-e427332682.911411
-r1
-xLd
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/demo
-xnormal
-xi386
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/demo.LinkFileList
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/libCordova.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/crt1.o
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/main.o
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/AppDelegate.o
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MainViewController.o
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/IonicKeyboard.o
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/UIWebViewExtension.o
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVLogger.o
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/CDVDevice.o
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/MBProgressHUD.o
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/ProgressIndicator.o
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libSystem.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libobjc.dylib
-d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.ios.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcorecrypto_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcompiler_rt_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcopyfile_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdispatch.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdyld_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libmacho_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libnotify_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libremovefile_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_blocks.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_c.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_info.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_m.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_network.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libunwind_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libxpc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_configuration.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_asl.dylib
-d/usr/lib/libSystem.B.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/libAVFAudio.dylib
-d/usr/lib/system/libcache.dylib
-d/usr/lib/system/libcommonCrypto.dylib
-d/usr/lib/system/libcompiler_rt.dylib
-d/usr/lib/system/libcopyfile.dylib
-d/usr/lib/system/libcorecrypto.dylib
-d/usr/lib/system/libdyld.dylib
-d/usr/lib/system/libkeymgr.dylib
-d/usr/lib/system/liblaunch.dylib
-d/usr/lib/system/libmacho.dylib
-d/usr/lib/system/libquarantine.dylib
-d/usr/lib/system/libremovefile.dylib
-d/usr/lib/system/libsystem_asl.dylib
-d/usr/lib/system/libsystem_blocks.dylib
-d/usr/lib/system/libsystem_c.dylib
-d/usr/lib/system/libsystem_configuration.dylib
-d/usr/lib/system/libsystem_dnssd.dylib
-d/usr/lib/system/libsystem_info.dylib
-d/usr/lib/system/libsystem_kernel.dylib
-d/usr/lib/system/libsystem_m.dylib
-d/usr/lib/system/libsystem_malloc.dylib
-d/usr/lib/system/libsystem_notify.dylib
-d/usr/lib/system/libsystem_platform.dylib
-d/usr/lib/system/libsystem_pthread.dylib
-d/usr/lib/system/libsystem_sandbox.dylib
-d/usr/lib/system/libunc.dylib
-d/usr/lib/system/libunwind.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Link /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/demo51"[1mLd[0m build/emulator/demo.app/demo normal i3863f39c24a9478b941^3f55e94a9478b941^---0#0#1#--2179"[1mLd[0m build/emulator/demo.app/demo normal i386    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export IPHONEOS_DEPLOYMENT_TARGET=6.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -F/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -filelist /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/demo.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -force_load /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/libCordova.a -ObjC -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=6.0 -framework AssetsLibrary /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/libCordova.a -framework CoreGraphics -framework MobileCoreServices -framework CoreLocation -Xlinker -dependency_info -Xlinker /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Objects-normal/i386/demo_dependency_info.dat -o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/demo36"79B04227-24C0-4636-B97F-4B2B25E3BC43-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CPhaseScriptExecution Copy\ www\ directory /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.sh
-s427332681.534652
-e427332681.829701
-r1
-xPhaseScriptExecution
-xCopy www directory
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.sh
-o
-oreal	0m0.264s
-ouser	0m0.086s
-osys	0m0.127s
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'134"[1mPhaseScriptExecution[0m Copy\ www\ directory build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.shb95489499478b941^876cd4499478b941^-42"real	0m0.264suser	0m0.086ssys	0m0.127s3(21%IDEActivityLogMessage2@14"real	0m0.264s-427332681#1#14#-0#-----2@14"user	0m0.086s-427332681#15#14#-0#-----2@13"sys	0m0.127s-427332681#29#13#-0#-----0#0#1#--380"[1mPhaseScriptExecution[0m Copy\ www\ directory build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.sh    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    /bin/sh -c /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/Script-304B58A110DAC018002A0835.sh36"6A966B8B-2E81-4F4E-AA4C-CF100B0CD3F5-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CProcessInfoPlistFile /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Info.plist /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/demo-Info.plist
-s427332681.526601
-e427332681.529182
-r1
-xProcessInfoPlistFile
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Info.plist
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/demo-Info.plist
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Process /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/demo-Info.plist92"[1mProcessInfoPlistFile[0m build/emulator/demo.app/Info.plist [1mdemo/demo-Info.plist[0m64ea86499478b941^d3fa87499478b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/demo-Info.plist0000000000000000^1139"[1mProcessInfoPlistFile[0m build/emulator/demo.app/Info.plist [1mdemo/demo-Info.plist[0m    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    builtin-infoPlistUtility /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/demo-Info.plist -genpkginfo /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app/Info.plist36"2C052BAE-807B-474B-8D5D-51E242FA284D-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CProcessPCH /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch.pch demo/demo-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427332681.860481
-e427332682.282410
-r1
-xProcessPCH
-x/var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch.pch
-xdemo/demo-Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/demo-Prefix.pch
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile demo/demo-Prefix.pch286"[1mProcessPCH[0m /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch.pch demo/demo-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerea5ddc499478b941^124d484a9478b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/demo-Prefix.pch0000000000000000^4250"[1mProcessPCH[0m /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch.pch demo/demo-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=193 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-generated-files.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-own-target-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-all-target-headers.hmap -iquote /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/demo-project-headers.hmap -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/usr/local/lib/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/UninstalledProducts/include -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources/i386 -I/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/demo.build/Debug-iphonesimulator/demo.build/DerivedSources -F/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator --serialize-diagnostics /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch.d -c /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/demo/demo-Prefix.pch -o /var/folders/3t/why_8dkd7q3dxq16k7tl0hkh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/demo-Prefix-fnzlgfnnsmnakrgzvcrckwhgprzz/demo-Prefix.pch.pch36"36DFEDED-F590-41E6-9EE7-BBEFB6033972-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-
-CTouch /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app
-s427332683.015398
-e427332683.024574
-r1
-xTouch
-x/Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Touch /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app37"[1mTouch[0m build/emulator/demo.appf609044b9478b941^535b064b9478b941^---0#0#1#--798"[1mTouch[0m build/emulator/demo.app    cd /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/paolob/.rvm/bin"    /usr/bin/touch -c /Users/paolob/Desktop/Projects/cordova-plugins/PI-demo/platforms/ios/build/emulator/demo.app36"2EDCBDDD-A0B5-4A80-A35F-5329B8B98882-
-b2B2B6E44-E04C-4D4F-945E-2F70CC9B4EEB
-

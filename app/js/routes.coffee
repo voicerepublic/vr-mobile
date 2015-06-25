@@ -11,7 +11,7 @@ angular.module("voicerepublic")
     url: "/login"
     templateUrl: 'templates/login.html'
     controller: 'loginCtrl'
-    isLogin: true
+    isLoginState: true
 
   .state "tab",
     url: "/tab"
