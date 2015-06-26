@@ -24,7 +24,7 @@ angular.module("voicerepublic")
   
   #overlay options
   opts =
-    templateUrl : "templates/recordingTemplate.html"
+    templateUrl: "templates/recordingTemplate.html"
     scope: $scope
 
   #events

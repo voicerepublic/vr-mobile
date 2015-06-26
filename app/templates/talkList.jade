@@ -31,7 +31,6 @@ ion-view(view-title='Talks overview')
           strong {{talk.title}}
           h3 {{talk.teaser}}
           p {{talk.description}}
-          p Held in {{talk.language}}
           p
             a.subdued(ng-click='share(talk)', ng-hide='talk.isShared') Not shared yet
               i.icon.ion-android-share-alt.assertive(ng-show='isAndroid', style='margin-left: 2%')

@@ -86,6 +86,13 @@ angular.module("voicerepublic")
       date = new $window.Date()
       recordDate = date.toLocaleDateString()
       recordTime = date.toLocaleTimeString()
+      startsAtDate_year = "#{date.getFullYear()}"
+      startsAtDate_month = if date.getMonth() < 10 then "0#{date.getMonth()}" else "#{date.getMonth()}"
+      startsAtDate_day = if date.getDate() < 10 then "0#{date.getDate()}" else "#{date.getDate()}"
+      startsAtDate = "#{startsAtDate_year}-#{startsAtDate_month}-#{startsAtDate_day}"
+      startsAtTime_hours = if date.getHours() < 10 then "0#{date.getHours()}" else "#{date.getHours()}"
+      startsAtTime_minutes = if date.getMinutes() < 10 then "0#{date.getMinutes()}" else "#{date.getMinutes()}"
+      startsAtTime = "#{startsAtTime_hours}:#{startsAtTime_minutes}"
 
       #persistent autoincrement of id
       talkId = $localstorage.get "idCounter", 0
@@ -105,6 +112,8 @@ angular.module("voicerepublic")
         filename : fileName
         isUploaded : false
         isShared : false
+        starts_at_date : startsAtDate
+        starts_at_time : startsAtTime
         recordDate : recordDate
         recordTime : recordTime
         unifiedDate : date.toLocaleString()

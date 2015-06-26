@@ -4,7 +4,7 @@ angular.module("voicerepublic")
   USER_EMAIL_CACHE_KEY = "user_email"
   USER_TOKEN_CACHE_KEY = "user_token"
   USER_SERIES_CACHE_KEY = "user_series"
-  USER_NAME_CACHE_KEY = "user_name"
+  USER_DATA_CACHE_KEY = "user_data"
 
   new class Auth extends ObserverFactory
     constructor: ->
@@ -41,17 +41,27 @@ angular.module("voicerepublic")
       @setAuthToken(null, null)
 
     #user relvant data saved with Authservice rather than 
-    #creating an extra fac or srv
+    #creating an extra fac or srvc could be refactored later
     getSeries: ->
       $localstorage.getObject USER_SERIES_CACHE_KEY
 
     setSeries: (series) ->
-      $localstorage.setObject USER_SERIES_CACHE_KEY, series
+      seriesJsonArray = []
+      for key,value of series
+        seriesJson =
+          "id": key
+          "name": value
+        seriesJsonArray.push seriesJson
+      $localstorage.setObject USER_SERIES_CACHE_KEY, seriesJsonArray
 
-    getUserName: ->
-      $localstorage.get USER_NAME_CACHE_KEY
+    getUserData: ->
+      $localstorage.getObject USER_DATA_CACHE_KEY
 
-    setUserName: (username) ->
-      $localstorage.set USER_NAME_CACHE_KEY, username
+    setUserData: (id, firstname, lastname) ->
+      userdata = 
+        "id": id
+        "firstname": firstname
+        "lastname": lastname
+      $localstorage.setObject USER_DATA_CACHE_KEY, userdata
 
 

@@ -46,7 +46,6 @@ angular.module("voicerepublic")
   $rootScope.$on "$cordovaInAppBrowser:loadstart", (e, event) ->
     if event.url.search("backToTheApp") isnt -1
       $cordovaInAppBrowser.close()
-    $window.console.log event
 
   #inject the script after loading the assets
   $rootScope.$on "$cordovaInAppBrowser:loadstop", (e, event) ->
@@ -85,37 +84,32 @@ angular.module("voicerepublic")
     $ionicLoading.show ionicLoadingOpts
 
     #URL's
-    url = 'https://staging.voicerepublic.com/users/sign_in.json'
+    url = 'https://staging.voicerepublic.com/users/sign_in'
     #url = "https://voicerepublic.com/users/sign_in"
 
-    options = 
-      url: url
-      method: "POST"
-      headers:
-        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
-      params:
-        "user[email]": $scope.user.email
-        "user[password]": $scope.user.password
-        "user[remember_me]": 1
+    #credentials provided from user
+    credentials =
+      "email": $scope.user.email
+      "password": $scope.user.password
         
     #login request
-    $http(options)
+    $http.post(url, credentials)
     .success (data, status) ->
-      $window.console.log data
       $ionicLoading.hide()
 
-      #set the auth & user relevant data
+      # set the auth & user relevant data
       Auth.setAuthToken $scope.user.email, data.authentication_token
       Auth.setSeries data.series
-      Auth.setUserName data.firstname
+      Auth.setUserData data.id, data.firstname, data.lastname
       # future usage
       #Auth.setCredits data.credits
 
+      $state.go "tab.record"
+      $cordovaToast.showShortBottom "Hello #{data.firstname}!"
+
     .error (data, status) ->
-      $window.console.log data
-      $window.console.log status
       $ionicLoading.hide()
-      $cordovaToast.showShortBottom "Login failed, please try again"
+      $cordovaToast.showShortBottom "Error with your login or password, please try again"
 
   #open the InAppBrowser and redirect to VR Website
   $scope.register = () ->
@@ -136,32 +130,3 @@ angular.module("voicerepublic")
     ).catch (event) ->
       #error
       $cordovaToast.showShortBottom "Something went wrong, please try again"
-
-  ###send the http post as 'application/json' for signin purpose (without authenticity token)
-    creds = 
-      "user[email]": $scope.user.email
-      "user[password]": $scope.user.password
-      "user[remember_me]": 1
-
-    $http.post(url, creds)
-    .success (data, status, headers, config) ->
-      #success
-      $window.alert JSON.stringify data
-      Auth.setAuthToken $scope.user.email, data.token
-      $ionicLoading.hide()
-      $state.go "tab.record"
-      $cordovaToast.showShortBottom "Hello #{name}"
-    .error (data, status, headers, config) ->
-      #error
-      opts =
-        data: data
-        status: status
-        headers: headers
-        config: config
-
-      $window.opts = opts
-      $window.console.log opts
-
-      $ionicLoading.hide()
-      $cordovaToast.showShortBottom "Login failed, please try again"
-    ###

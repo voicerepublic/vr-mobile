@@ -29,14 +29,15 @@ app.config ($httpProvider) ->
   # Combine multiple $http requests into one $applyAsync (boosts performance)
   $httpProvider.useApplyAsync(true)
 
-  # with staging
+  # if staging
   $httpProvider.defaults.headers.common.Authorization = 'Basic c3RhZ2luZzpvcGg1bG9oYg=='
 
   # override the csrf header
   $httpProvider.defaults.xsrfHeaderName = 'X-CSRF-TOKEN'
 
   # set JSON for post
-  #$httpProvider.defaults.headers.post['Content-Type'] = 'application/json'
+  $httpProvider.defaults.headers.post['Content-Type'] = 'application/json'
+  $httpProvider.defaults.headers.post['Accept'] = 'application/json'
 
   # Add support for PATCH requests
   $httpProvider.defaults.headers.patch ||= {}
