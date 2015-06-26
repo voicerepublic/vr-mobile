@@ -1,5 +1,7 @@
 ion-view(view-title='Talks overview')
-  ion-nav-buttons(side='primary')
+  ion-nav-buttons(side='left')
+    button.button.button-icon.icon.ion-log-out.button-clear.button-light(ng-click='logOut()')
+  ion-nav-buttons(side='right')
     button.button.button-icon.icon.ion-ios-minus-outline(ng-click='toggleDelete()')
   ion-content(on-swipe-right='onSwipedRight()', on-swipe-left='onSwipedLeft()')
     .card(ng-show='(talksToUpload.length == 0) && (uploadedTalks.length == 0)')

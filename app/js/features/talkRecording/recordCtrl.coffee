@@ -15,7 +15,7 @@
 ###
 angular.module("voicerepublic")
 
-.controller "recordCtrl", ($scope, $state, $window, $timeout, $ionicHistory, $ionicLoading, $cordovaToast, Recorder) ->
+.controller "recordCtrl", ($scope, $state, $window, $timeout, $ionicHistory, $ionicLoading, $ionicPopup, $cordovaToast, Recorder, Auth) ->
   #clear the history after login
   $ionicHistory.clearHistory()
 
@@ -93,3 +93,16 @@ angular.module("voicerepublic")
     $scope.$broadcast "timer-stop"
     #hide the overlay
     $ionicLoading.hide()
+
+  $scope.logOut = () ->
+    popupOpts =
+      title: "Logout"
+      template: "Do you really want to log out?"
+      cancelText: "No"
+      okText: "Yes"
+      okType: "button-assertive"
+    popupPromise = $ionicPopup.confirm popupOpts
+    popupPromise.then (logout) ->
+      if logout
+        Auth.setAuthToken null, null
+        $state.go "login"

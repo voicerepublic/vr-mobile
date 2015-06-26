@@ -2,9 +2,9 @@ ion-view
   ion-nav-title
     | Upload {{talk.title}}
   ion-nav-buttons(side='left')
-    a.button.icon-left.ion-chevron-left.button-clear.button-light(ng-click='back()')
+    button.button.button-icon.ion-chevron-left.button-clear.button-light(ng-click='back()')
   ion-nav-buttons(side='right')
-    a.button.icon-right.ion-upload.button-clear.button-light(ng-click='startUpload()')
+    button.button.button-icon.ion-upload.button-clear.button-light(ng-click='startUpload()')
   ion-content(scroll='true', on-swipe-right='onSwipedRight()')
     .list
       form(name='form.upload', novalidate='true')
