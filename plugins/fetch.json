@@ -57,9 +57,7 @@
         "source": {
             "type": "registry",
             "id": "com.google.playservices@19.0.0"
-        },
-        "is_top_level": false,
-        "variables": {}
+        }
     },
     "cordova-plugin-google-analytics": {
         "source": {

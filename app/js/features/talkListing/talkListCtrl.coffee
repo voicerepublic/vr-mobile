@@ -32,6 +32,10 @@ angular.module("voicerepublic")
   $scope.shouldShowDelete = no
   $scope.hideActionSheet = undefined
 
+  #little workaround for playing spinner
+  unless $window.ionic.Platform.grade == "a"
+    $(".spinner-assertive").removeClass "spinner-assertive"
+
   #events
   #
   #refresh data if view rentered & loading

@@ -100,7 +100,7 @@ module.exports = new class GulpConfig
         ENV: "development"
 
         BUNDLE_ID: "com.voicerepublic.mobile.development"
-        BUNDLE_NAME: "Voice Republic"
+        BUNDLE_NAME: "VoiceRepublic"
 
         # Automatically connect to weinre on application's startup
         # (this way you can debug your application on your PC even if it's running from mobile ;) )
@@ -112,7 +112,7 @@ module.exports = new class GulpConfig
         ENV: "production"
 
         BUNDLE_ID: "com.voicerepublic.mobile"
-        BUNDLE_NAME: "Voice Republic"
+        BUNDLE_NAME: "VoiceRepublic"
 
         COMPRESS_ASSETS: true
 

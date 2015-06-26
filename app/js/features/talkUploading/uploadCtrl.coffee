@@ -37,7 +37,9 @@ angular.module("voicerepublic")
   $scope.uploadProgress = "0.00%"
   #ionicloading uploading template
   if $window.ionic.Platform.isAndroid()
-    condTemplate = '<ion-spinner icon="android"></ion-spinner> <br/> <strong>{{uploadProgress}}</strong> <br/> uploaded...'
+    condTemplate = '<ion-spinner icon="android"'
+    condTemplate += 'class="spinner-assertive"' if $window.ionic.Platform.grade is "a"
+    condTemplate += '></ion-spinner> <br/> <strong>{{uploadProgress}}</strong> <br/> uploaded...'
   if $window.ionic.Platform.isIOS()
     condTemplate = '<ion-spinner icon="ios"></ion-spinner> <br/> <strong>{{uploadProgress}}</strong> <br/> uploaded...'
   ionicLoadingOpts = 
@@ -83,7 +85,7 @@ angular.module("voicerepublic")
     options.mimeType = "audio/wav" if $window.ionic.Platform.isIOS()
     options.mimeType = "audio/amr" if $window.ionic.Platform.isAndroid()
     optParams = {}
-    optParams.key = $window.sha1 "#{TalkToUpload.filename}:#{$localstorage.get 'user_email'}:#{Math.random()*1337%1111}"
+    optParams.key = $window.sha1 "#{TalkToUpload.filename}:#{$localstorage.get 'user_email'}:#{$window.Math.random()*1337%1111}"
     options.params = optParams
 
     #every plugin has its own URL to files WTF??!11
@@ -91,7 +93,7 @@ angular.module("voicerepublic")
     if $window.ionic.Platform.isIOS()
       source = "cdvfile://localhost/persistent/talks/#{TalkToUpload.filename}"
     if $window.ionic.Platform.isAndroid()
-      source = "cdvfile://localhost/persistent/#{TalkToUpload.nativeUrl.replace 'file:///storage/emulated/0', ''}"
+      source = "cdvfile://localhost/persistent/#{TalkToUpload.nativeUrl.replace $window.cordova.file?.externalRootDirectory, ''}"
 
     #state params
     params = 
@@ -107,9 +109,11 @@ angular.module("voicerepublic")
       $ionicLoading.hide()
       #ionicloading metadata uploading template
       if $window.ionic.Platform.isAndroid()
-        condTemplateMeta = '<ion-spinner icon="android"></ion-spinner> <br/> uploading metadata...'
+        condTemplateMeta = '<ion-spinner icon="android"'
+        condTemplateMeta = 'class="spinner-assertive"' if $window.ionic.Platform.grade is "a"
+        condTemplateMeta +='></ion-spinner> <br/> uploading form data...'
       if $window.ionic.Platform.isIOS()
-        condTemplateMeta = '<ion-spinner icon="ios"></ion-spinner> <br/> uploading metadata...'
+        condTemplateMeta = '<ion-spinner icon="ios"></ion-spinner> <br/> uploading form data...'
       ionicLoadingOptsMeta = 
         template: condTemplateMeta
         hideOnStateChange: yes
