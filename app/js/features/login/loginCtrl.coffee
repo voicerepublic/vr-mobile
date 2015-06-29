@@ -16,13 +16,14 @@
 ###
 angular.module("voicerepublic")
 
-.controller "loginCtrl", ($http, $ionicLoading, $rootScope, $scope, $window, $state, $cordovaToast, $cordovaInAppBrowser, Auth) ->
+.controller "loginCtrl", ($http, $ionicLoading, $ionicHistory, $rootScope, $scope, $window, $state, $cordovaToast, $cordovaInAppBrowser, Auth) ->
   $scope.user = {}
+  $ionicHistory.clearHistory()
 
   #ionic loading template
   if $window.ionic.Platform.isAndroid()
     condTemplate = '<ion-spinner icon="android"' 
-    condTemplate += 'class="spinner-assertive"' if $window.ionic.Platform.grade is "a"
+    condTemplate += 'class="spinner-light"' if $window.ionic.Platform.grade is "a"
     condTemplate += '></ion-spinner> <br/> Logging in...'
   if $window.ionic.Platform.isIOS()
     condTemplate = '<ion-spinner icon="ios"></ion-spinner> <br/> Logging in...'
@@ -105,6 +106,9 @@ angular.module("voicerepublic")
       Auth.setUserData data.id, data.firstname, data.lastname
       # future usage
       #Auth.setCredits data.credits
+
+      $scope.user.email = ""
+      $scope.user.password = ""
 
       $state.go "tab.record"
       $cordovaToast.showShortBottom "Hello #{data.firstname}!"

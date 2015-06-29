@@ -82,18 +82,17 @@ angular.module("voicerepublic")
     options = {}
     options.fileKey = "file"
     options.fileName = TalkToUpload.filename
+    options.chunkedMode = no
     options.mimeType = "audio/wav" if $window.ionic.Platform.isIOS()
     options.mimeType = "audio/amr" if $window.ionic.Platform.isAndroid()
     optParams = {}
     optParams.key = $window.sha1 "#{TalkToUpload.filename}:#{$localstorage.get 'user_email'}:#{$window.Math.random()*1337%1111}"
     options.params = optParams
 
-    #every plugin has its own URL to files WTF??!11
-    source = ""
     if $window.ionic.Platform.isIOS()
-      source = "cdvfile://localhost/persistent/talks/#{TalkToUpload.filename}"
+      source = $window.cordova.file.documentsDirectory + "talks/#{TalkToUpload.filename}"
     if $window.ionic.Platform.isAndroid()
-      source = "cdvfile://localhost/persistent/#{TalkToUpload.nativeUrl.replace $window.cordova.file?.externalRootDirectory, ''}"
+      source = TalkToUpload.nativeURL
 
     #state params
     params = 
@@ -110,8 +109,8 @@ angular.module("voicerepublic")
       #ionicloading metadata uploading template
       if $window.ionic.Platform.isAndroid()
         condTemplateMeta = '<ion-spinner icon="android"'
-        condTemplateMeta = 'class="spinner-assertive"' if $window.ionic.Platform.grade is "a"
-        condTemplateMeta +='></ion-spinner> <br/> uploading form data...'
+        condTemplateMeta += 'class="spinner-light"' if $window.ionic.Platform.grade is "a"
+        condTemplateMeta += '></ion-spinner> <br/> uploading form data...'
       if $window.ionic.Platform.isIOS()
         condTemplateMeta = '<ion-spinner icon="ios"></ion-spinner> <br/> uploading form data...'
       ionicLoadingOptsMeta = 
@@ -145,8 +144,9 @@ angular.module("voicerepublic")
         $ionicLoading.hide()
         $cordovaToast.showShortBottom "Could not upload the talk metadata, please try again"
     (err) ->
+      $ionicLoading.hide()
       $cordovaToast.showShortBottom "Could not upload the talk, please try again"
-      $log.debug err
+      $window.uploadError = err
     (progress) ->
       upProgress = (progress.loaded / progress.total) * 100
       upProgress = $window.Math.round((upProgress + 0.00001) * 100) / 100

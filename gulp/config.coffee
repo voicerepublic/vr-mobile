@@ -59,7 +59,7 @@ module.exports = new class GulpConfig
         HTTP_SERVER_IP: (->
           # Try to detect IP address in user's network.
           # If not, fallback to 127.0.0.1 .
-          #localIp = execSync("(ifconfig wlan 2>/dev/null || ifconfig en0) | grep inet | grep -v inet6 | awk '{print $2}' | sed 's/addr://g'").stdout.trim()
+          localIp = execSync("(ifconfig wlan 2>/dev/null || ifconfig en1) | grep inet | grep -v inet6 | awk '{print $2}' | sed 's/addr://g'").stdout.trim()
           localIp = "127.0.0.1" unless parseInt(localIp) > 0
           localIp
         )()
@@ -100,7 +100,7 @@ module.exports = new class GulpConfig
         ENV: "development"
 
         BUNDLE_ID: "com.voicerepublic.mobile.development"
-        BUNDLE_NAME: "VoiceRepublic"
+        BUNDLE_NAME: "Voice Republic"
 
         # Automatically connect to weinre on application's startup
         # (this way you can debug your application on your PC even if it's running from mobile ;) )
@@ -112,7 +112,7 @@ module.exports = new class GulpConfig
         ENV: "production"
 
         BUNDLE_ID: "com.voicerepublic.mobile"
-        BUNDLE_NAME: "VoiceRepublic"
+        BUNDLE_NAME: "Voice Republic"
 
         COMPRESS_ASSETS: true
 

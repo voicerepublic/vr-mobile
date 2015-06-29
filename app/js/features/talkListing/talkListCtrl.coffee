@@ -176,6 +176,10 @@ angular.module("voicerepublic")
     $scope.isPlayingId = ""
 
   $scope.logOut = () ->
+    nextViewOpts =
+      disableBack: yes
+      historyRoot: yes
+    $ionicHistory.nextViewOptions nextViewOpts
     popupOpts =
       title: "Logout"
       template: "Do you really want to log out?"
