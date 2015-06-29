@@ -127,9 +127,9 @@ module.exports = new class GulpConfig
         # Required for the release to be signed with correct certificate.
         IOS_PROVISIONING_PROFILE: "keys/ios/voicerepublicstaging.mobileprovision"
 
-        CORDOVA_GOOGLE_ANALYTICS_ID: "UA-46754662-1"
-        # GOOGLE_ANALYTICS_ID: "UA-123123-1"
-        # GOOGLE_ANALYTICS_HOST: "ionicstarter.com"
+        CORDOVA_GOOGLE_ANALYTICS_ID: "UA-123123-2"
+        GOOGLE_ANALYTICS_ID: "UA-123123-1"
+        GOOGLE_ANALYTICS_HOST: "ionicstarter.com"
       }
     }
 

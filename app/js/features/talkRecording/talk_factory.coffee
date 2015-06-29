@@ -86,6 +86,14 @@ angular.module("voicerepublic")
       date = new $window.Date()
       recordDate = date.toLocaleDateString()
       recordTime = date.toLocaleTimeString()
+      startsAtDate_year = "#{date.getFullYear()}"
+      startsAtDate_month = date.getMonth() + 1 #strange...
+      startsAtDate_month = if startsAtDate_month < 10 then "0#{startsAtDate_month}" else "#{startsAtDate_month}"
+      startsAtDate_day = if date.getDate() < 10 then "0#{date.getDate()}" else "#{date.getDate()}"
+      startsAtDate = "#{startsAtDate_year}-#{startsAtDate_month}-#{startsAtDate_day}"
+      startsAtTime_hours = if date.getHours() < 10 then "0#{date.getHours()}" else "#{date.getHours()}"
+      startsAtTime_minutes = if date.getMinutes() < 10 then "0#{date.getMinutes()}" else "#{date.getMinutes()}"
+      startsAtTime = "#{startsAtTime_hours}:#{startsAtTime_minutes}"
 
       #persistent autoincrement of id
       talkId = $localstorage.get "idCounter", 0
@@ -105,6 +113,8 @@ angular.module("voicerepublic")
         filename : fileName
         isUploaded : false
         isShared : false
+        starts_at_date : startsAtDate
+        starts_at_time : startsAtTime
         recordDate : recordDate
         recordTime : recordTime
         unifiedDate : date.toLocaleString()
@@ -169,7 +179,7 @@ angular.module("voicerepublic")
         #get the nativeURL with ANDROID
         nativeURLtoTalksDir = success?.nativeURL
         #success is undefined with IOS
-        nativeURLtoTalksDir = path + "/talks/" if $window.ionic.Platform.isIOS()
+        nativeURLtoTalksDir = path + "talks/" if $window.ionic.Platform.isIOS()
         talk = self._createTalkDataStructure nativeURLtoTalksDir
 
         #return the next promise and build a chain \(^^)/
@@ -278,7 +288,7 @@ angular.module("voicerepublic")
 
     deleteTalk: (talkToDelete) ->
       self = @
-      #used the angular q, but I could return the existing
+      #used the angular q, but one could return the existing
       #promise and chain it... but for simplicity's sake:
       q = $q.defer()
 

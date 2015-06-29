@@ -2,9 +2,9 @@ ion-view
   ion-nav-title
     | Upload {{talk.title}}
   ion-nav-buttons(side='left')
-    a.button.icon-left.ion-chevron-left.button-clear.button-light(ng-click='back()')
+    button.button.button-icon.ion-chevron-left.button-clear.button-light(ng-click='back()')
   ion-nav-buttons(side='right')
-    a.button.icon-right.ion-upload.button-clear.button-light(ng-click='startUpload()')
+    button.button.button-icon.ion-upload.button-clear.button-light(ng-click='startUpload()')
   ion-content(scroll='true', on-swipe-right='onSwipedRight()')
     .list
       form(name='form.upload', novalidate='true')
@@ -34,32 +34,47 @@ ion-view
               | Please give your awsome talk a description
         label.item.item-input.item-select
           .input-label
-            | * Language
+            | Attach it to one of your Series
+          select(ng-model='talk.serie', ng-options='serie.id as serie.name for serie in series')
+        label.item.item-input.item-select
+          .input-label
+            | Language
           select(ng-model='talk.language')
-            option Albanian
-            option Arabic
-            option Bulgarian
-            option Bengali
-            option Czech
-            option Dutch
-            option English
-            option French
-            option German
-            option Hungarian
-            option Italian
-            option Japanese
-            option Kongolesian
-            option Mandarin
-            option Marathi
-            option Oriya
-            option Punjabi
-            option Russian
-            option Spanish
-            option Turkish
-            option Telugu
-            option Ukrainian
-            option Vietnamese
-            option Wu
-            option Xiang
-            option Yoruba
-            option Zhuang
+            optgroup(label='Common Languages')
+              option(value='de') Deutsch
+              option(selected='selected', value='en') English
+              option(value='es') Espa&ntilde;ol
+              option(value='fr') Fran&ccedil;ais
+              option(value='it') Italiano
+            optgroup(label='Other Languages')
+              option(value='ar') &#x64A;&#x628;&#x631;&#x639;&#x644;&#x627;
+              option(value='bg') &Bcy;&hardcy;&lcy;&gcy;&acy;&rcy;&scy;&kcy;&icy;
+              option(value='ca') Catal&agrave;
+              option(value='cs') &Ccaron;esky
+              option(value='da') Dansk
+              option(value='eo') Esperanto
+              option(value='fa') &#x633; &#x631;&#x627;&#x641;
+              option(value='ko') &#xD55C;&#xAD6D;&#xC5B4;
+              option(value='id') Bahasa Indonesia
+              option(value='he') &#x5E2;&#x5D1;&#x5E8;&#x5D9;&#x5EA;
+              option(value='lt') Lietuvi&uogon;
+              option(value='hu') Magyar
+              option(value='ms') Bahasa Melayu
+              option(value='nl') Nederlands
+              option(value='ja') &#x65E5;&#x672C;&#x8A9E;
+              option(value='no') Norsk (bokm&aring;l)
+              option(value='pl') Polski
+              option(value='pt') Portugu&ecirc;s
+              option(value='ru') &Rcy;&ucy;&scy;&scy;&kcy;&icy;&jcy;
+              option(value='ro') Rom&acirc;n&abreve;
+              option(value='sk') Sloven&ccaron;ina
+              option(value='sl') Sloven&scaron;&ccaron;ina
+              option(value='sr') &Scy;&rcy;&pcy;&scy;&kcy;&icy; / Srpski
+              option(value='fi') Suomi
+              option(value='sv') Svenska
+              option(value='tr') T&uuml;rk&ccedil;e
+              option(value='uk') &Ucy;&kcy;&rcy;&acy;&yicy;&ncy;&scy;&softcy;&kcy;&acy;
+              option(value='vi') Ti&#x1EBF;ng Vi&#x1EC7;t
+              option(value='vo') Volap&uuml;k
+              option(value='war') Winaray
+              option(value='zh') &#x4E2D;&#x6587;

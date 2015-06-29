@@ -8,23 +8,44 @@
   This Controller is responsible for the uploading view.
   It uses the following services & factories:
   - TalkFactory
-  - Uploader
+  - Auth
 
   **Note:** 
   Using the following cordova plugins:
   - cordova.toast
+  - cordovaFileTransfer
 ###
 angular.module("voicerepublic")
 
-.controller "uploadCtrl", ($scope, $rootScope, $http, $cordovaFileTransfer, $cordovaProgress, $window, $log, $state, $timeout, $ionicHistory, $cordovaToast, $localstorage, TalkToUpload, TalkFactory) ->
+.controller "uploadCtrl", ($scope, $rootScope, $http, $cordovaFileTransfer, $ionicLoading, $window, $log, $state, $timeout, $ionicHistory, $cordovaToast, $localstorage, TalkToUpload, TalkFactory, Auth) ->
   #the form
   $scope.form = {}
+
   #needed to keep track of uploading
   #if user swipes away
   $scope.uploaded = no
 
   #get the "resolved" talk
   $scope.talk = TalkToUpload
+
+  #get the series & init selections
+  $scope.series = Auth.getSeries()
+  $scope.talk.serie = $scope.series[0].id
+  $scope.talk.language = "en"
+
+  #uploadProgress
+  $scope.uploadProgress = "0.00%"
+  #ionicloading uploading template
+  if $window.ionic.Platform.isAndroid()
+    condTemplate = '<ion-spinner icon="android"'
+    condTemplate += 'class="spinner-assertive"' if $window.ionic.Platform.grade is "a"
+    condTemplate += '></ion-spinner> <br/> <strong>{{uploadProgress}}</strong> <br/> uploaded...'
+  if $window.ionic.Platform.isIOS()
+    condTemplate = '<ion-spinner icon="ios"></ion-spinner> <br/> <strong>{{uploadProgress}}</strong> <br/> uploaded...'
+  ionicLoadingOpts = 
+    template: condTemplate
+    scope: $scope
+    hideOnStateChange: yes
 
   #swipe actions
   #
@@ -40,8 +61,6 @@ angular.module("voicerepublic")
     $ionicHistory.goBack -1
 
   $scope.startUpload = () ->
-    $window.uploadForm = $scope.form
-    #just cosmetics
     $scope.form.upload.$setSubmitted()
     #manual validation
     $scope.form.upload.title.$validate()
@@ -53,26 +72,27 @@ angular.module("voicerepublic")
       $cordovaToast.showShortBottom "Please provide more information"
       return 
 
-    #URLS
-    talk_upload_url = "https://vr-audio-uploads-live.s3.amazonaws.com"
-    meta_data_url = "https://voicerepublic.com/talks/upload"
+    # URL's
+    #talk_upload_url = "https://vr-audio-uploads-live.s3.amazonaws.com"
+    #meta_data_url = "https://voicerepublic.com/api/uploads"
+    talk_upload_url = "https://vr-audio-uploads-staging.s3.amazonaws.com"
+    meta_data_url = "https://staging.voicerepublic.com/api/uploads"
 
     #upload options
     options = {}
     options.fileKey = "file"
     options.fileName = TalkToUpload.filename
+    options.chunkedMode = no
     options.mimeType = "audio/wav" if $window.ionic.Platform.isIOS()
     options.mimeType = "audio/amr" if $window.ionic.Platform.isAndroid()
     optParams = {}
-    optParams.key = $window.sha1 "#{TalkToUpload.filename}:#{$localstorage.get 'user_email'}:#{$localstorage.get 'csrfToken'}"
+    optParams.key = $window.sha1 "#{TalkToUpload.filename}:#{$localstorage.get 'user_email'}:#{$window.Math.random()*1337%1111}"
     options.params = optParams
 
-    #every plugin has its own URL WTF??!11
-    source = ""
     if $window.ionic.Platform.isIOS()
-      source = "cdvfile://localhost/persistent/talks/#{TalkToUpload.filename}"
+      source = $window.cordova.file.documentsDirectory + "talks/#{TalkToUpload.filename}"
     if $window.ionic.Platform.isAndroid()
-      source = "cdvfile://localhost/persistent/#{TalkToUpload.nativeUrl.replace 'file:///storage/emulated/0', ''}"
+      source = TalkToUpload.nativeURL
 
     #state params
     params = 
@@ -80,90 +100,55 @@ angular.module("voicerepublic")
 
     #native upload
     #
-    #progress flag needed
-    firstProgress = yes
-
+    #show the talk uploading modal
+    $ionicLoading.show ionicLoadingOpts
+    #start the upload process
     uploadingPromise = $cordovaFileTransfer.upload talk_upload_url, source, options
     uploadingPromise.then((success) ->
-      #get the god damn token
-      $http.get("https://voicerepublic.com/uploads/new")
-      .success (data) ->
-        #get/extract the csrf token
-        $log.debug data
-        el = angular.element data
-        authToken = el.find("input[name=authenticity_token]").val()
-        #save the token for the interceptor and further usage
-        $localstorage.set "csrfToken", authToken
-        #options for the POST request
-        optionsPost =
-          url: "https://voicerepublic.com/uploads"
-          method: "POST"
-          headers:
-            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-          params:
-            "commit": "Save"
-            "authenticity_token": authToken
-            "talk[description]": "<p>#{$scope.talk.description}</p>"
-            "talk[language]": "en"
-            "talk[starts_at_date]": "2015-05-05"#$scope.talk.recordDate
-            "talk[starts_at_time]": "00:10"#$scope.talk.recordTime
-            "talk[tag_list]": $scope.talk.tags
-            "talk[teaser]": $scope.talk.teaser
-            "talk[title]": $scope.talk.title
-            "talk[user_override_uuid]": optParams.key
-            "talk[new_venue_title]": "Mobile Talks"
-
-        #send metadata to VR Backend
-        $http(optionsPost)
-        .success (data, status, headers, config) ->
-          $cordovaProgress.hide()
-          $cordovaProgress.showSuccess true, "Talk uploaded!"
-          $timeout ->
-            $cordovaProgress.hide()
-          , 1337
-          #get/extract the csrf token
-          $log.debug data
-          el = angular.element data
-          authToken = el.find("input[name=authenticity_token]").val()
-          #save the token for the interceptor and further usage
-          $localstorage.set "csrfToken", authToken
-
-          TalkFactory.setTalkUploaded $scope.talk, "https://voicerepublic.com/talks/#{$scope.talk.title}"
-          $state.go "tab.share", params
-        .error (data, status, headers, config) ->
-          $cordovaProgress.hide()
-          $cordovaProgress.showText false, "Talk upload failed! Please try again", "center"
-          $timeout ->
-            $cordovaProgress.hide()
-          , 2000
-          #logging
-          $log.debug status
-          $log.debug headers
-          $log.debug config
-      .error (data, status, headers, config) ->
-        $cordovaProgress.hide()
-        $cordovaProgress.showText false, "Talk upload failed! Please try again", "center"
-        $timeout ->
-          $cordovaProgress.hide()
-        , 2000
-        #logging
-        $log.debug status
-        $log.debug headers
-        $log.debug config
+      $ionicLoading.hide()
+      #ionicloading metadata uploading template
+      if $window.ionic.Platform.isAndroid()
+        condTemplateMeta = '<ion-spinner icon="android"'
+        condTemplateMeta += 'class="spinner-light"' if $window.ionic.Platform.grade is "a"
+        condTemplateMeta += '></ion-spinner> <br/> uploading form data...'
+      if $window.ionic.Platform.isIOS()
+        condTemplateMeta = '<ion-spinner icon="ios"></ion-spinner> <br/> uploading form data...'
+      ionicLoadingOptsMeta = 
+        template: condTemplateMeta
+        hideOnStateChange: yes
+      #show metadata upload modal
+      $ionicLoading.show ionicLoadingOptsMeta
+      #metadata payload
+      payload =
+        "description": $scope.talk.description
+        "language": $scope.talk.language
+        "starts_at_date": $scope.talk.starts_at_date
+        "starts_at_time": $scope.talk.starts_at_time
+        "tag_list": $scope.talk.tags
+        "teaser": $scope.talk.teaser
+        "title": $scope.talk.title
+        "user_override_uuid": optParams.key
+        "venue_id": $scope.talk.serie
+        "duration": $scope.talk.duration.substring 3, 5
+      #send metadata to VR Backend
+      $http.post(meta_data_url, {talk: payload})
+      .success (data, status) ->
+        $ionicLoading.hide()
+        $cordovaToast.showShortBottom "Talk upload successfull!"
+        #shareUrl = "https://voicerepublic.com/talks/"
+        shareUrl = "https://staging.voicerepublic.com/talks/"
+        #save slug etc.
+        TalkFactory.setTalkUploaded $scope.talk, shareUrl + data.slug
+        $state.go "tab.share", params
+      .error (data, status) ->
+        $ionicLoading.hide()
+        $cordovaToast.showShortBottom "Could not upload the talk metadata, please try again"
     (err) ->
-      $cordovaProgress.hide()
-      $cordovaProgress.showText false, "Talk upload failed! Please try again", "center"
-      $timeout ->
-        $cordovaProgress.hide()
-      , 2000
-      $log.debug err
+      $ionicLoading.hide()
+      $cordovaToast.showShortBottom "Could not upload the talk, please try again"
+      $window.uploadError = err
     (progress) ->
-      $cordovaProgress.hide() unless firstProgress
-      uploadProgress = (progress.loaded / progress.total) * 100
-      uploadProgress = $window.Math.round((uploadProgress + 0.00001) * 100) / 100
-      $cordovaProgress.showSimpleWithLabel false, "#{uploadProgress}%"
-      #not the first anymore
-      firstProgress = no
+      upProgress = (progress.loaded / progress.total) * 100
+      upProgress = $window.Math.round((upProgress + 0.00001) * 100) / 100
+      $scope.uploadProgress = "#{upProgress}%"
     )
-
-    

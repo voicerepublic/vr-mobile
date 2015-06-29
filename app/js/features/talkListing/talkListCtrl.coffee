@@ -16,7 +16,7 @@
 ###
 angular.module("voicerepublic")
 
-.controller "talkListCtrl", ($rootScope, $scope, $state, $stateParams, $window, $ionicHistory, $ionicActionSheet, $cordovaToast, TalkFactory, Player) ->
+.controller "talkListCtrl", ($rootScope, $scope, $state, $stateParams, $window, $ionicHistory, $ionicActionSheet, $ionicPopup, $cordovaToast, TalkFactory, Player, Auth) ->
   #needed to display playing talks
   $scope.isPlayingId = ""
 
@@ -31,6 +31,10 @@ angular.module("voicerepublic")
   #list options
   $scope.shouldShowDelete = no
   $scope.hideActionSheet = undefined
+
+  #little workaround for playing spinner
+  unless $window.ionic.Platform.grade == "a"
+    $(".spinner-assertive").removeClass "spinner-assertive"
 
   #events
   #
@@ -170,3 +174,20 @@ angular.module("voicerepublic")
   $scope.stopPlaying = () ->
     Player.stop() if $scope.isPlayingId isnt ""
     $scope.isPlayingId = ""
+
+  $scope.logOut = () ->
+    nextViewOpts =
+      disableBack: yes
+      historyRoot: yes
+    $ionicHistory.nextViewOptions nextViewOpts
+    popupOpts =
+      title: "Logout"
+      template: "Do you really want to log out?"
+      cancelText: "No"
+      okText: "Yes"
+      okType: "button-assertive"
+    popupPromise = $ionicPopup.confirm popupOpts
+    popupPromise.then (logout) ->
+      if logout
+        Auth.setAuthToken null, null
+        $state.go "login"

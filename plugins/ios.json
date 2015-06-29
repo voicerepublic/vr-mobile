@@ -13,6 +13,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"UniversalAnalytics\"><param name=\"ios-package\" value=\"UniversalAnalyticsPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"SocialSharing\"><param name=\"ios-package\" value=\"SocialSharing\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
@@ -39,20 +43,36 @@
                         {
                             "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"ProgressIndicator\"><param name=\"ios-package\" value=\"ProgressIndicator\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"UniversalAnalytics\"><param name=\"ios-package\" value=\"UniversalAnalyticsPlugin\" /></feature>",
-                            "count": 1
                         }
                     ]
                 }
             },
             "framework": {
                 "parents": {
+                    "SystemConfiguration.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreData.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "libz.dylib": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "libsqlite3.0.dylib": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
                     "Social.framework": [
                         {
                             "xml": true,
@@ -88,37 +108,19 @@
                             "xml": false,
                             "count": 2
                         }
-                    ],
-                    "SystemConfiguration.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "CoreData.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "libz.dylib": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "libsqlite3.0.dylib": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
                     ]
                 }
             }
         }
     },
     "installed_plugins": {
+        "com.google.playservices": {
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+        },
         "com.ionic.keyboard": {
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+        },
+        "cordova-plugin-google-analytics": {
             "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
         },
         "nl.x-services.plugins.socialsharing": {
@@ -140,15 +142,6 @@
             "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
         },
         "org.apache.cordova.splashscreen": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
-        },
-        "org.pbernasconi.progressindicator": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
-        },
-        "com.google.playservices": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
-        },
-        "cordova-plugin-google-analytics": {
             "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
         }
     },
