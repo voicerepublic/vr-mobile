@@ -18,7 +18,6 @@ angular.module("voicerepublic")
 
 .controller "loginCtrl", ($http, $ionicLoading, $ionicHistory, $rootScope, $scope, $window, $state, $cordovaToast, $cordovaInAppBrowser, Auth) ->
   $scope.user = {}
-  $ionicHistory.clearHistory()
 
   #ionic loading template
   if $window.ionic.Platform.isAndroid()
@@ -109,6 +108,12 @@ angular.module("voicerepublic")
 
       $scope.user.email = ""
       $scope.user.password = ""
+
+      #next view should become root
+      nextViewOpts =
+        disableBack: yes
+        historyRoot: yes
+      $ionicHistory.nextViewOptions nextViewOpts
 
       $state.go "tab.record"
       $cordovaToast.showShortBottom "Hello #{data.firstname}!"
