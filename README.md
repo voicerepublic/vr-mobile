@@ -1,7 +1,11 @@
-# Voicerepublic Mobile [![Circle CI](https://circleci.com/gh/munen/voicerepublic_mobile/tree/integration.svg?style=svg&circle-token=c40bfd4f3ded798fe2f51ee5751812d5c19ffebd)](https://circleci.com/gh/munen/voicerepublic_mobile/tree/integration)
+[![Circle CI](https://circleci.com/gh/munen/voicerepublic_mobile/tree/integration.svg?style=svg&circle-token=c40bfd4f3ded798fe2f51ee5751812d5c19ffebd)](https://circleci.com/gh/munen/voicerepublic_mobile/tree/integration)
+
+# Voicerepublic Mobile
+
 Cross platform mobile app for voicerepublic.com, based on ionic & cordova.
 
-## Base functionallity:
+## Base functionality
+
 * Login: Authorization (Based on sessions or oauth)
 * Register: In-App Browser, where the user can register on the main voicerepublic.com site.
 * Record a talk: Provide functionallity to record a talk and store it locally.
@@ -10,13 +14,17 @@ Cross platform mobile app for voicerepublic.com, based on ionic & cordova.
 * Share on social networks: Simple as it is..^^
 
 ## How we share our app for testing & pivoting purpose (system testing)
-[Ionic.view] (http://view.ionic.io/) and [Testfairy](http://testfairy.com) to share our apps with testers and clients,
- or to easily test on new devices.
+
+[Ionic.view](http://view.ionic.io/) and
+[Testfairy](http://testfairy.com) to share our apps with testers and
+clients, or to easily test on new devices.
 
 ## Dev Process
+
 SCRUM is organized via [pivotaltracker](https://www.pivotaltracker.com/projects/1303582)
 
-# Dev Features
+## Dev Features
+
 * Application can be run in a local http server, or emulated/released to Android/iOS
 * A lot of useful gulp tasks, like:
   * `gulp` - watch for changes + browser-sync (http server with livereload) + weinre debugger
@@ -29,33 +37,56 @@ SCRUM is organized via [pivotaltracker](https://www.pivotaltracker.com/projects/
 * Tests configured and working: unit (karma + mocha) and end to end (protractor)
 * Rollbar support (configured, working in angular functions and support for uploading the sourcemaps to Rollbar server)
 
-# Requirements
+## Requirements
+
 * NodeJS
 * Cordova 4.2+
-* Android or iOS SDK installed and [configured](http://docs.phonegap.com/en/4.0.0/guide_platforms_index.md.html#Platform%20Guides) (required only if you want to deploy the app to native mobile platforms - you can run `gulp` server without that)
+* Android or iOS SDK installed and
+  [configured](http://docs.phonegap.com/en/4.0.0/guide_platforms_index.md.html#Platform%20Guides)
+  (required only if you want to deploy the app to native mobile
+  platforms - you can run `gulp` server without that)
 
-# Prerequisites
-1. Install Node: `nvm install 0.12.2`
-1. Install the Ionic CLI: `npm install -g ionic@1.4.3`
-2. Install gulp: `npm install -g gulp@3.8.11`
-3. Install cordova: `npm install -g cordova@4.3.0`
-4. Install iOS Simulator: `npm install -g ios-sim@3.1.1`
-5. Install iOS Deploy: `npm install -g ios-deploy@1.7.0`
+## Prerequisites
 
-# Getting Started
-```
-# install dependencies
-npm install
-bower install
-brew install imagemagick # or `apt-get install imagemagick`, if you're on linux
+### OS independent
 
-gulp build
+Install Node, Ionic CLI, gulp & Apache Cordova
+
+    nvm install 0.12.2
+    npm install -g ionic@1.4.3
+    npm install -g gulp@3.8.11
+    npm install -g cordova@4.3.0
+
+### MacOS
+
+Install iOS Simulator, iOS Deploy & ImageMagick
+
+    npm install -g ios-sim@3.1.1
+    npm install -g ios-deploy@1.7.0
+
+    brew install imagemagick
+
+### Linux
+
+Install ImageMagick
+
+    apt-get install imagemagick
+
+## Install Dependencies & Build It
+
+    npm install
+    bower install
+
+    gulp build
 
 ## Running in browser
-ionic serve # if node v0.12.0 think about sudo ionic serve or sudo gulp serve
 
-```
-If you get "too many files" error, try: `ulimit -n 10000`. You may want to add this line to your .bashrc / .zshrc / config.fish.
+    ionic serve
+
+* If node v0.12.0 think about `sudo ionic serve` or `sudo gulp serve`
+
+* If you get "too many files" error, try: `ulimit -n 10000`. You may
+  want to add this line to your .bashrc / .zshrc / config.fish.
 
 ## What does the `gulp build` do?
 
@@ -67,30 +98,28 @@ More or less:
 
 For detailed description, see `gulpfile.coffee`.
 
-P.S. `www/` is like `dist/` directory for Cordova. That's why it's not included in this repository, as it's fully generated with `gulp`.
+P.S. `www/` is like `dist/` directory for Cordova. That's why it's not
+included in this repository, as it's fully generated with `gulp`.
 
 ## Testing
 
-Requirements: installed PhantomJS and configured [selenium standalone webdriver](https://github.com/angular/protractor/blob/master/docs/getting-started.md#setup-and-config).
+Requirements: installed PhantomJS and configured
+[selenium standalone webdriver](https://github.com/angular/protractor/blob/master/docs/getting-started.md#setup-and-config).
 
-#### Unit tests (karma & PhantomJS/Chrome)
+### Unit tests (karma & PhantomJS/Chrome)
 
-```
-gulp test:unit # using PhantomJS
-gulp test:unit --browsers Chrome # or using Google Chrome
-```
+    gulp test:unit # using PhantomJS
+    gulp test:unit --browsers Chrome # or using Google Chrome
 
-#### e2e tests (protractor & selenium)
+### e2e tests (protractor & selenium)
 
-```
-gulp build # build solution
-gulp serve # served at :4400 port
-node_modules/.bin/webdriver-manager start # runs selenium server in the background
+    gulp build # build solution
+    gulp serve # served at :4400 port
+    node_modules/.bin/webdriver-manager start # runs selenium server in the background
 
-gulp test:e2e # finally, run e2e tests
-```
+    gulp test:e2e # finally, run e2e tests
 
-# How to run on mobile?
+## How to run on mobile?
 
 I recommend [tmux](http://tmux.sourceforge.net/) for handling multiple terminal tabs/windows ;)
 
@@ -108,16 +137,16 @@ I recommend [tmux](http://tmux.sourceforge.net/) for handling multiple terminal 
 
 3. Run `gulp cordova:emulate:[ios|android]` or `gulp cordova:run:[ios|android]`.
 
-# Releasing to appstores
+## Releasing to appstores
 
 First, generate the certificate keys:
 
-#### Android
+### Android
 
 1. [Generate .keystore file](http://developer.android.com/tools/publishing/app-signing.html):
 `keytool -genkey -v -keystore keys/android/$ANDROID_KEYSTORE_NAME.keystore -alias $ANDROID_ALIAS_NAME -keyalg RSA -keysize 2048 -validity 10000`
 
-#### iPhone
+### iPhone
 
 1. Create a certificate and a provisioning profile, as it's described [here](http://docs.build.phonegap.com/en_US/3.3.0/signing_signing-ios.md.html#iOS%20Signing).
 
@@ -125,6 +154,4 @@ First, generate the certificate keys:
 
 Then, generate the application and deploy it to the webserver with:
 
-```
-gulp release:[ios|android] --env=[staging|production]
-```
+    gulp release:[ios|android] --env=[staging|production]
