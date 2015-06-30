@@ -27,6 +27,7 @@
     "angular": "1.3.13",
     "ionic": "master",
     "angular-animate": "1.3.13",
-    "angular-sanitize": "1.3.13"
+    "angular-sanitize": "1.3.13",
+    "humanize-duration": "~2.4.0"
   }
 }
