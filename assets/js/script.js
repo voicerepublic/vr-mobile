@@ -12,9 +12,8 @@
 
 	//remove the modal
 	var modal = document.querySelector("#nagModal");
-	if (modal) {
+	if (modal)
 		modal.remove();
-	}
 
 	//hide the menu so that user cannot navigate away
 	var menu = document.querySelector(".menu-icon");
@@ -26,17 +25,28 @@
 
 	//hide the linksbox
 	var linksbox = document.querySelector(".links-box");
-	if (linksbox) {
+	if (linksbox)
 		linksbox.style.display = "none";
-	}
+
+	//hide the facebook button until we integrate native 
+	//login with facebook
+	var facebookButton = document.querySelector(".facebook");
+	if (facebookButton)
+		facebookButton.style.display = "none";
+
+	//remove the hr tags
+	var hrElements = document.getElementsByTagName("hr");
+	angular.forEach(hrElements, function(hrElement){
+		hrElement.style.display = "none";
+	});
 
 	//hide links in password renew page
-	var pwlinks = document.querySelector('.medium-offset-1');
-	if (pwlinks) {
-		pwlinks = pwlinks.children;
-		angular.forEach(pwlinks, function(child){
-			if (child.tagName === "A") {
-				child.style.display = "none";
+	var pwlinksContainer = document.querySelector('.medium-offset-1');
+	if (pwlinksContainer) {
+		pwlinks = pwlinksContainer.children;
+		angular.forEach(pwlinks, function(link){
+			if (link.tagName === "A") {
+				link.style.display = "none";
 			}
 		});
 	}
