@@ -39,6 +39,7 @@ SCRUM is organized via [pivotaltracker](https://www.pivotaltracker.com/projects/
 2. Install gulp: `npm install -g gulp`
 3. Install cordova: `npm install -g cordova`
 4. Install iOS Simulator: `npm install -g ios-sim`
+5. Install iOS Deploy: `npm install -g ios-deploy`
 
 # Getting Started
 ```
