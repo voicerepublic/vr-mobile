@@ -186,7 +186,7 @@ module.exports = new class GulpConfig
 
           # Here add any vendor files that should be included in vendor.js
           #"assets/components/ngCordova/dist/ng-cordova.js"
-          "assets/components/angular-timer/app/js/_timer.js"
+          "assets/components/angular-timer/app/js/timer.js"
           "assets/components/angular-timer/app/js/i18nService.js"
           "assets/components/humanize-duration/humanize-duration.js"
           "assets/components/momentjs/moment.js"
