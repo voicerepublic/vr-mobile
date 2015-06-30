@@ -127,6 +127,11 @@ Install the Android Development Environment
 
 * https://spring.io/guides/gs/android/
 
+### Enabling Background Threading in IOS (not needed for Android)
+
+After building the iOS app (via build-release or run), make sure to open it with XCode.
+You will have to navigate to the 'Capabilities' tab and enable Background Mode for sound.
+
 ### And then...
 
 I recommend [tmux](http://tmux.sourceforge.net/) for handling multiple terminal tabs/windows ;)

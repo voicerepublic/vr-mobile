@@ -9,28 +9,28 @@ ion-view
     .list
       form(name='form.upload', novalidate='true')
         label.item.item-input.item-floating-label
-          span.input-label * Title
+          span.input-label Title
           input(type='text', name='title', placeholder='* Title', required='', ng-model='talk.title')
           div(ng-show='form.upload.$submitted || form.upload.title.$touched')
             div.assertive(ng-show='form.upload.title.$error.required')
               | Please fill in a title
         label.item.item-input.item-floating-label
-          span.input-label * Teaser
+          span.input-label Teaser
           input(type='text', name='teaser', placeholder='* Teaser', required='', ng-model='talk.teaser')
           div(ng-show='form.upload.$submitted || form.upload.teaser.$touched')
-            div.assertive(ng-show='form.upload.teaser.$error.required')
+            div.assertive(ng-show='form.upload.teaser.$error.required', style='word-wrap: break-word;')
               | Please fill in a teaser (short description)
         label.item.item-input.item-floating-label
-          span.input-label * Tags
+          span.input-label Tags
           input(type='text', name='tags', placeholder='* tag1, tag2, tag3', required='', ng-model='talk.tags')
           div(ng-show='form.upload.$submitted || form.upload.tags.$touched')
             div.assertive(ng-show='form.upload.tags.$error.required')
               | Please fill in some tags
         label.item.item-input.item-floating-label
-          span.input-label * Description
+          span.input-label Description
           textarea(type='text', name='description' placeholder='* Description', required='', ng-model='talk.description', rows='4' cols='50')
           div(ng-show='form.upload.$submitted || form.upload.description.$touched')
-            div.assertive(ng-show='form.upload.description.$error.required')
+            div.assertive(ng-show='form.upload.description.$error.required', style='word-wrap: break-word;')
               | Please give your awsome talk a description
         label.item.item-input.item-select
           .input-label
@@ -40,41 +40,40 @@ ion-view
           .input-label
             | Language
           select(ng-model='talk.language')
-            optgroup(label='Common Languages')
-              option(value='de') Deutsch
-              option(selected='selected', value='en') English
-              option(value='es') Espa&ntilde;ol
-              option(value='fr') Fran&ccedil;ais
-              option(value='it') Italiano
-            optgroup(label='Other Languages')
-              option(value='ar') &#x64A;&#x628;&#x631;&#x639;&#x644;&#x627;
-              option(value='bg') &Bcy;&hardcy;&lcy;&gcy;&acy;&rcy;&scy;&kcy;&icy;
-              option(value='ca') Catal&agrave;
-              option(value='cs') &Ccaron;esky
-              option(value='da') Dansk
-              option(value='eo') Esperanto
-              option(value='fa') &#x633; &#x631;&#x627;&#x641;
-              option(value='ko') &#xD55C;&#xAD6D;&#xC5B4;
-              option(value='id') Bahasa Indonesia
-              option(value='he') &#x5E2;&#x5D1;&#x5E8;&#x5D9;&#x5EA;
-              option(value='lt') Lietuvi&uogon;
-              option(value='hu') Magyar
-              option(value='ms') Bahasa Melayu
-              option(value='nl') Nederlands
-              option(value='ja') &#x65E5;&#x672C;&#x8A9E;
-              option(value='no') Norsk (bokm&aring;l)
-              option(value='pl') Polski
-              option(value='pt') Portugu&ecirc;s
-              option(value='ru') &Rcy;&ucy;&scy;&scy;&kcy;&icy;&jcy;
-              option(value='ro') Rom&acirc;n&abreve;
-              option(value='sk') Sloven&ccaron;ina
-              option(value='sl') Sloven&scaron;&ccaron;ina
-              option(value='sr') &Scy;&rcy;&pcy;&scy;&kcy;&icy; / Srpski
-              option(value='fi') Suomi
-              option(value='sv') Svenska
-              option(value='tr') T&uuml;rk&ccedil;e
-              option(value='uk') &Ucy;&kcy;&rcy;&acy;&yicy;&ncy;&scy;&softcy;&kcy;&acy;
-              option(value='vi') Ti&#x1EBF;ng Vi&#x1EC7;t
-              option(value='vo') Volap&uuml;k
-              option(value='war') Winaray
-              option(value='zh') &#x4E2D;&#x6587;
+            option(value='de') Deutsch
+            option(selected='selected', value='en') English
+            option(value='es') Espa&ntilde;ol
+            option(value='fr') Fran&ccedil;ais
+            option(value='it') Italiano
+            option(value='ar') &#x64A;&#x628;&#x631;&#x639;&#x644;&#x627;
+            option(value='bg') &Bcy;&hardcy;&lcy;&gcy;&acy;&rcy;&scy;&kcy;&icy;
+            option(value='ca') Catal&agrave;
+            option(value='cs') &Ccaron;esky
+            option(value='da') Dansk
+            option(value='eo') Esperanto
+            option(value='fa') &#x633; &#x631;&#x627;&#x641;
+            option(value='ko') &#xD55C;&#xAD6D;&#xC5B4;
+            option(value='id') Bahasa Indonesia
+            option(value='he') &#x5E2;&#x5D1;&#x5E8;&#x5D9;&#x5EA;
+            option(value='lt') Lietuvi&uogon;
+            option(value='hu') Magyar
+            option(value='ms') Bahasa Melayu
+            option(value='nl') Nederlands
+            option(value='ja') &#x65E5;&#x672C;&#x8A9E;
+            option(value='no') Norsk (bokm&aring;l)
+            option(value='pl') Polski
+            option(value='pt') Portugu&ecirc;s
+            option(value='ru') &Rcy;&ucy;&scy;&scy;&kcy;&icy;&jcy;
+            option(value='sq') Shqip
+            option(value='ro') Rom&acirc;n&abreve;
+            option(value='sk') Sloven&ccaron;ina
+            option(value='sl') Sloven&scaron;&ccaron;ina
+            option(value='sr') &Scy;&rcy;&pcy;&scy;&kcy;&icy; / Srpski
+            option(value='fi') Suomi
+            option(value='sv') Svenska
+            option(value='tr') T&uuml;rk&ccedil;e
+            option(value='uk') &Ucy;&kcy;&rcy;&acy;&yicy;&ncy;&scy;&softcy;&kcy;&acy;
+            option(value='vi') Ti&#x1EBF;ng Vi&#x1EC7;t
+            option(value='vo') Volap&uuml;k
+            option(value='war') Winaray
+            option(value='zh') &#x4E2D;&#x6587;
