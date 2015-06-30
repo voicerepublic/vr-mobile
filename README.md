@@ -88,7 +88,7 @@ Install ImageMagick
 * If you get "too many files" error, try: `ulimit -n 10000`. You may
   want to add this line to your .bashrc / .zshrc / config.fish.
 
-## What does the `gulp build` do?
+## What does `gulp build` do?
 
 More or less:
 
@@ -119,7 +119,15 @@ Requirements: installed PhantomJS and configured
 
     gulp test:e2e # finally, run e2e tests
 
-## How to run on mobile?
+## Run on Mobile
+
+### Prerequisites for Building for Android
+
+Install the Android Development Environment
+
+* https://spring.io/guides/gs/android/
+
+### And then...
 
 I recommend [tmux](http://tmux.sourceforge.net/) for handling multiple terminal tabs/windows ;)
 
