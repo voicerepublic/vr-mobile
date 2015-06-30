@@ -1,0 +1,14 @@
+{
+    "version": "19.0.0",
+    "name": "com.google.playservices",
+    "cordova_name": "Google Play Services for Android",
+    "platforms": [
+        "android"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}
