@@ -34,10 +34,11 @@ SCRUM is organized via [pivotaltracker](https://www.pivotaltracker.com/projects/
 * Cordova 4.2+
 * Android or iOS SDK installed and [configured](http://docs.phonegap.com/en/4.0.0/guide_platforms_index.md.html#Platform%20Guides) (required only if you want to deploy the app to native mobile platforms - you can run `gulp` server without that)
 
-# Prerequisites 
+# Prerequisites
 1. Install the Ionic CLI: `npm install -g ionic`
 2. Install gulp: `npm install -g gulp`
 3. Install cordova: `npm install -g cordova`
+4. Install iOS Simulator: `npm install -g ios-sim`
 
 # Getting Started
 ```
@@ -49,7 +50,10 @@ bower install
 brew install imagemagick # or `apt-get install imagemagick`, if you're on linux
 
 gulp build
+
+## Running in browser
 ionic serve # if node v0.12.0 think about sudo ionic serve or sudo gulp serve
+
 ```
 If you get "too many files" error, try: `ulimit -n 10000`. You may want to add this line to your .bashrc / .zshrc / config.fish.
 
