@@ -22,7 +22,7 @@ angular.module("voicerepublic")
   #ionic loading template
   if $window.ionic.Platform.isAndroid()
     condTemplate = '<ion-spinner icon="android"' 
-    condTemplate += 'class="spinner-light"' if $window.ionic.Platform.grade is "a"
+    condTemplate += 'class="spinner-assertive"' if $window.ionic.Platform.grade is "a"
     condTemplate += '></ion-spinner> <br/> Logging in...'
   if $window.ionic.Platform.isIOS()
     condTemplate = '<ion-spinner icon="ios"></ion-spinner> <br/> Logging in...'

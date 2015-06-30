@@ -189,5 +189,6 @@ angular.module("voicerepublic")
     popupPromise = $ionicPopup.confirm popupOpts
     popupPromise.then (logout) ->
       if logout
+        $scope.stopPlaying()
         Auth.setAuthToken null, null
         $state.go "login"
