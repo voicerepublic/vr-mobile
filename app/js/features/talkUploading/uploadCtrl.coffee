@@ -109,7 +109,7 @@ angular.module("voicerepublic")
       #ionicloading metadata uploading template
       if $window.ionic.Platform.isAndroid()
         condTemplateMeta = '<ion-spinner icon="android"'
-        condTemplateMeta += 'class="spinner-light"' if $window.ionic.Platform.grade is "a"
+        condTemplateMeta += 'class="spinner-assertive"' if $window.ionic.Platform.grade is "a"
         condTemplateMeta += '></ion-spinner> <br/> uploading form data...'
       if $window.ionic.Platform.isIOS()
         condTemplateMeta = '<ion-spinner icon="ios"></ion-spinner> <br/> uploading form data...'
@@ -141,12 +141,14 @@ angular.module("voicerepublic")
         TalkFactory.setTalkUploaded $scope.talk, shareUrl + data.slug
         $state.go "tab.share", params
       .error (data, status) ->
-        $ionicLoading.hide()
-        $cordovaToast.showShortBottom "Could not upload the talk metadata, please try again"
+        $cordovaToast.showShortBottom("Could not upload the talk metadata, please try again")
+        .then ->
+          $ionicLoading.hide()
     (err) ->
-      $ionicLoading.hide()
-      $cordovaToast.showShortBottom "Could not upload the talk, please try again"
-      $window.uploadError = err
+      $cordovaToast.showShortBottom("Could not upload the talk, please try again")
+      .then ->
+        #workaround to hide loading modal after error.. it only works if wrapped in promise
+        $ionicLoading.hide()
     (progress) ->
       upProgress = (progress.loaded / progress.total) * 100
       upProgress = $window.Math.round((upProgress + 0.00001) * 100) / 100
