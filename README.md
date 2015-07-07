@@ -131,17 +131,23 @@ Install the Android Development Environment
 
 I recommend [tmux](http://tmux.sourceforge.net/) for handling multiple terminal tabs/windows ;)
 
-1. Copy `.envrc.android-sample` or `.envrc.ios-sample` to `.envrc` and configure it.
+1. Copy `.envrc.android-sample` or `.envrc.ios-sample` to `.envrc` and
+   configure it.
 
-  * Ofcourse, if you're a Mac user and you can compile both Android and iOS on the same machine, you can include all the variables from both of these files in only one `.envrc` .
+  * Ofcourse, if you're a Mac user and you can compile both Android
+    and iOS on the same machine, you can include all the variables
+    from both of these files in only one `.envrc` .
 
-  * Also, make sure you have all the keys and certificates needed stored in `keys/android/` and `keys/ios/`:
+  * Also, make sure you have all the keys and certificates needed
+    stored in `keys/android/` and `keys/ios/`:
 
     * `keys/android/ionicstarter.keystore`
     * `keys/ios/ionicstarter_staging.mobileprovision`
     * `keys/ios/ionicstarter_production.mobileprovision`
 
-2. Ensure, you have [configured ios/android platform with Cordova](http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html), f.e. by running `gulp cordova:platform-add:[ios|android]`.
+2. Ensure, you have
+   [configured ios/android platform with Cordova](http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html),
+   f.e. by running `gulp cordova:platform-add:[ios|android]`.
 
 3. Run `gulp cordova:emulate:[ios|android]` or `gulp cordova:run:[ios|android]`.
 
@@ -156,9 +162,12 @@ First, generate the certificate keys:
 
 ### iPhone
 
-1. Create a certificate and a provisioning profile, as it's described [here](http://docs.build.phonegap.com/en_US/3.3.0/signing_signing-ios.md.html#iOS%20Signing).
+1. Create a certificate and a provisioning profile, as it's described
+   [here](http://docs.build.phonegap.com/en_US/3.3.0/signing_signing-ios.md.html#iOS%20Signing).
 
-2. Download the provisioning profile and copy it into `keys/ios/`, so it will match the `IOS_PROVISIONING_PROFILE` file set up in the `gulpfile.coffee`.
+2. Download the provisioning profile and copy it into `keys/ios/`, so
+   it will match the `IOS_PROVISIONING_PROFILE` file set up in the
+   `gulpfile.coffee`.
 
 Then, generate the application and deploy it to the webserver with:
 
