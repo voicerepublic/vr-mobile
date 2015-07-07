@@ -5,12 +5,12 @@
 @function
 
 @description
-  This Controller is responsible for 
+  This Controller is responsible for
   loggin in and signing up the user.
   It uses the following services:
   - Auth
 
-  **Note:** 
+  **Note:**
   Using the following cordova plugins:
   - cordova.InAppBrowser
 ###
@@ -21,15 +21,15 @@ angular.module("voicerepublic")
 
   #ionic loading template
   if $window.ionic.Platform.isAndroid()
-    condTemplate = '<ion-spinner icon="android"' 
+    condTemplate = '<ion-spinner icon="android"'
     condTemplate += 'class="spinner-assertive"' if $window.ionic.Platform.grade is "a"
     condTemplate += '></ion-spinner> <br/> Logging in...'
   if $window.ionic.Platform.isIOS()
     condTemplate = '<ion-spinner icon="ios"></ion-spinner> <br/> Logging in...'
-  ionicLoadingOpts = 
+  ionicLoadingOpts =
     template: condTemplate
     hideOnStateChange: yes
-  
+
   #InAppBrowserOptions
   options =
     location: "no"
@@ -55,7 +55,7 @@ angular.module("voicerepublic")
     ajaxRequest =
       type: "GET"
       url: script.file
-      dataType: "text"  
+      dataType: "text"
       success: (msg) ->
         $cordovaInAppBrowser.executeScript({code: msg}, ->
             #successfully injected
@@ -86,14 +86,14 @@ angular.module("voicerepublic")
     $ionicLoading.show ionicLoadingOpts
 
     #URL's
-    url = 'https://staging.voicerepublic.com/users/sign_in'
+    url = 'http://localhost:3000/api/sessions/sign_in'
     #url = "https://voicerepublic.com/users/sign_in"
 
     #credentials provided from user
     credentials =
       "email": $scope.user.email
       "password": $scope.user.password
-        
+
     #login request
     $http.post(url, credentials)
     .success (data, status) ->
