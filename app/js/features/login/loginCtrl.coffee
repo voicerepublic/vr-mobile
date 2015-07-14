@@ -86,9 +86,8 @@ angular.module("voicerepublic")
     $ionicLoading.show ionicLoadingOpts
 
     #URL's
-    #url = 'http://staging.voicerepublic.com/api/sessions'
-    url = 'http://localhost:3000/api/sessions'
-    #url = "https://voicerepublic.com/users"
+    url = 'https://staging:oph5lohb@staging.voicerepublic.com/api/sessions'
+    #url = 'http://localhost:3000/api/sessions'
 
     #credentials provided from user
     credentials =
