@@ -129,8 +129,10 @@ Install the Android Development Environment
 
 ### Enabling Background Threading in IOS (not needed for Android)
 
-After building the iOS app (via build-release or run), make sure to open it with XCode.
-You will have to navigate to the 'Capabilities' tab and enable Background Mode for sound.
+After building the iOS app (via build-release or run), make sure to open it
+with XCode.  You will have to navigate to the 'Capabilities' tab and enable
+Background Mode for sound. Then choose your device in Product -> Destination
+and run the app using the 'play' button to install a new version.
 
 ### And then...
 
