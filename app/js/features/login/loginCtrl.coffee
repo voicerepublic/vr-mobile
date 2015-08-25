@@ -101,7 +101,7 @@ angular.module("voicerepublic")
 
       # set the auth & user relevant data
       Auth.setAuthToken $scope.user.email, data.authentication_token
-      Auth.setSeries data.series
+      Auth.setSeries data.list_of_series
       Auth.setUserData data.id, data.firstname, data.lastname
       # future usage
       #Auth.setCredits data.credits
