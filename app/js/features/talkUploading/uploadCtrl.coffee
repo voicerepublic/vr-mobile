@@ -72,8 +72,9 @@ angular.module("voicerepublic")
       $cordovaToast.showShortBottom "Please provide more information"
       return
 
-    talk_upload_url = "#{GLOBALS.S3_AUDIO_UPLOAD_BUCKET}"
-    meta_data_url = "#{GLOBALS.API_ROOT_URL}/api/uploads"
+    # URL's
+    s3_audio_upload_url = "#{GLOBALS.S3_AUDIO_UPLOAD_BUCKET}"
+    talk_create_url = "#{GLOBALS.API_ROOT_URL}/api/uploads"
 
     #upload options
     options = {}
@@ -100,7 +101,7 @@ angular.module("voicerepublic")
     #show the talk uploading modal
     $ionicLoading.show ionicLoadingOpts
     #start the upload process
-    uploadingPromise = $cordovaFileTransfer.upload talk_upload_url, source, options
+    uploadingPromise = $cordovaFileTransfer.upload s3_audio_upload_url, source, options
     uploadingPromise.then((success) ->
       $ionicLoading.hide()
       #ionicloading metadata uploading template
@@ -128,7 +129,7 @@ angular.module("voicerepublic")
         "series_id": $scope.talk.series_id
         "duration": $scope.talk.duration.substring 3, 5
       #send metadata to VR Backend
-      $http.post(meta_data_url, {talk: payload})
+      $http.post(talk_create_url, {talk: payload})
       .success (data, status) ->
         $ionicLoading.hide()
         $cordovaToast.showShortBottom "Talk upload successfull!"
@@ -137,7 +138,8 @@ angular.module("voicerepublic")
         TalkFactory.setTalkUploaded $scope.talk, shareUrl + data.slug
         $state.go "tab.share", params
       .error (data, status) ->
-        $cordovaToast.showShortBottom("Could not upload the talk metadata, please try again")
+        msg = "Could not create the talk:\r" + data.errors
+        $cordovaToast.showShortBottom(msg)
         .then ->
           $ionicLoading.hide()
     (err) ->
