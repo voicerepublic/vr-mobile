@@ -30,7 +30,7 @@ angular.module("voicerepublic")
 
   #get the series & init selections
   $scope.series = Auth.getSeries()
-  $scope.talk.serie = $scope.series[0].id
+  $scope.talk.series_id = $scope.series[0].id
   $scope.talk.language = "en"
 
   #uploadProgress
@@ -128,7 +128,7 @@ angular.module("voicerepublic")
         "teaser": $scope.talk.teaser
         "title": $scope.talk.title
         "user_override_uuid": optParams.key
-        "venue_id": $scope.talk.serie
+        "series_id": $scope.talk.series_id
         "duration": $scope.talk.duration.substring 3, 5
       #send metadata to VR Backend
       $http.post(meta_data_url, {talk: payload})
