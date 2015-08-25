@@ -10,7 +10,7 @@
   - TalkFactory
   - Auth
 
-  **Note:** 
+  **Note:**
   Using the following cordova plugins:
   - cordova.toast
   - cordovaFileTransfer
@@ -42,7 +42,7 @@ angular.module("voicerepublic")
     condTemplate += '></ion-spinner> <br/> <strong>{{uploadProgress}}</strong> <br/> uploaded...'
   if $window.ionic.Platform.isIOS()
     condTemplate = '<ion-spinner icon="ios"></ion-spinner> <br/> <strong>{{uploadProgress}}</strong> <br/> uploaded...'
-  ionicLoadingOpts = 
+  ionicLoadingOpts =
     template: condTemplate
     scope: $scope
     hideOnStateChange: yes
@@ -51,7 +51,7 @@ angular.module("voicerepublic")
   #
   #swiped right
   $scope.onSwipedRight = () ->
-    #redirect, probably more 
+    #redirect, probably more
     #to do here
     $scope.back() if $scope.uploaded
 
@@ -70,13 +70,10 @@ angular.module("voicerepublic")
     #dont execute if form invalid
     if $scope.form.upload.$invalid
       $cordovaToast.showShortBottom "Please provide more information"
-      return 
+      return
 
-    # URL's
-    #talk_upload_url = "https://vr-audio-uploads-live.s3.amazonaws.com"
-    #meta_data_url = "https://voicerepublic.com/api/uploads"
-    talk_upload_url = "https://vr-audio-uploads-staging.s3.amazonaws.com"
-    meta_data_url = "https://staging.voicerepublic.com/api/uploads"
+    talk_upload_url = "#{GLOBALS.S3_AUDIO_UPLOAD_BUCKET}"
+    meta_data_url = "#{GLOBALS.API_ROOT_URL}/api/uploads"
 
     #upload options
     options = {}
@@ -95,7 +92,7 @@ angular.module("voicerepublic")
       source = TalkToUpload.nativeURL
 
     #state params
-    params = 
+    params =
       talkToShareId: TalkToUpload.id
 
     #native upload
@@ -113,7 +110,7 @@ angular.module("voicerepublic")
         condTemplateMeta += '></ion-spinner> <br/> uploading form data...'
       if $window.ionic.Platform.isIOS()
         condTemplateMeta = '<ion-spinner icon="ios"></ion-spinner> <br/> uploading form data...'
-      ionicLoadingOptsMeta = 
+      ionicLoadingOptsMeta =
         template: condTemplateMeta
         hideOnStateChange: yes
       #show metadata upload modal
@@ -135,8 +132,7 @@ angular.module("voicerepublic")
       .success (data, status) ->
         $ionicLoading.hide()
         $cordovaToast.showShortBottom "Talk upload successfull!"
-        #shareUrl = "https://voicerepublic.com/talks/"
-        shareUrl = "https://staging.voicerepublic.com/talks/"
+        shareUrl = "#{GLOBALS.API_ROOT_URL}/talks/"
         #save slug etc.
         TalkFactory.setTalkUploaded $scope.talk, shareUrl + data.slug
         $state.go "tab.share", params
