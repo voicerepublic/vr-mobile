@@ -29,8 +29,8 @@ angular.module("voicerepublic")
   $scope.talk = TalkToUpload
 
   #get the series & init selections
-  $scope.series = Auth.getSeries()
-  $scope.talk.series_id = $scope.series[0].id
+  $scope.list_of_series = Auth.getSeries()
+  $scope.talk.series_id = $scope.list_of_series[0].id
   $scope.talk.language = "en"
 
   #uploadProgress
