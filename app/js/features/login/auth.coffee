@@ -40,7 +40,7 @@ angular.module("voicerepublic")
       #AccountResource.signOut()
       @setAuthToken(null, null)
 
-    #user relvant data saved with Authservice rather than 
+    #user relvant data saved with Authservice rather than
     #creating an extra fac or srvc could be refactored later
     getSeries: ->
       $localstorage.getObject USER_SERIES_CACHE_KEY
@@ -58,7 +58,7 @@ angular.module("voicerepublic")
       $localstorage.getObject USER_DATA_CACHE_KEY
 
     setUserData: (id, firstname, lastname) ->
-      userdata = 
+      userdata =
         "id": id
         "firstname": firstname
         "lastname": lastname

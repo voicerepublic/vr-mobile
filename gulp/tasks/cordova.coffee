@@ -14,7 +14,7 @@ generateEnvCommand = ->
 
 
 # Clean all cordova platforms, so they will need to be generated again.
-gulp.task "cordova:clear", "Reset built apps (clears platforms/* directories)", shell.task('rm -rf plugins/* platforms/*')
+gulp.task "cordova:clear", "Reset built apps (clears platforms/* directories)", shell.task('rm -rf platforms/*')
 
 
 # Create cordova platform.

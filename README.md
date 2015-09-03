@@ -26,14 +26,15 @@ SCRUM is organized via [pivotaltracker](https://www.pivotaltracker.com/projects/
 ## Dev Features
 
 * Application can be run in a local http server, or emulated/released to Android/iOS
+* Support for *environments*: `development` and `production`
+  (configurable in `gulp/config.coffee`)
 * A lot of useful gulp tasks, like:
   * `gulp` - watch for changes + browser-sync (http server with livereload) + weinre debugger
-  * `gulp cordova:emulate:ios` - run application in iOS emulator
-  * `gulp cordova:run:android` - run application on Android's device
+  * `gulp cordova:emulate:ios --env=environment` - run application in iOS emulator
+  * `gulp cordova:run:android --env=environment` - run application on Android's device
   * Run `gulp help` or see `gulp/tasks.coffee` for more information about all tasks
 * Useful hooks and tweaks, which allow you to deploy your cordova app out-of-the-box
 * SASS + CoffeeScript + Jade combo
-* Support for multiple environments, like *development, staging, production* (configuration available in `gulpfile.coffee`)
 * Tests configured and working: unit (karma + mocha) and end to end (protractor)
 * Rollbar support (configured, working in angular functions and support for uploading the sourcemaps to Rollbar server)
 
@@ -136,8 +137,6 @@ and run the app using the 'play' button to install a new version.
 
 ### And then...
 
-I recommend [tmux](http://tmux.sourceforge.net/) for handling multiple terminal tabs/windows ;)
-
 1. Copy `.envrc.android-sample` or `.envrc.ios-sample` to `.envrc` and
    configure it.
 
@@ -156,7 +155,8 @@ I recommend [tmux](http://tmux.sourceforge.net/) for handling multiple terminal 
    [configured ios/android platform with Cordova](http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html),
    f.e. by running `gulp cordova:platform-add:[ios|android]`.
 
-3. Run `gulp cordova:emulate:[ios|android]` or `gulp cordova:run:[ios|android]`.
+3. Run `gulp cordova:emulate:[ios|android] --env=environment` or
+   `gulp cordova:run:[ios|android] --env=environment`.
 
 ## Releasing to appstores
 

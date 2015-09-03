@@ -40,8 +40,8 @@ angular.module("voicerepublic")
   script =
     file: "js/script.js"
 
-  signUpURL = "https://voicerepublic.com/users/sign_up"
-  forgotPasswordURL = "https://voicerepublic.com/users/password/new"
+  signUpURL = "#{GLOBALS.API_ROOT_URL}/users/sign_up"
+  forgotPasswordURL = "#{GLOBALS.API_ROOT_URL}/users/password/new"
   target = "_blank"
 
   #close the browser if location hash equals
@@ -86,8 +86,7 @@ angular.module("voicerepublic")
     $ionicLoading.show ionicLoadingOpts
 
     #URL's
-    url = 'https://staging:oph5lohb@staging.voicerepublic.com/api/sessions'
-    #url = 'http://localhost:3000/api/sessions'
+    url = "#{GLOBALS.API_ROOT_URL}/api/sessions"
 
     #credentials provided from user
     credentials =
@@ -101,7 +100,7 @@ angular.module("voicerepublic")
 
       # set the auth & user relevant data
       Auth.setAuthToken $scope.user.email, data.authentication_token
-      Auth.setSeries data.series
+      Auth.setSeries data.list_of_series
       Auth.setUserData data.id, data.firstname, data.lastname
       # future usage
       #Auth.setCredits data.credits
