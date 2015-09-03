@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Migrate Android's WebView to ChromeView.
 #
 # (see https://crosswalk-project.org/#documentation/cordova/migrate_an_application

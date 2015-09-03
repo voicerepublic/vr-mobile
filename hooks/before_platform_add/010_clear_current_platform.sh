@@ -1,9 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
 clear_platform() {
   PLATFORM=$1
   rm -rf "platforms/$PLATFORM" "plugins/$PLATFORM.json" "plugins/com.phonegap.plugins.facebookconnect"
 }
+
+echo '------------------------------------------------------------'
+echo $CORDOVA_PLATFORMS
+echo $SHELL
+echo '------------------------------------------------------------'
 
 if [[ $CORDOVA_PLATFORMS == *"android"* ]]; then
   if ! cat "platforms/android/assets/www/config.xml" | grep -q "id=\"$BUNDLE_ID\""; then

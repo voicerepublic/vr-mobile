@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Compile image resources (images and splashscreens) from assets/img/ to assets/img/res/ dasrectory.
 
