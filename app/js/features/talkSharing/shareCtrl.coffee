@@ -44,7 +44,7 @@ angular.module("voicerepublic")
     #shared stuff
     message = TalkToShare.description
     subject = TalkToShare.title
-    file = TalkToShare.nativeURL
+    file = null
     link = TalkToShare.shareURL
 
     $cordovaSocialSharing
