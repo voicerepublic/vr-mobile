@@ -30,7 +30,7 @@ angular.module("voicerepublic")
 
   #get the series & init selections
   $scope.series = Auth.getSeries()
-  $scope.talk.serie = $scope.series[0].id
+  #$scope.talk.serie = $scope.series[0].id
   $scope.talk.language = "en"
 
   #uploadProgress
@@ -134,6 +134,10 @@ angular.module("voicerepublic")
       $http.post(meta_data_url, {talk: payload})
       .success (data, status) ->
         $ionicLoading.hide()
+        #avoid going back after upload
+        nextViewOpts =
+          disableBack: yes
+        $ionicHistory.nextViewOptions nextViewOpts
         $cordovaToast.showShortBottom "Talk upload successfull!"
         #shareUrl = "https://voicerepublic.com/talks/"
         shareUrl = "https://staging.voicerepublic.com/talks/"

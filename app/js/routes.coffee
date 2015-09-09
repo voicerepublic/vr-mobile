@@ -18,6 +18,14 @@ angular.module("voicerepublic")
     abstract: true
     templateUrl: "templates/tabs.html"
 
+  .state "tab.bookmarks",
+    url: "/bookmarks/:shouldReload"
+    views:
+      "tab-bookmarks":
+        templateUrl: 'templates/bookmarks.html'
+        controller: 'bookmarksCtrl'
+    authenticate: true
+
   .state "tab.record",
     url: "/record"
     views:

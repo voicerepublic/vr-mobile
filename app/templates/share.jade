@@ -6,12 +6,11 @@ ion-view(view-title='Share your talk')
       .item.item-avatar.item-text-wrap
         img(src='img/VR_Logo_rgb_4.png')
         h2(style='color:black') Share your Words!
-        p {{talk.title}} on Voice Republic wants to be heard...
+        p Talk &quot;{{talk.title}}&quot; on Voice Republic wants to be heard...
       .item.item-image.padding
         img(src='img/img-socialicons.png', ng-click='share()')
-      a.item.item-icon-right(ng-click='share()', ng-show='isAndroid')
-          i.icon.ion-android-share-alt
-          span.item-note Share
-      a.item.item-icon-right(ng-click='share()', ng-show='isIOS')
-          i.icon.ion-share
-          span.item-note Share
+      .item.tabs.tabs-secondary.tabs-icon-left
+          a.tab-item(ng-click='share()')
+            i.icon.ion-share(ng-show='isIOS')
+            i.icon.ion-android-share-alt(ng-show='isAndroid')
+            | Share

@@ -17,7 +17,7 @@ app.run ($rootScope, $state, $log, $localstorage, $timeout, $ionicPlatform, $ion
     $rootScope.$on '$stateChangeStart', (event, toState, toParams, fromState, fromParams) ->
       $ionicLoading.show template: 'Loading...'
       if toState.isLoginState and Auth.isSignedIn()
-        $state.transitionTo 'tab.record'
+        $state.transitionTo 'tab.bookmarks'
         event.preventDefault()
       else if toState.authenticate and !Auth.isSignedIn()
         # User isn’t authenticated
@@ -33,7 +33,6 @@ app.run ($rootScope, $state, $log, $localstorage, $timeout, $ionicPlatform, $ion
   # (it should be visible up until this moment)
   $timeout ->
     $cordovaSplashscreen.hide()
-  , 1000
 
   # greet the user if we know him or her
   if Auth.isSignedIn()

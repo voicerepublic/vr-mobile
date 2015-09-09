@@ -115,7 +115,10 @@ angular.module("voicerepublic")
         historyRoot: yes
       $ionicHistory.nextViewOptions nextViewOpts
 
-      $state.go "tab.record"
+      params =
+        shouldReload: yes
+
+      $state.go "tab.bookmarks", params
       $cordovaToast.showShortBottom "Hello #{data.firstname}!"
 
     .error (data, status) ->

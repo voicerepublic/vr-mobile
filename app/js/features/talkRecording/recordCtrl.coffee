@@ -58,6 +58,10 @@ angular.module("voicerepublic")
   #swiped left
   $scope.onSwipedLeft = () ->
     $state.go "tab.talkList"
+
+  #swiped left
+  $scope.onSwipedRight = () ->
+    $state.go "tab.bookmarks"
     
   #Button actions
   #

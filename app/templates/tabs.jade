@@ -1,7 +1,10 @@
 ion-tabs.tabs-icon-top.tabs-background-assertive.tabs-color-light
+  //- Bookmarks Tab
+  ion-tab(title='Bookmarks', icon-off='ion-ios-bookmarks-outline', icon-on='ion-ios-bookmarks', href='#/tab/bookmarks')
+    ion-nav-view(name='tab-bookmarks')
   //- Record Tab
   ion-tab(title='Record', icon-off='ion-ios-mic-outline', icon-on='ion-ios-mic', href='#/tab/record')
     ion-nav-view(name='tab-record')
   //- Saved Files Tab
-  ion-tab(title='Saved Talks', icon-off='ion-ios-list-outline', icon-on='ion-ios-list', href='#/tab/talkList')
+  ion-tab(title='Talks', icon-off='ion-ios-list-outline', icon-on='ion-ios-list', href='#/tab/talkList')
     ion-nav-view(name='tab-talkList')
