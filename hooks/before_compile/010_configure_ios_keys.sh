@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Exit, if there's no ios here.
 [[ $CORDOVA_PLATFORMS == *"ios"* ]] || exit 0

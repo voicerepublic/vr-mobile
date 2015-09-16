@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Exit, if there's no android here.
 [[ $CORDOVA_PLATFORMS == *"android"* ]] || exit 0

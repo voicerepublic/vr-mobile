@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function install_plugin {
   # Possible values: 'android', 'ios', 'android ios'
