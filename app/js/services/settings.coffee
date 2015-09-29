@@ -19,8 +19,8 @@ settingsFn = ($log, $localstorage, $window) ->
     $localstorage.setObject SETTINGS_DATA_CACHE_KEY, data
 
   {
-    data
     set
+    data
   }
 
 angular.module("voicerepublic").service('Settings', settingsFn)

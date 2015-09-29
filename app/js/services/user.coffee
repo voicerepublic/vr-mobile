@@ -10,7 +10,7 @@ userFn = ($log, $http, $localstorage) ->
   $log.info "setup User service #{JSON.stringify(data)}"
 
   # TODO checkout if we can use data binding here
-  store = (_data) ->
+  _store = (_data) ->
     $log.info "storing #{JSON.stringify(_data)}"
     data = _data
     $localstorage.setObject USER_DATA_CACHE_KEY, _data
@@ -21,7 +21,7 @@ userFn = ($log, $http, $localstorage) ->
     $http.post(LOGIN_URL, { email, password })
       .success (data, status) ->
         $log.info "success: #{status} #{JSON.stringify(data)}"
-        store(data)
+        _store(data)
         $http.defaults.headers.common["X-User-Email"] = email
         $http.defaults.headers.common["X-User-Token"] = data.authentication_token
         success(data, status) if success?
@@ -29,21 +29,27 @@ userFn = ($log, $http, $localstorage) ->
         $log.info "error: #{status} #{JSON.stringify(data)}"
         error(data, status) if error?
 
+  logout = ->
+    delete $http.defaults.headers.common["X-User-Email"]
+    delete $http.defaults.headers.common["X-User-Token"]
+    _store {}
+
   reload = ->
     $log.info "reload #{data.email}"
     $log.info "POST #{RELOAD_URL}#{data.id}"
     $http.get(RELOAD_URL+data.id)
       .success (data, status) ->
         $log.info "success: #{status} #{JSON.stringify(data)}"
-        store(data)
+        _store(data)
       .error (data, status) ->
         # TODO handle error properly
         $log.info "error: #{status} #{JSON.stringify(data)}"
 
   {
     login
-    data
+    logout
     reload
+    data
   }
 
 angular.module("voicerepublic").service('User', userFn)

@@ -8,15 +8,9 @@
   This Controller is responsible for settings tab.
 
 ###
-angular.module("voicerepublic")
+settingsFn = ($scope, $state, $ionicHistory, $ionicPopup,
+              Auth, User, Settings, $cordovaToast) ->
 
-.controller "settingsCtrl", ($rootScope, $scope, $state, $stateParams, $window, $ionicHistory, $ionicActionSheet, $ionicPopup, Auth, $log, User, Settings, $cordovaToast) ->
-
-  #platform specific
-  $scope.isAndroid = $window.ionic.Platform.isAndroid()
-  $scope.isIOS = $window.ionic.Platform.isIOS()
-
-  #swiped right
   $scope.onSwipedRight = () ->
     $state.go "tab.talkList"
 
@@ -49,3 +43,5 @@ angular.module("voicerepublic")
         $scope.stopPlaying()
         Auth.setAuthToken null, null
         $state.go "login"
+
+angular.module("voicerepublic").controller("settingsCtrl", settingsFn)
