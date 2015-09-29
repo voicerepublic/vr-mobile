@@ -147,6 +147,9 @@ module.exports = new class GulpConfig
         CORDOVA_GOOGLE_ANALYTICS_ID: "UA-123123-2"
         GOOGLE_ANALYTICS_ID: "UA-123123-1"
         GOOGLE_ANALYTICS_HOST: "ionicstarter.com"
+
+        WEINRE_ADDRESS: (GLOBALS) ->
+          "#{GLOBALS.HTTP_SERVER_IP}:31173"
       }
     }
 

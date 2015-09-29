@@ -10,7 +10,7 @@
   - TalkFactory
   - Player
 
-  **Note:** 
+  **Note:**
   Using the following cordova plugins:
   - cordova.toast
 ###
@@ -48,7 +48,7 @@ angular.module("voicerepublic")
   #notify view if Player stopped
   Player.on "stopped", () ->
     ($scope.isPlayingId = "") unless $scope.isPlayingId is ""
-      
+
   #notify user if Player had an error
   Player.on "error", (error) ->
     $cordovaToast.showShortBottom "Could not play talk #{talk.id}, #{error.message}"
@@ -62,19 +62,25 @@ angular.module("voicerepublic")
     $scope.stopPlaying() unless $scope.isPlayingId is ""
     $state.go "tab.record"
 
+  #swiped left
+  $scope.onSwipedLeft = () ->
+    #handle if user does not stop manually
+    $scope.stopPlaying() unless $scope.isPlayingId is ""
+    $state.go "tab.settings"
+
   #ActionSheet on list item click
   #
   $scope.openActionSheet = (talk, position, thisTalkIsUploaded) ->
     #conditional button text
     #based on platform
-    if $scope.isAndroid 
-      specificShareButton = 
+    if $scope.isAndroid
+      specificShareButton =
         text: '<i class="icon ion-android-share-alt"></i> <b>Share</b>'
     else
-      specificShareButton = 
+      specificShareButton =
         text: '<i class="icon ion-share"></i> <b>Share</b>'
     #needed Buttons
-    stopButton = 
+    stopButton =
       text: '<i class="icon ion-stop assertive"></i> Stop'
     playButton =
       text: '<i class="icon ion-play"></i> Play'
@@ -91,7 +97,7 @@ angular.module("voicerepublic")
     if thisTalkIsPlaying then sheetButtons.unshift stopButton
     else sheetButtons.push playButton
     #options needed for the ActionSheet
-    options = 
+    options =
       buttons: sheetButtons
       titleText: "Please select an action for #{talk.title}"
       destructiveText: '<i class="icon ion-trash-b assertive"></i> <b class="assertive">Delete</b>'
@@ -107,7 +113,7 @@ angular.module("voicerepublic")
         switch index
           when 0
             if thisTalkIsPlaying then $scope.stopPlaying()
-            else 
+            else
               if thisTalkIsUploaded then $scope.share talk
               else $scope.upload talk
           when 1
