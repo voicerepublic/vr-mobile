@@ -1,10 +1,57 @@
 ion-view(view-title='Settings')
   ion-nav-buttons(side='left')
     button.button.button-icon.icon.ion-log-out.button-clear.button-light(ng-click='logOut()')
-  //- ion-nav-buttons(side='right')
-  //-   button.button.button-icon.icon.ion-ios-minus-outline(ng-click='toggleDelete()')
   ion-content(on-swipe-right='onSwipedRight()', on-swipe-left='onSwipedLeft()')
-    p some settings here
+    ion-list
+      ion-item
+        span Remaining Talk Credits: {{credits}}
+
+      ion-item.item-toggle
+        label.toggle
+          p Download content only when on a Wifi
+          input(type='checkbox' ng-click='setDownloadOption()')
+          .track
+            .handle
+
+      ion-item.item-toggle
+        label.toggle
+          span Download content only when on a Wifi
+          input(type='checkbox' ng-click='setDownloadOption()')
+          .track
+            .handle
+
+      ion-item.item-toggle
+        label.toggle
+          div Download content only when on a Wifi
+          input(type='checkbox' ng-click='setDownloadOption()')
+          .track
+            .handle
+
+      ion-item.item-toggle
+        p Download content only when on a Wifi
+        label.toggle
+          input(type='checkbox' ng-click='setDownloadOption()')
+          .track
+            .handle
+
+      ion-item.item-toggle
+        span Download content only when on a Wifi
+        label.toggle
+          input(type='checkbox' ng-click='setDownloadOption()')
+          .track
+            .handle
+
+      ion-item.item-toggle
+        div Download content only when on a Wifi
+        label.toggle
+          input(type='checkbox' ng-click='setDownloadOption()')
+          .track
+            .handle
+
+    //-   ion-item
+    //-     label.toggle
+    //-       input(type='checkbox')
+    //-     Download only when via Wifix
     //- .card(ng-show='(talksToUpload.length == 0) && (uploadedTalks.length == 0)')
     //-   .item.item-text-wrap
     //-     | There are no talks... You really should start recording them!

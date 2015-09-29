@@ -12,11 +12,6 @@ angular.module("voicerepublic")
 
 .controller "settingsCtrl", ($rootScope, $scope, $state, $stateParams, $window, $ionicHistory, $ionicActionSheet, $ionicPopup, Auth, $log) ->
 
-  $log.log 'hello from settingsCtrl'
-  $log.debug 'hello from settingsCtrl'
-  $log.info 'hello from settingsCtrl'
-  $log.error 'hello from settingsCtrl'
-
   #platform specific
   $scope.isAndroid = $window.ionic.Platform.isAndroid()
   $scope.isIOS = $window.ionic.Platform.isIOS()
@@ -24,6 +19,11 @@ angular.module("voicerepublic")
   #swiped right
   $scope.onSwipedRight = () ->
     $state.go "tab.talkList"
+
+  $scope.setDownloadOption = ->
+    ; # TODO
+
+  $scope.credits = Auth.getData().credits
 
   $scope.logOut = () ->
     nextViewOpts =

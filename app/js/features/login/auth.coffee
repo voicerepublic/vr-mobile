@@ -1,6 +1,6 @@
 angular.module("voicerepublic")
 
-.service 'Auth', ($http, $localstorage, PromiseFactory, ObserverFactory) ->
+.service 'Auth', ($http, $localstorage, PromiseFactory, ObserverFactory, $log) ->
   USER_EMAIL_CACHE_KEY = "user_email"
   USER_TOKEN_CACHE_KEY = "user_token"
   USER_SERIES_CACHE_KEY = "user_series"
@@ -55,13 +55,19 @@ angular.module("voicerepublic")
       $localstorage.setObject USER_SERIES_CACHE_KEY, seriesJsonArray
 
     getUserData: ->
+      $log.warn 'getUserData is deprecated use getData instead'
       $localstorage.getObject USER_DATA_CACHE_KEY
 
     setUserData: (id, firstname, lastname) ->
+      $log.warn 'getUserData is deprecated use getData instead'
       userdata =
         "id": id
         "firstname": firstname
         "lastname": lastname
       $localstorage.setObject USER_DATA_CACHE_KEY, userdata
 
+    getData: ->
+      $localstorage.getObject USER_DATA_CACHE_KEY
 
+    setData: (data) ->
+      $localstorage.setObject USER_DATA_CACHE_KEY, data

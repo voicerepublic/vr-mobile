@@ -16,7 +16,7 @@
 ###
 angular.module("voicerepublic")
 
-.controller "loginCtrl", ($http, $ionicLoading, $ionicHistory, $rootScope, $scope, $window, $state, $cordovaToast, $cordovaInAppBrowser, Auth) ->
+.controller "loginCtrl", ($http, $ionicLoading, $ionicHistory, $rootScope, $scope, $window, $state, $cordovaToast, $cordovaInAppBrowser, Auth, $log) ->
   $scope.user = {}
 
   #ionic loading template
@@ -94,9 +94,12 @@ angular.module("voicerepublic")
       "password": $scope.user.password
 
     #login request
+    $log.info url
     $http.post(url, credentials)
     .success (data, status) ->
       $ionicLoading.hide()
+
+      $log.info data
 
       # set the auth & user relevant data
       Auth.setAuthToken $scope.user.email, data.authentication_token
@@ -104,6 +107,7 @@ angular.module("voicerepublic")
       Auth.setUserData data.id, data.firstname, data.lastname
       # future usage
       #Auth.setCredits data.credits
+      Auth.setData(data)
 
       $scope.user.email = ""
       $scope.user.password = ""
