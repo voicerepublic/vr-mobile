@@ -5,12 +5,12 @@ ion-view(view-title='Settings')
     ion-list
 
       ion-item.item-icon-right
-        div Remaining Talk Credits: {{data.credits}}
+        div Remaining Talk Credits: {{user.credits}}
         i.icon.ion-android-refresh(ng-click='refreshCredits()')
 
       ion-item.item-toggle
         span Download content only when on a Wifi
-        label.toggle
+        label.toggle.toogle-calm
           input(type='checkbox'
                 ng-click='toggleDownloadOption()'
                 ng-checked='limitDownloadToWifi')

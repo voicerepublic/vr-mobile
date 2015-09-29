@@ -10,7 +10,7 @@
 ###
 angular.module("voicerepublic")
 
-.controller "settingsCtrl", ($rootScope, $scope, $state, $stateParams, $window, $ionicHistory, $ionicActionSheet, $ionicPopup, Auth, $log, User, Settings) ->
+.controller "settingsCtrl", ($rootScope, $scope, $state, $stateParams, $window, $ionicHistory, $ionicActionSheet, $ionicPopup, Auth, $log, User, Settings, $cordovaToast) ->
 
   #platform specific
   $scope.isAndroid = $window.ionic.Platform.isAndroid()
@@ -20,15 +20,17 @@ angular.module("voicerepublic")
   $scope.onSwipedRight = () ->
     $state.go "tab.talkList"
 
-  $scope.data = Settings.data
+  $scope.settings = Settings.data
   $scope.toggleDownloadOption = ->
-    data.limitDownloadToWifi = !data.limitDownloadToWifi
-    Settings.set 'limitDownloadToWifi', data.limitDownloadToWifi
+    $scope.settings.limitDownloadToWifi = !$scope.settings.limitDownloadToWifi
+    Settings.set 'limitDownloadToWifi', $scope.settings.limitDownloadToWifi
 
   $scope.refreshCredits = ->
     User.reload()
+    $scope.user = User.data
+    $cordovaToast.showLongBottom "Refreshed successfully."
 
-  $scope.data = User.data
+  $scope.user = User.data
 
   $scope.logOut = () ->
     nextViewOpts =
