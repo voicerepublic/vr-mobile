@@ -10,7 +10,7 @@
 ###
 angular.module("voicerepublic")
 
-.controller "settingsCtrl", ($rootScope, $scope, $state, $stateParams, $window, $ionicHistory, $ionicActionSheet, $ionicPopup, Auth, $log) ->
+.controller "settingsCtrl", ($rootScope, $scope, $state, $stateParams, $window, $ionicHistory, $ionicActionSheet, $ionicPopup, Auth, $log, User, Settings) ->
 
   #platform specific
   $scope.isAndroid = $window.ionic.Platform.isAndroid()
@@ -20,10 +20,15 @@ angular.module("voicerepublic")
   $scope.onSwipedRight = () ->
     $state.go "tab.talkList"
 
-  $scope.setDownloadOption = ->
-    ; # TODO
+  $scope.data = Settings.data
+  $scope.toggleDownloadOption = ->
+    data.limitDownloadToWifi = !data.limitDownloadToWifi
+    Settings.set 'limitDownloadToWifi', data.limitDownloadToWifi
 
-  $scope.credits = Auth.getData().credits
+  $scope.refreshCredits = ->
+    User.reload()
+
+  $scope.data = User.data
 
   $scope.logOut = () ->
     nextViewOpts =

@@ -3,50 +3,20 @@ ion-view(view-title='Settings')
     button.button.button-icon.icon.ion-log-out.button-clear.button-light(ng-click='logOut()')
   ion-content(on-swipe-right='onSwipedRight()', on-swipe-left='onSwipedLeft()')
     ion-list
-      ion-item
-        span Remaining Talk Credits: {{credits}}
 
-      ion-item.item-toggle
-        label.toggle
-          p Download content only when on a Wifi
-          input(type='checkbox' ng-click='setDownloadOption()')
-          .track
-            .handle
-
-      ion-item.item-toggle
-        label.toggle
-          span Download content only when on a Wifi
-          input(type='checkbox' ng-click='setDownloadOption()')
-          .track
-            .handle
-
-      ion-item.item-toggle
-        label.toggle
-          div Download content only when on a Wifi
-          input(type='checkbox' ng-click='setDownloadOption()')
-          .track
-            .handle
-
-      ion-item.item-toggle
-        p Download content only when on a Wifi
-        label.toggle
-          input(type='checkbox' ng-click='setDownloadOption()')
-          .track
-            .handle
+      ion-item.item-icon-right
+        div Remaining Talk Credits: {{data.credits}}
+        i.icon.ion-android-refresh(ng-click='refreshCredits()')
 
       ion-item.item-toggle
         span Download content only when on a Wifi
         label.toggle
-          input(type='checkbox' ng-click='setDownloadOption()')
+          input(type='checkbox'
+                ng-click='toggleDownloadOption()'
+                ng-checked='limitDownloadToWifi')
           .track
             .handle
 
-      ion-item.item-toggle
-        div Download content only when on a Wifi
-        label.toggle
-          input(type='checkbox' ng-click='setDownloadOption()')
-          .track
-            .handle
 
     //-   ion-item
     //-     label.toggle

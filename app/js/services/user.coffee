@@ -1,0 +1,49 @@
+userFn = ($log, $http, $localstorage) ->
+
+  USER_DATA_CACHE_KEY = "user"
+
+  LOGIN_URL = "#{GLOBALS.API_ROOT_URL}/api/sessions"
+  RELOAD_URL = "#{GLOBALS.API_ROOT_URL}/api/users/"
+
+  data = $localstorage.getObject USER_DATA_CACHE_KEY || {}
+
+  $log.info "setup User service #{JSON.stringify(data)}"
+
+  # TODO checkout if we can use data binding here
+  store = (_data) ->
+    $log.info "storing #{JSON.stringify(_data)}"
+    data = _data
+    $localstorage.setObject USER_DATA_CACHE_KEY, _data
+
+  login = (email, password, success, error) ->
+    $log.info "login #{email} with password"
+    $log.info "POST #{LOGIN_URL}"
+    $http.post(LOGIN_URL, { email, password })
+      .success (data, status) ->
+        $log.info "success: #{status} #{JSON.stringify(data)}"
+        store(data)
+        $http.defaults.headers.common["X-User-Email"] = email
+        $http.defaults.headers.common["X-User-Token"] = data.authentication_token
+        success(data, status) if success?
+      .error (data, status) ->
+        $log.info "error: #{status} #{JSON.stringify(data)}"
+        error(data, status) if error?
+
+  reload = ->
+    $log.info "reload #{data.email}"
+    $log.info "POST #{RELOAD_URL}#{data.id}"
+    $http.get(RELOAD_URL+data.id)
+      .success (data, status) ->
+        $log.info "success: #{status} #{JSON.stringify(data)}"
+        store(data)
+      .error (data, status) ->
+        # TODO handle error properly
+        $log.info "error: #{status} #{JSON.stringify(data)}"
+
+  {
+    login
+    data
+    reload
+  }
+
+angular.module("voicerepublic").service('User', userFn)
