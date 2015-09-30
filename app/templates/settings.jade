@@ -1,7 +1,8 @@
 ion-view(view-title='Settings')
   ion-nav-buttons(side='left')
     button.button.button-icon.icon.ion-log-out.button-clear.button-light(ng-click='logOut()')
-  ion-content(on-swipe-right='onSwipedRight()' on-swipe-left='onSwipedLeft()')
+  ion-content(on-swipe-right='onSwipedRight()'
+              on-swipe-left='onSwipedLeft()')
     ion-list
 
       ion-item.item-icon-right
@@ -11,6 +12,7 @@ ion-view(view-title='Settings')
       ion-item.item-toggle
         span Download content only when on a Wifi
         label.toggle.toogle-calm
+          //- TODO check if we can use ng-model here
           input(type='checkbox'
                 ng-click='toggleDownloadOption()'
                 ng-checked='settings.limitDownloadToWifi')
@@ -21,12 +23,7 @@ ion-view(view-title='Settings')
       .developer-options(ng-show="settings.developer()")
 
         ion-item
-          h1 Developer Options
           h2 Developer Options
-          h3 Developer Options
-          h4 Developer Options
-          h5 Developer Options
-          h6 Developer Options
 
         ion-item.item-input.item-select
           .input-label Target

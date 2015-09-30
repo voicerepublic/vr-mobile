@@ -20,7 +20,8 @@ settingsFn = ($log, $localstorage, $window) ->
     target: GLOBALS.DEFAULT_TARGET
     developer: GLOBALS.DEVELOPER_OPTIONS
 
-  data = DEFAULTS
+  data = {}
+  data[key] = val for key, val of DEFAULTS
 
   # load an merge stored settings from local storage
   if $window.localStorage[SETTINGS_DATA_CACHE_KEY]?
@@ -46,11 +47,12 @@ settingsFn = ($log, $localstorage, $window) ->
   targets = ->
     key for key, val of TARGETS
 
-  $log.info JSON.stringify(targets())
-
   reset = ->
     data = DEFAULTS
     $localstorage.setObject SETTINGS_DATA_CACHE_KEY, data
+    # FIXME this restarts the app, which might not be nescessary
+    $window.location.reload(true)
+
 
   {
     data

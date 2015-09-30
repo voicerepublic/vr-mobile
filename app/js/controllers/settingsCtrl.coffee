@@ -23,7 +23,7 @@ settingsFn = ($scope, $state, $ionicHistory, $ionicPopup,
 
   $scope.resetSettings = ->
     Settings.reset()
-    $cordovaToast.showLongBottom "Settings have been reset."
+    $cordovaToast.showLongBottom "Settings have been reset, restarting..."
 
   $scope.refreshCredits = ->
     User.reload()
