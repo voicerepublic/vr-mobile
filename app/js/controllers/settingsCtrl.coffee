@@ -15,9 +15,15 @@ settingsFn = ($scope, $state, $ionicHistory, $ionicPopup,
     $state.go "tab.talkList"
 
   $scope.settings = Settings.data
+  $scope.targets = Settings.targets
+
   $scope.toggleDownloadOption = ->
     $scope.settings.limitDownloadToWifi = !$scope.settings.limitDownloadToWifi
     Settings.set 'limitDownloadToWifi', $scope.settings.limitDownloadToWifi
+
+  $scope.resetSettings = ->
+    Settings.reset()
+    $cordovaToast.showLongBottom "Settings have been reset."
 
   $scope.refreshCredits = ->
     User.reload()
