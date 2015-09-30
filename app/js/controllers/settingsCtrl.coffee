@@ -11,9 +11,11 @@
 settingsFn = ($scope, $state, $ionicHistory, $ionicPopup,
               Auth, User, Settings, $cordovaToast) ->
 
+  # navigation
   $scope.onSwipedRight = () ->
     $state.go "tab.talkList"
 
+  # settings
   $scope.settings = Settings.data
   $scope.targets = Settings.targets
 
@@ -25,6 +27,7 @@ settingsFn = ($scope, $state, $ionicHistory, $ionicPopup,
     Settings.reset()
     $cordovaToast.showLongBottom "Settings have been reset, restarting..."
 
+  # user
   $scope.refreshCredits = ->
     User.reload()
     $scope.user = User.data
@@ -32,6 +35,7 @@ settingsFn = ($scope, $state, $ionicHistory, $ionicPopup,
 
   $scope.user = User.data
 
+  # logout
   $scope.logOut = () ->
     nextViewOpts =
       disableBack: yes

@@ -41,7 +41,6 @@ settingsFn = ($log, $localstorage, $window) ->
     $localstorage.setObject SETTINGS_DATA_CACHE_KEY, data
 
   endpoint = ->
-    $log.info "TARGET: #{JSON.stringify(TARGET[data.target])}"
     TARGETS[data.target]
 
   targets = ->
