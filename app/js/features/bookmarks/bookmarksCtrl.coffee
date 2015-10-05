@@ -154,11 +154,33 @@ angular.module("voicerepublic")
 
   #Player relevant
   #
+  $scope.play = (talk, index) ->
+    isSame = talk.id is $scope.playedTalk?.id
+    isSameAndPlaying = isSame and $scope.isTalkPlaying
+    shouldResume = isSame and $scope.isTalkPaused
+    #handle if talk is paused
+    $scope.resume() if shouldResume
+    #nothing to do if same talk
+    return if isSameAndPlaying
+    #if one is playing stop it to start the new
+    if $scope.isTalkPlaying
+    #handle via event
+      Player.once 'stopped', () ->
+        play talk, index
+      Player.stop()
+    else
+      play talk, index
+
+  #handle playing event-based -> wait for stop
   play = (talk, index) ->
-    #remove event after handled
+    #remove event listener after handled
     Player.off 'stopped'
     #assure button icon
     el = $window.document.querySelector '#pauseOrResume-button'
+    if el.classList.contains 'ion-ios-play'
+      el.classList.remove 'ion-ios-play'
+      el.classList.add 'ion-ios-pause'
+    el = $window.document.querySelector '#handle-button'
     if el.classList.contains 'ion-ios-play'
       el.classList.remove 'ion-ios-play'
       el.classList.add 'ion-ios-pause'
@@ -172,20 +194,14 @@ angular.module("voicerepublic")
     $scope.isTalkPlaying = yes
     Player.once 'stopped', () ->
       alternateButtons()
-      $scope.isTalkPlaying = no
       Player.off 'stopped'
-
-  $scope.play = (talk, index) ->
-    #nothing to do if same talk
-    return if talk.id is $scope.playedTalk?.id
-    #if one is playing stop it to start the new
-    if $scope.isTalkPlaying
-      #handle via event
-      Player.once 'stopped', () ->
-        play talk, index
-      Player.stop()
-    else
-      play talk, index
+      progress = $scope.playedTalk.progress
+      duration = $scope.playedTalk.duration
+      if progress >= duration
+        $scope.isTalkPlaying = no
+        $scope.playNext()
+      else
+        $scope.isTalkPlaying = no
 
   $scope.pause = () ->
     $scope.isTalkPaused = yes
@@ -209,9 +225,12 @@ angular.module("voicerepublic")
     , 300
 
   alternateButtons = () ->
+    handleButton =
+      target: $window.document.querySelector '#handle-button'
     pauseOrResumeButton =
       target: $window.document.querySelector '#pauseOrResume-button'
     alternateButtonFromTarget pauseOrResumeButton
+    alternateButtonFromTarget handleButton
 
   alternateButtonFromTarget = ($e) ->
     el = $e.target
@@ -228,7 +247,10 @@ angular.module("voicerepublic")
     if el.classList.contains 'ion-ios-pause'
       $scope.pause() if $scope.isTalkPlaying
     else if el.classList.contains 'ion-ios-play'
-      $scope.resume() if $scope.isTalkPaused
+      if $scope.isTalkPaused
+        $scope.resume()
+      else if not $scope.isTalkPlaying
+        $scope.play $scope.playedTalk, $scope.playedTalk.index
 
     alternateButtonFromTarget $e
 
