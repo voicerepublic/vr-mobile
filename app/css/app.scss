@@ -22,16 +22,23 @@ ion-pull-up-handle {
 	width: 100%;
 	filter: opacity(50%); 
 	-webkit-filter: opacity(50%);
-	transform: scale(3,3);
-	-webkit-transform: scale(3,3);
+	transform: scale(3, 3) translateY(30%);
+	-webkit-transform: scale(3, 3) translateY(30%);
 	vertical-align: middle;
 }
 
-#round {
-	border-radius: 50%;
-	border-style: solid;
-	border-color: white;
-    border-width: 1px;
+#rounded {
+	border-radius: 5px;
+}
+
+pic-container {
+	height: 50%;
+	z-index: 9999999;
+}
+
+pic-container img {
+	max-height: 100%;
+	max-width: 100%;
 }
 
 .blur {

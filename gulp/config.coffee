@@ -59,7 +59,7 @@ module.exports = new class GulpConfig
         HTTP_SERVER_IP: (->
           # Try to detect IP address in user's network.
           # If not, fallback to 127.0.0.1 .
-          #localIp = execSync("(ifconfig wlan 2>/dev/null || ifconfig en1) | grep inet | grep -v inet6 | awk '{print $2}' | sed 's/addr://g'").stdout.trim()
+          localIp = execSync("(ifconfig wlan 2>/dev/null || ifconfig en1) | grep inet | grep -v inet6 | awk '{print $2}' | sed 's/addr://g'").stdout.trim()
           localIp = "127.0.0.1" unless parseInt(localIp) > 0
           localIp
         )()
@@ -185,7 +185,7 @@ module.exports = new class GulpConfig
           "assets/components/ionic/js/ionic-angular.js"
 
           # Here add any vendor files that should be included in vendor.js
-          #"assets/components/ngCordova/dist/ng-cordova.js"
+          #"assets/components/ngCordova/dist/ng-cordova.js" getting it from assets/js directly to assure order of execution
           "assets/components/angular-timer/app/js/timer.js"
           "assets/components/angular-timer/app/js/i18nService.js"
           "assets/components/humanize-duration/humanize-duration.js"

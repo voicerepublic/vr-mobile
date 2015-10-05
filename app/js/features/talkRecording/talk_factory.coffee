@@ -18,7 +18,7 @@
     - cordova.file
 
 @models
-  talk =
+  recordedTalk =
     id : talkId
     fullPath : "/talks/" + fileName
     nativeURL : path + fileName
@@ -40,10 +40,10 @@
 @examples
   For private usage
   -----------------
-    talk = TalkFactory._createTalkDataStructure path=""
+    talk = TalkFactory._createDataStructure path=""
       -> where path is the platform specific absolute path to the talk (without filename)
 
-    TalkFactory._removeTalkFromDataStructure talk
+    TalkFactory._removeFromDataStructure talk
 
   For public usage
   ----------------
@@ -81,7 +81,7 @@ angular.module("voicerepublic")
     constructor: () ->
       #constructor
       
-    _createTalkDataStructure: (path = "") ->
+    _createDataStructure: (path = "") ->
       #keep track of date data
       date = new $window.Date()
       recordDate = date.toLocaleDateString()
@@ -95,7 +95,7 @@ angular.module("voicerepublic")
       startsAtTime_minutes = if date.getMinutes() < 10 then "0#{date.getMinutes()}" else "#{date.getMinutes()}"
       startsAtTime = "#{startsAtTime_hours}:#{startsAtTime_minutes}"
 
-      #persistent autoincrement of id
+      #persisted autoincrement of id
       talkId = $localstorage.get "idCounter", 0
       $localstorage.set "idCounter", ++talkId
 
@@ -136,7 +136,7 @@ angular.module("voicerepublic")
       #expose the created talk
       talk
 
-    _removeTalkFromDataStructure: (talkToDelete) ->
+    _removeFromDataStructure: (talkToDelete) ->
       #retrieve talks
       talks = $localstorage.getObject "talks"
 
@@ -180,7 +180,7 @@ angular.module("voicerepublic")
         nativeURLtoTalksDir = success?.nativeURL
         #success is undefined with IOS
         nativeURLtoTalksDir = path + "talks/" if $window.ionic.Platform.isIOS()
-        talk = self._createTalkDataStructure nativeURLtoTalksDir
+        talk = self._createDataStructure nativeURLtoTalksDir
 
         #return the next promise and build a chain \(^^)/
         $cordovaFile.createFile nativeURLtoTalksDir, talk.filename, false
@@ -188,7 +188,7 @@ angular.module("voicerepublic")
         if error.code is 12 and error.message is "PATH_EXISTS_ERR"
           #directory talks exists already! good!
           path = path + "talks/"
-          talk = self._createTalkDataStructure path
+          talk = self._createDataStructure path
 
           #return the next promise and build a chain \(^^)/
           $cordovaFile.createFile path, talk.filename, false
@@ -204,7 +204,7 @@ angular.module("voicerepublic")
       (error) ->
         #remove the talk in the DataStructure
         #since it was not created
-        self._removeTalkFromDataStructure talk
+        self._removeFromDataStructure talk
         #reject with error as param
         q.reject error
       )
@@ -301,12 +301,12 @@ angular.module("voicerepublic")
       $cordovaFile.removeFile(path, file)
       .then((success) ->
         #remove from DataStructure
-        self._removeTalkFromDataStructure talkToDelete
+        self._removeFromDataStructure talkToDelete
         #notify that deleting the talk was successfull
         q.resolve success
       (error) ->
         #remove from DataStructure
-        self._removeTalkFromDataStructure talkToDelete
+        self._removeFromDataStructure talkToDelete
         #notify that deleting the talk was not successfull
         q.reject error
       )

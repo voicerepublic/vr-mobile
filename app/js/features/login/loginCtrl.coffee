@@ -86,7 +86,8 @@ angular.module("voicerepublic")
     $ionicLoading.show ionicLoadingOpts
 
     #URL's
-    url = 'https://staging:oph5lohb@staging.voicerepublic.com/api/sessions'
+    url = 'https://voicerepublic.com/api/sessions'
+    #url = 'https://staging:oph5lohb@staging.voicerepublic.com/api/sessions'
     #url = 'http://localhost:3000/api/sessions'
 
     #credentials provided from user
@@ -116,9 +117,10 @@ angular.module("voicerepublic")
       $ionicHistory.nextViewOptions nextViewOpts
 
       params =
-        shouldReload: yes
+        shouldAdjustPlayer: yes
 
       $state.go "tab.bookmarks", params
+
       $cordovaToast.showShortBottom "Hello #{data.firstname}!"
 
     .error (data, status) ->

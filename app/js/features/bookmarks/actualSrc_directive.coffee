@@ -19,4 +19,4 @@ angular.module("voicerepublic")
           img.src = attrs.actualSrc
           angular.element(img).bind 'load', ->
             element.attr 'src', attrs.actualSrc
- }
+  }

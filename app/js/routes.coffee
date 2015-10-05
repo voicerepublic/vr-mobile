@@ -19,7 +19,7 @@ angular.module("voicerepublic")
     templateUrl: "templates/tabs.html"
 
   .state "tab.bookmarks",
-    url: "/bookmarks/:shouldReload"
+    url: "/bookmarks/:shouldAdjustPlayer"
     views:
       "tab-bookmarks":
         templateUrl: 'templates/bookmarks.html'

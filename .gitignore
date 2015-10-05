@@ -14,5 +14,8 @@
 
 /coverage
 
+# IDE settings
+/.idea
+
 .DS_Store
 *swp

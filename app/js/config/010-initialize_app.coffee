@@ -5,7 +5,6 @@ app = angular.module(GLOBALS.ANGULAR_APP_NAME, [
   "ionic"
   "#{GLOBALS.NGCORDOVA}"
   "timer"
-  "ipCookie"
   "ionic-pullup"
   "angulartics.google.analytics"
   "angulartics.google.analytics.cordova"

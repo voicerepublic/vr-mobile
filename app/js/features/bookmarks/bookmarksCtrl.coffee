@@ -16,91 +16,99 @@
 ###
 angular.module("voicerepublic")
 
-.controller "bookmarksCtrl", ($rootScope, $scope, $state, $stateParams, $window, $timeout, $ionicHistory, $ionicPopup, $cordovaSocialSharing, $cordovaToast, Auth) ->
-  #mockup data
-  $scope.bookmarks = [
-    talk1 =
-      img: 'http://lorempixel.com/800/700'
-      teaser: 'teasing you - for ever'
-      participants: 'Mark Teaser, Tea Ser'
-      title: 'lorem ipsum'
-      isDownloaded: yes
-      description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-    talk2 =
-      img: 'http://lorempixel.com/800/700'
-      teaser: 'teasing you - for ever'
-      participants: 'Mark Teaser, Tea Ser'
-      title: 'lorem ipsum'
-      description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-    talk3 =
-      img: 'http://lorempixel.com/800/700'
-      teaser: 'teasing you - for ever'
-      participants: 'Mark Teaser, Tea Ser'
-      title: 'lorem ipsum'
-      description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-  ]
+.controller "bookmarksCtrl", ($scope, $state, $stateParams, $window, $timeout, $interval, $ionicHistory, $ionicLoading, $ionicPopup, $cordovaSocialSharing, $cordovaToast, Auth, Fetcher, Player) ->
+  #bookmark container
+  $scope.bookmarks = []
 
-  #Variables ?needed
+  #played talks container
+  $scope.playedTalk = null
+
+  #flags
   $scope.isIOS = $window.ionic.Platform.isIOS()
-  $scope.playedTalk = {}
   $scope.isTalkPlaying = no
   $scope.isTalkPaused = no
   $scope.isFooterExpanded = no
+  $scope.isRefresh = no
+  $scope.isInfScroll = no
+  $scope.isTalkLoading = no
+  progressChangedFromUser = no
 
-  #Bookmarked talk list relevant
+  #ionic loading template
+  if $window.ionic.Platform.isAndroid()
+    condTemplate = '<ion-spinner icon="android"'
+    condTemplate += 'class="spinner-assertive"' if $window.ionic.Platform.grade is "a"
+    condTemplate += '></ion-spinner> <br/> Loading...'
+  if $window.ionic.Platform.isIOS()
+    condTemplate = '<ion-spinner icon="ios"></ion-spinner> <br/> Loading...'
+  ionicLoadingOpts =
+    template: condTemplate
+    hideOnStateChange: yes
+
+  #events
+  #
+  #fetched the bundle successfully
+  Fetcher.on 'bundleLoaded', (talks) ->
+    $scope.bookmarks = [] if $scope.isRefresh
+    for talk in talks
+      talk.url = "#{Fetcher.baseUrl}#{talk.media_links.mp3}"
+      console.log talk
+      $scope.bookmarks.push talk
+    $scope.$broadcast 'scroll.infiniteScrollComplete' if $scope.isInfScroll
+    $scope.$broadcast 'scroll.refreshComplete' if $scope.isRefresh
+    $scope.isRefresh = no
+    $scope.isInfScroll = no
+
+  #error fetching bundle
+  Fetcher.on 'error', (err) ->
+    $scope.isRefresh = no
+    $scope.isInfScroll = no
+    console.log JSON.stringify err
+
+  #loading resource
+  Player.on 'loadStart', () ->
+    #show the loading modal
+    if $scope.isFooterExpanded
+      $ionicLoading.show ionicLoadingOpts
+    $scope.isTalkLoading = yes
+    console.log 'Loading...'
+
+  #resource loaded
+  Player.on 'loadEnd', () ->
+    #hide the loading modal
+    $ionicLoading.hide() if $scope.isFooterExpanded
+    $scope.isTalkLoading = no
+    console.log 'Done loading!'
+
+  #update the duration of the played talk
+  Player.on 'duration', (duration) ->
+    duration = Math.floor parseInt duration, 10
+    $scope.playedTalk.duration = duration
+
+  #update the progress of the played talk
+  Player.on 'progress', (progress) ->
+    if progressChangedFromUser
+      progressChangedFromUser = no
+      return
+    progress = Math.floor parseInt progress, 10
+    $scope.playedTalk.progress = progress
+
+  #something went wrong while playing
+  Player.on 'error', (err) ->
+    $scope.isTalkLoading = no
+    console.log JSON.stringify err
+
+  #Bookmarked talks list relevant
   #
   $scope.refreshBookmarks = () ->
-    #$scope.bookmarks = Fetcher.refresh()
-    talk4 =
-      img: 'http://lorempixel.com/800/700'
-      teaser: 'teasing you - for ever'
-      participants: 'Mark Teaser, Tea Ser'
-      title: 'lorem ipsum'
-      isDownloaded: yes
-      description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
- 
-    $timeout ->
-      $scope.bookmarks.unshift talk4
-      $scope.$broadcast 'scroll.refreshComplete'
-    , 1337
+    $scope.isRefresh = yes
+    Fetcher.refresh()
 
   $scope.moreDataCanBeLoaded = () ->
-    yes
+    Fetcher.canLoadMore
 
   $scope.loadMore = () ->
-    #nextBundle = Fetcher.loadNextBundle()
-    talk1 =
-      img: 'http://lorempixel.com/800/700'
-      teaser: 'teasing you - for ever'
-      participants: 'Mark Teaser, Tea Ser'
-      title: 'lorem ipsum'
-      description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-    talk2 =
-      img: 'http://lorempixel.com/800/700'
-      teaser: 'teasing you - for ever'
-      participants: 'Mark Teaser, Tea Ser'
-      title: 'lorem ipsum'
-      description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-    talk3 =
-      img: 'http://lorempixel.com/800/700'
-      teaser: 'teasing you - for ever'
-      participants: 'Mark Teaser, Tea Ser'
-      title: 'lorem ipsum'
-      description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-    talk4 =
-      img: 'http://lorempixel.com/800/700'
-      teaser: 'teasing you - for ever'
-      participants: 'Mark Teaser, Tea Ser'
-      title: 'lorem ipsum'
-      description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
- 
-    $timeout ->
-      $scope.bookmarks.push talk1
-      $scope.bookmarks.push talk2
-      $scope.bookmarks.push talk3
-      $scope.bookmarks.push talk4
-      $scope.$broadcast 'scroll.infiniteScrollComplete'
-    , 1337
+    $scope.isInfScroll = yes
+    Fetcher.loadNextBundle()
 
   #Footer handle
   #
@@ -115,6 +123,9 @@ angular.module("voicerepublic")
       handleButton.classList.remove 'ion-ios-pause'
 
     handleButton.classList.add 'ion-close'
+
+    if $scope.isTalkLoading
+      $ionicLoading.show ionicLoadingOpts
 
     $scope.isFooterExpanded = yes
 
@@ -143,31 +154,83 @@ angular.module("voicerepublic")
 
   #Player relevant
   #
-  $scope.play = (talk) ->
-    $scope.isTalkPlaying = yes
+  play = (talk, index) ->
+    #remove event after handled
+    Player.off 'stopped'
+    #assure button icon
+    el = $window.document.querySelector '#pauseOrResume-button'
+    if el.classList.contains 'ion-ios-play'
+      el.classList.remove 'ion-ios-play'
+      el.classList.add 'ion-ios-pause'
     $scope.playedTalk = talk
+    #reset progress & duration
+    $scope.playedTalk.progress = 0
+    $scope.playedTalk.duration = 0
+    #assign index to know which is next or last
+    $scope.playedTalk.index = index
+    Player.start talk
+    $scope.isTalkPlaying = yes
+    Player.once 'stopped', () ->
+      alternateButtons()
+      $scope.isTalkPlaying = no
+      Player.off 'stopped'
+
+  $scope.play = (talk, index) ->
+    #nothing to do if same talk
+    return if talk.id is $scope.playedTalk?.id
+    #if one is playing stop it to start the new
+    if $scope.isTalkPlaying
+      #handle via event
+      Player.once 'stopped', () ->
+        play talk, index
+      Player.stop()
+    else
+      play talk, index
 
   $scope.pause = () ->
     $scope.isTalkPaused = yes
+    Player.pause()
+
+  $scope.resume = () ->
+    $scope.isTalkPaused = no
+    Player.play()
+
+  $scope.sliderReleased = () ->
+    progressChangedFromUser = yes
+    pos = $scope.playedTalk.progress
+    Player.seekTo pos * 1000
 
   $scope.stop = () ->
     $scope.isTalkPlaying = no
-    $scope.playedTalk = null
+    Player.stop()
+    # wait for view to settle
+    $timeout ->
+      $scope.playedTalk = null
+    , 300
+
+  alternateButtons = () ->
+    pauseOrResumeButton =
+      target: $window.document.querySelector '#pauseOrResume-button'
+    alternateButtonFromTarget pauseOrResumeButton
+
+  alternateButtonFromTarget = ($e) ->
+    el = $e.target
+    if el.classList.contains 'ion-ios-pause'
+      el.classList.remove 'ion-ios-pause'
+      el.classList.add 'ion-ios-play'
+    else if el.classList.contains 'ion-ios-play'
+      el.classList.remove 'ion-ios-play'
+      el.classList.add 'ion-ios-pause'
 
   $scope.pauseOrResume = ($e) ->
     el = $e.target
 
     if el.classList.contains 'ion-ios-pause'
-      el.classList.remove 'ion-ios-pause'
-      el.classList.add 'ion-ios-play'
       $scope.pause() if $scope.isTalkPlaying
     else if el.classList.contains 'ion-ios-play'
-      el.classList.remove 'ion-ios-play'
-      el.classList.add 'ion-ios-pause'
       $scope.resume() if $scope.isTalkPaused
 
-  $scope.resume = () ->
-    $scope.isTalkPaused = no
+    alternateButtonFromTarget $e
 
   $scope.handleAction = () ->
     handleButton =
@@ -179,23 +242,41 @@ angular.module("voicerepublic")
       $scope.stop()
     else
       $scope.pauseOrResume handleButton
-      $scope.pauseOrResume pauseOrResumeButton
+      alternateButtonFromTarget pauseOrResumeButton
     
+  getNextOrLastTalk = (backward = false) ->
+    index = $scope.playedTalk.index
+    last = $scope.bookmarks.length - 1
+    first = 0
+    if backward
+      next = index - 1
+      if index is first
+        next = last
+    else
+      next = index + 1
+      if index is last
+        next = first
+    nextTalk = $scope.bookmarks[next]
+    nextTalk.index = next
+    return nextTalk
 
   $scope.playNext = () ->
-    $scope.playedTalk = $scope.bookmarks[2]
+    nextTalk = getNextOrLastTalk()
+    $scope.play nextTalk, nextTalk.index
 
   $scope.playLast = () ->
-    $scope.playedTalk = $scope.bookmarks[1]
+    backward = yes
+    lastTalk = getNextOrLastTalk backward
+    $scope.play lastTalk, lastTalk.index
 
   #Load the share context
   #
   $scope.share = (talk) ->
     #shared stuff
     file = null
-    message = talk.description
+    message = talk.teaser
     subject = talk.title
-    link = talk.url
+    link = talk.self_url
 
     $cordovaSocialSharing
     .share(message, subject, file, link)
@@ -209,6 +290,8 @@ angular.module("voicerepublic")
   #
   #swiped left
   $scope.onSwipedLeft = () ->
+    if $scope.isTalkPlaying
+      $scope.stop()
     $state.go "tab.record"
 
   #Logout
