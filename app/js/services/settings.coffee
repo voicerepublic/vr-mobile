@@ -52,6 +52,11 @@ settingsFn = ($log, $localstorage, $window) ->
     # FIXME this restarts the app, which might not be nescessary
     $window.location.reload(true)
 
+  # clear the localstorage -- not just settings!
+  clear = ->
+    $window.localStorage.clear()
+    $window.location.reload(true)
+
 
   {
     data
@@ -59,6 +64,7 @@ settingsFn = ($log, $localstorage, $window) ->
     endpoint
     targets
     reset
+    clear
   }
 
 angular.module("voicerepublic").service('Settings', settingsFn)

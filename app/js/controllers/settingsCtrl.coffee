@@ -27,6 +27,10 @@ settingsFn = ($scope, $state, $ionicHistory, $ionicPopup,
     Settings.reset()
     $cordovaToast.showLongBottom "Settings have been reset, restarting..."
 
+  $scope.clearStorage = ->
+    Settings.clear()
+    $cordovaToast.showLongBottom "Storage has been cleared, restarting..."
+
   # user
   $scope.refreshCredits = ->
     User.reload()

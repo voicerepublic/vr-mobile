@@ -1,13 +1,14 @@
-userFn = ($log, $http, $localstorage) ->
+userFn = ($log, $http, $localstorage, Settings) ->
 
   USER_DATA_CACHE_KEY = "user"
 
-  LOGIN_URL = "#{GLOBALS.API_ROOT_URL}/api/sessions"
-  RELOAD_URL = "#{GLOBALS.API_ROOT_URL}/api/users/"
+  LOGIN_URL  = "#{Settings.endpoint.api}/api/sessions"
+  RELOAD_URL = "#{Settings.endpoint.api}/api/users/"
 
   data = $localstorage.getObject USER_DATA_CACHE_KEY || {}
 
   $log.info "setup User service #{JSON.stringify(data)}"
+
 
   # TODO checkout if we can use data binding here
   _store = (_data) ->
@@ -44,6 +45,7 @@ userFn = ($log, $http, $localstorage) ->
       .error (data, status) ->
         # TODO handle error properly
         $log.info "error: #{status} #{JSON.stringify(data)}"
+
 
   {
     login
