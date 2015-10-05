@@ -16,6 +16,7 @@ userFn = ($log, $http, $localstorage, Settings) ->
     data = _data
     $localstorage.setObject USER_DATA_CACHE_KEY, _data
 
+
   login = (email, password, success, error) ->
     $log.info "login #{email} with password"
     $log.info "POST #{LOGIN_URL}"
@@ -46,12 +47,16 @@ userFn = ($log, $http, $localstorage, Settings) ->
         # TODO handle error properly
         $log.info "error: #{status} #{JSON.stringify(data)}"
 
+  signedIn = ->
+    !!data.id?
+
 
   {
     login
     logout
     reload
     data
+    signedIn
   }
 
 angular.module("voicerepublic").service('User', userFn)

@@ -59,8 +59,8 @@ app.config ($httpProvider) ->
 
       # Sign out current user if we receive a 401 status.
       if response.status == 401
-        $injector.invoke (Auth) ->
-          Auth.setAuthToken(null, null)
+        $injector.invoke (User) ->
+          User.logout()
           $location.path("/")
 
       $q.reject(response)

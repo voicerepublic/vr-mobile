@@ -9,7 +9,7 @@
 
 ###
 settingsFn = ($scope, $state, $ionicHistory, $ionicPopup,
-              Auth, User, Settings, $cordovaToast) ->
+              User, Settings, $cordovaToast) ->
 
   # navigation
   $scope.onSwipedRight = () ->
@@ -54,8 +54,7 @@ settingsFn = ($scope, $state, $ionicHistory, $ionicPopup,
     popupPromise = $ionicPopup.confirm popupOpts
     popupPromise.then (logout) ->
       if logout
-        $scope.stopPlaying()
-        Auth.setAuthToken null, null
+        User.logout()
         $state.go "login"
 
 angular.module("voicerepublic").controller("settingsCtrl", settingsFn)

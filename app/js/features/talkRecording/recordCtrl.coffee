@@ -15,7 +15,7 @@
 ###
 angular.module("voicerepublic")
 
-.controller "recordCtrl", ($scope, $state, $window, $timeout, $ionicHistory, $ionicLoading, $ionicPopup, $cordovaToast, Recorder, Auth) ->
+.controller "recordCtrl", ($scope, $state, $window, $timeout, $ionicHistory, $ionicLoading, $ionicPopup, $cordovaToast, Recorder, User) ->
   #needed as flag for view
   $scope.isRecording = no
   
@@ -105,5 +105,5 @@ angular.module("voicerepublic")
     popupPromise = $ionicPopup.confirm popupOpts
     popupPromise.then (logout) ->
       if logout
-        Auth.setAuthToken null, null
+        User.logout()
         $state.go "login"

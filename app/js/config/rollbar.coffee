@@ -21,14 +21,14 @@ Rollbar.configure
         frame.filename = frame.filename.replace(GLOBALS.APP_ROOT, "#{GLOBALS.ROLLBAR_SOURCEMAPS_URL_PREFIX}/")
 
 
-app.run (Auth) ->
-  Auth.on "user.updated", (user) ->
-    Rollbar.configure
-      payload:
-        person: ({
-          id: user.id
-          email: user.email
-        } if user)
+# app.run (Auth) ->
+#   Auth.on "user.updated", (user) ->
+#     Rollbar.configure
+#       payload:
+#         person: ({
+#           id: user.id
+#           email: user.email
+#         } if user)
 
 ### future usage
 app.run (onRouteChangeCallback) ->

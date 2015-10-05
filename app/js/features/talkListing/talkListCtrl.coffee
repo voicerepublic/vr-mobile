@@ -16,7 +16,7 @@
 ###
 angular.module("voicerepublic")
 
-.controller "talkListCtrl", ($rootScope, $scope, $state, $stateParams, $window, $ionicHistory, $ionicActionSheet, $ionicPopup, $cordovaToast, TalkFactory, Player, Auth) ->
+.controller "talkListCtrl", ($rootScope, $scope, $state, $stateParams, $window, $ionicHistory, $ionicActionSheet, $ionicPopup, $cordovaToast, TalkFactory, Player, User) ->
   #needed to display playing talks
   $scope.isPlayingId = ""
 
@@ -196,5 +196,5 @@ angular.module("voicerepublic")
     popupPromise.then (logout) ->
       if logout
         $scope.stopPlaying()
-        Auth.setAuthToken null, null
+        User.logout()
         $state.go "login"
