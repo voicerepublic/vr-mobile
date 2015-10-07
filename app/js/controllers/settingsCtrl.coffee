@@ -8,8 +8,14 @@
   This Controller is responsible for settings tab.
 
 ###
-settingsFn = ($scope, $state, $ionicHistory, $ionicPopup,
-              User, Settings, $cordovaToast) ->
+settingsFn = ( $scope,
+               $state,
+               $ionicHistory,
+               $ionicPopup,
+               $cordovaToast,
+               User,
+               Settings,
+               Player ) ->
 
   # navigation
   $scope.onSwipedRight = () ->
@@ -40,7 +46,7 @@ settingsFn = ($scope, $state, $ionicHistory, $ionicPopup,
   $scope.user = User.data
 
   # logout
-  $scope.logOut = () ->
+  $scope.logout = ->
     nextViewOpts =
       disableBack: yes
       historyRoot: yes
@@ -54,7 +60,9 @@ settingsFn = ($scope, $state, $ionicHistory, $ionicPopup,
     popupPromise = $ionicPopup.confirm popupOpts
     popupPromise.then (logout) ->
       if logout
+        Player.stop()
         User.logout()
         $state.go "login"
+
 
 angular.module("voicerepublic").controller("settingsCtrl", settingsFn)

@@ -40,7 +40,7 @@ settingsFn = ($log, $localstorage, $window) ->
     data[key] = value
     $localstorage.setObject SETTINGS_DATA_CACHE_KEY, data
 
-  endpoint = ->
+  endpoints = ->
     TARGETS[data.target]
 
   targets = ->
@@ -61,7 +61,7 @@ settingsFn = ($log, $localstorage, $window) ->
   {
     data
     set
-    endpoint
+    endpoints
     targets
     reset
     clear

@@ -1,6 +1,4 @@
 ion-view(view-title='Settings')
-  ion-nav-buttons(side='left')
-    button.button.button-icon.icon.ion-log-out.button-clear.button-light(ng-click='logOut()')
   ion-content(on-swipe-right='onSwipedRight()'
               on-swipe-left='onSwipedLeft()')
     ion-list
@@ -18,6 +16,10 @@ ion-view(view-title='Settings')
                 ng-checked='settings.limitDownloadToWifi')
           .track
             .handle
+
+      ion-item.item-icon-right
+        div Signed in as: {{user.email}}
+        i.icon.ion-log-out(ng-click='logout()')
 
       //- DEVELOPER OPTIONS
       .developer-options(ng-show="settings.developer")

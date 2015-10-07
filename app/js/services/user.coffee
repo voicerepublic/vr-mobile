@@ -2,9 +2,6 @@ userFn = ($log, $http, $localstorage, Settings) ->
 
   USER_DATA_CACHE_KEY = "user"
 
-  LOGIN_URL  = "#{Settings.endpoint.api}/api/sessions"
-  RELOAD_URL = "#{Settings.endpoint.api}/api/users/"
-
   data = $localstorage.getObject USER_DATA_CACHE_KEY || {}
 
   $log.info "setup User service #{JSON.stringify(data)}"
@@ -12,15 +9,15 @@ userFn = ($log, $http, $localstorage, Settings) ->
 
   # TODO checkout if we can use data binding here
   _store = (_data) ->
-    $log.info "storing #{JSON.stringify(_data)}"
     data = _data
     $localstorage.setObject USER_DATA_CACHE_KEY, _data
 
 
   login = (email, password, success, error) ->
     $log.info "login #{email} with password"
-    $log.info "POST #{LOGIN_URL}"
-    $http.post(LOGIN_URL, { email, password })
+    url = "#{Settings.endpoints().api}/api/sessions"
+    $log.info "POST #{url}"
+    $http.post(url, { email, password })
       .success (data, status) ->
         $log.info "success: #{status} #{JSON.stringify(data)}"
         _store(data)
@@ -38,8 +35,9 @@ userFn = ($log, $http, $localstorage, Settings) ->
 
   reload = ->
     $log.info "reload #{data.email}"
-    $log.info "POST #{RELOAD_URL}#{data.id}"
-    $http.get(RELOAD_URL+data.id)
+    url = "#{Settings.endpoints().api}/api/users/#{data.id}"
+    $log.info "GET #{url}"
+    $http.get(url)
       .success (data, status) ->
         $log.info "success: #{status} #{JSON.stringify(data)}"
         _store(data)
@@ -52,10 +50,10 @@ userFn = ($log, $http, $localstorage, Settings) ->
 
 
   {
+    data
     login
     logout
     reload
-    data
     signedIn
   }
 
