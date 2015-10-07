@@ -15,10 +15,17 @@
   - cordova.InAppBrowser
 ###
 
-loginCtrlFn = ($http, $ionicLoading, $ionicHistory,
-               $rootScope, $scope, $window, $state,
-               $cordovaToast, $cordovaInAppBrowser,
-               $log, User) ->
+loginCtrlFn = ( $scope,
+                $http,
+                $log,
+                $window,
+                $state,
+                $rootScope,
+                $ionicLoading,
+                $ionicHistory,
+                $cordovaToast,
+                $cordovaInAppBrowser,
+                User ) ->
 
   $scope.user = {}
 
