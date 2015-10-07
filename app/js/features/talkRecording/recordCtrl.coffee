@@ -91,19 +91,3 @@ angular.module("voicerepublic")
     #hide the overlay
     $ionicLoading.hide()
 
-  $scope.logOut = () ->
-    nextViewOpts =
-      disableBack: yes
-      historyRoot: yes
-    $ionicHistory.nextViewOptions nextViewOpts
-    popupOpts =
-      title: "Logout"
-      template: "Do you really want to log out?"
-      cancelText: "No"
-      okText: "Yes"
-      okType: "button-assertive"
-    popupPromise = $ionicPopup.confirm popupOpts
-    popupPromise.then (logout) ->
-      if logout
-        User.logout()
-        $state.go "login"

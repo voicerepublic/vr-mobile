@@ -181,20 +181,3 @@ angular.module("voicerepublic")
     Player.stop() if $scope.isPlayingId isnt ""
     $scope.isPlayingId = ""
 
-  $scope.logOut = () ->
-    nextViewOpts =
-      disableBack: yes
-      historyRoot: yes
-    $ionicHistory.nextViewOptions nextViewOpts
-    popupOpts =
-      title: "Logout"
-      template: "Do you really want to log out?"
-      cancelText: "No"
-      okText: "Yes"
-      okType: "button-assertive"
-    popupPromise = $ionicPopup.confirm popupOpts
-    popupPromise.then (logout) ->
-      if logout
-        $scope.stopPlaying()
-        User.logout()
-        $state.go "login"
