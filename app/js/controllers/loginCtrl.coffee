@@ -8,15 +8,25 @@
   This Controller is responsible for
   loggin in and signing up the user.
   It uses the following services:
-  - Auth
+  - User
 
   **Note:**
   Using the following cordova plugins:
   - cordova.InAppBrowser
 ###
-angular.module("voicerepublic")
 
-.controller "loginCtrl", ($http, $ionicLoading, $ionicHistory, $rootScope, $scope, $window, $state, $cordovaToast, $cordovaInAppBrowser, Auth) ->
+loginCtrlFn = ( $scope,
+                $http,
+                $log,
+                $window,
+                $state,
+                $rootScope,
+                $ionicLoading,
+                $ionicHistory,
+                $cordovaToast,
+                $cordovaInAppBrowser,
+                User ) ->
+
   $scope.user = {}
 
   #ionic loading template
@@ -85,25 +95,8 @@ angular.module("voicerepublic")
     #show the loading modal
     $ionicLoading.show ionicLoadingOpts
 
-    #URL's
-    url = "#{GLOBALS.API_ROOT_URL}/api/sessions"
-
-    #credentials provided from user
-    credentials =
-      "email": $scope.user.email
-      "password": $scope.user.password
-
-    #login request
-    $http.post(url, credentials)
-    .success (data, status) ->
+    success = (data, status) ->
       $ionicLoading.hide()
-
-      # set the auth & user relevant data
-      Auth.setAuthToken $scope.user.email, data.authentication_token
-      Auth.setSeries data.list_of_series
-      Auth.setUserData data.id, data.firstname, data.lastname
-      # future usage
-      #Auth.setCredits data.credits
 
       $scope.user.email = ""
       $scope.user.password = ""
@@ -117,9 +110,11 @@ angular.module("voicerepublic")
       $state.go "tab.record"
       $cordovaToast.showShortBottom "Hello #{data.firstname}!"
 
-    .error (data, status) ->
+    error = (data, status) ->
       $ionicLoading.hide()
       $cordovaToast.showShortBottom "Error with your login or password, please try again"
+
+    User.login($scope.user.email, $scope.user.password, success, error)
 
   #open the InAppBrowser and redirect to VR Website
   $scope.register = () ->
@@ -140,3 +135,5 @@ angular.module("voicerepublic")
     ).catch (event) ->
       #error
       $cordovaToast.showShortBottom "Something went wrong, please try again"
+
+angular.module("voicerepublic").controller("loginCtrl", loginCtrlFn)

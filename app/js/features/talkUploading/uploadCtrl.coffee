@@ -8,7 +8,7 @@
   This Controller is responsible for the uploading view.
   It uses the following services & factories:
   - TalkFactory
-  - Auth
+  - User
 
   **Note:**
   Using the following cordova plugins:
@@ -17,7 +17,7 @@
 ###
 angular.module("voicerepublic")
 
-.controller "uploadCtrl", ($scope, $rootScope, $http, $cordovaFileTransfer, $ionicLoading, $window, $log, $state, $timeout, $ionicHistory, $cordovaToast, $localstorage, TalkToUpload, TalkFactory, Auth) ->
+.controller "uploadCtrl", ($scope, $rootScope, $http, $cordovaFileTransfer, $ionicLoading, $window, $log, $state, $timeout, $ionicHistory, $cordovaToast, $localstorage, TalkToUpload, TalkFactory, User) ->
   #the form
   $scope.form = {}
 
@@ -29,7 +29,7 @@ angular.module("voicerepublic")
   $scope.talk = TalkToUpload
 
   #get the series & init selections
-  $scope.list_of_series = Auth.getSeries()
+  $scope.list_of_series = User.data.list_of_series
   $scope.talk.series_id = $scope.list_of_series[0].id
   $scope.talk.language = "en"
 

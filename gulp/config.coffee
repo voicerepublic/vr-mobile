@@ -126,6 +126,8 @@ module.exports = new class GulpConfig
         # VR Hosting: STAGING
         API_ROOT_URL: "https://staging:oph5lohb@staging.voicerepublic.com"
         S3_AUDIO_UPLOAD_BUCKET: "https://vr-audio-uploads-staging.s3.amazonaws.com"
+        DEFAULT_TARGET: 'staging'
+        DEVELOPER_OPTIONS: true
 
         # VR Hosting: LIVE
         #API_ROOT_URL: "https://voicerepublic.com"
@@ -147,6 +149,9 @@ module.exports = new class GulpConfig
         CORDOVA_GOOGLE_ANALYTICS_ID: "UA-123123-2"
         GOOGLE_ANALYTICS_ID: "UA-123123-1"
         GOOGLE_ANALYTICS_HOST: "ionicstarter.com"
+
+        WEINRE_ADDRESS: (GLOBALS) ->
+          "#{GLOBALS.HTTP_SERVER_IP}:31173"
       }
     }
 
@@ -161,6 +166,8 @@ module.exports = new class GulpConfig
       "BUNDLE_NAME"
       "API_ROOT_URL"
       "S3_AUDIO_UPLOAD_BUCKET"
+      "DEFAULT_TARGET"
+      "DEVELOPER_OPTIONS"
       "BUNDLE_VERSION"
       "CODE_VERSION"
       "CORDOVA_GOOGLE_ANALYTICS_ID"

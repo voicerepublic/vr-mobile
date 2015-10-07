@@ -1,0 +1,39 @@
+ion-view(view-title='Settings')
+  ion-content(on-swipe-right='onSwipedRight()'
+              on-swipe-left='onSwipedLeft()')
+    ion-list
+
+      ion-item.item-icon-right
+        div Remaining Talk Credits: {{user.credits}}
+        i.icon.ion-android-refresh(ng-click='refreshCredits()')
+
+      ion-item.item-toggle
+        span Download content only when on a Wifi
+        label.toggle.toogle-calm
+          //- TODO check if we can use ng-model here
+          input(type='checkbox'
+                ng-click='toggleDownloadOption()'
+                ng-checked='settings.limitDownloadToWifi')
+          .track
+            .handle
+
+      ion-item.item-icon-right
+        div Signed in as: {{user.email}}
+        i.icon.ion-log-out(ng-click='logout()')
+
+      //- DEVELOPER OPTIONS
+      .developer-options(ng-show="settings.developer")
+
+        ion-item
+          h2 Developer Options
+
+        ion-item.item-input.item-select
+          .input-label Target
+          select(ng-options="t as t for t in targets()"
+                 ng-model="settings.target")
+
+        ion-item
+          button.button.button-assertive(ng-click='resetSettings()')
+            b Reset settings
+          button.button.button-assertive(ng-click='clearStorage()')
+            b Clear storage

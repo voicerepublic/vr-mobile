@@ -1,10 +1,10 @@
 angular.module("voicerepublic")
 
 .config ($stateProvider, $urlRouterProvider) ->
-  
+
   # Ionic uses AngularUI Router which uses the concept of states
   # Learn more here: https://github.com/angular-ui/ui-router
-  
+
   $stateProvider
 
   .state "login",
@@ -54,6 +54,14 @@ angular.module("voicerepublic")
       "tab-talkList":
         templateUrl: "templates/share.html"
         controller: "shareCtrl"
+    authenticate: false
+
+  .state "tab.settings",
+    url: "/settings"
+    views:
+      "tab-settings":
+        templateUrl: "templates/settings.html"
+        controller: "settingsCtrl"
     authenticate: false
 
   # if none of the above states match, use this as the fallback
