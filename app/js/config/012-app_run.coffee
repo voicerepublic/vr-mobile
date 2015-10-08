@@ -27,7 +27,7 @@ app.run ($rootScope, $state, $log, $localstorage, $timeout, $ionicPlatform, $ion
     $rootScope.$on '$stateChangeSuccess', (event, toState, toParams, fromState, fromParams) ->
       $ionicLoading.hide()
 
-  $log.debug "Ionic app \"#{GLOBALS.ANGULAR_APP_NAME}\" has just started (app.run)!" unless GLOBALS.ENV == "test"
+  $log.debug "Ionic app \"#{GLOBALS.ANGULAR_APP_NAME}\" has just started (app.run) in env #{GLOBALS.ENV}!" unless GLOBALS.ENV == "test"
 
   # Finally, let's show the app, by hiding the splashscreen
   # (it should be visible up until this moment)
@@ -40,4 +40,3 @@ app.run ($rootScope, $state, $log, $localstorage, $timeout, $ionicPlatform, $ion
     $timeout ->
       $cordovaToast.showLongBottom "Welcome Back, #{User.data.firstname}!"
     , 1337
-  

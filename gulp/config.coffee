@@ -100,16 +100,10 @@ module.exports = new class GulpConfig
         ENV: "development"
 
         BUNDLE_ID: "com.voicerepublic.mobile.development"
-        BUNDLE_NAME: "Voice Republic"
+        BUNDLE_NAME: "Voice Republic Dev"
 
-        # VR Hosting: Development
-        API_ROOT_URL: "http://localhost:3000"
-        # # TODO: This URL could soon be pointing to localhost
-        S3_AUDIO_UPLOAD_BUCKET: "https://vr-audio-uploads-dev.s3.amazonaws.com"
-
-        # VR Hosting: STAGING
-        #API_ROOT_URL: "https://staging:oph5lohb@staging.voicerepublic.com"
-        #S3_AUDIO_UPLOAD_BUCKET: "https://vr-audio-uploads-staging.s3.amazonaws.com"
+        DEFAULT_TARGET: 'staging'
+        DEVELOPER_OPTIONS: true
 
         # Automatically connect to weinre on application's startup
         # (this way you can debug your application on your PC even if it's running from mobile ;) )
@@ -123,15 +117,8 @@ module.exports = new class GulpConfig
         BUNDLE_ID: "com.voicerepublic.mobile"
         BUNDLE_NAME: "Voice Republic"
 
-        # VR Hosting: STAGING
-        API_ROOT_URL: "https://staging:oph5lohb@staging.voicerepublic.com"
-        S3_AUDIO_UPLOAD_BUCKET: "https://vr-audio-uploads-staging.s3.amazonaws.com"
-        DEFAULT_TARGET: 'staging'
-        DEVELOPER_OPTIONS: true
-
-        # VR Hosting: LIVE
-        #API_ROOT_URL: "https://voicerepublic.com"
-        #S3_AUDIO_UPLOAD_BUCKET: "https://vr-audio-uploads-live.s3.amazonaws.com"
+        DEFAULT_TARGET: 'live'
+        DEVELOPER_OPTIONS: false
 
         COMPRESS_ASSETS: true
 
@@ -150,8 +137,6 @@ module.exports = new class GulpConfig
         GOOGLE_ANALYTICS_ID: "UA-123123-1"
         GOOGLE_ANALYTICS_HOST: "ionicstarter.com"
 
-        WEINRE_ADDRESS: (GLOBALS) ->
-          "#{GLOBALS.HTTP_SERVER_IP}:31173"
       }
     }
 
@@ -164,8 +149,6 @@ module.exports = new class GulpConfig
       "ANGULAR_APP_NAME"
       "NGCORDOVA"
       "BUNDLE_NAME"
-      "API_ROOT_URL"
-      "S3_AUDIO_UPLOAD_BUCKET"
       "DEFAULT_TARGET"
       "DEVELOPER_OPTIONS"
       "BUNDLE_VERSION"

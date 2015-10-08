@@ -25,7 +25,10 @@ loginCtrlFn = ( $scope,
                 $ionicHistory,
                 $cordovaToast,
                 $cordovaInAppBrowser,
-                User ) ->
+                User,
+                Settings ) ->
+
+  $scope.settings = Settings.data
 
   $scope.user = {}
 
@@ -50,8 +53,8 @@ loginCtrlFn = ( $scope,
   script =
     file: "js/script.js"
 
-  signUpURL = "#{GLOBALS.API_ROOT_URL}/users/sign_up"
-  forgotPasswordURL = "#{GLOBALS.API_ROOT_URL}/users/password/new"
+  signUpURL = "#{Settings.endpoints().api}/users/sign_up"
+  forgotPasswordURL = "#{Setting.endpoints().api}/users/password/new"
   target = "_blank"
 
   #close the browser if location hash equals
