@@ -54,7 +54,7 @@ loginCtrlFn = ( $scope,
     file: "js/script.js"
 
   signUpURL = "#{Settings.endpoints().api}/users/sign_up"
-  forgotPasswordURL = "#{Setting.endpoints().api}/users/password/new"
+  forgotPasswordURL = "#{Settings.endpoints().api}/users/password/new"
   target = "_blank"
 
   #close the browser if location hash equals
