@@ -15,6 +15,7 @@ settingsFn = ($log, $window, $localStorage) ->
     version: 1
     startUps: 0
     mobileDownload: false
+    playDevGreeting: true
     target: GLOBALS.DEFAULT_TARGET
     developer: GLOBALS.DEVELOPER_OPTIONS
 

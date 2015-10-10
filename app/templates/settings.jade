@@ -4,6 +4,10 @@ ion-view(view-title='Settings')
     ion-list
 
       ion-item.item-icon-right
+        div Signed in as: {{user.email}}
+        i.icon.ion-log-out(ng-click='logout()')
+
+      ion-item.item-icon-right
         div Remaining Talk Credits: {{user.credits}}
         i.icon.ion-android-refresh(ng-click='refreshCredits()')
 
@@ -14,10 +18,6 @@ ion-view(view-title='Settings')
           .track
             .handle
 
-      ion-item.item-icon-right
-        div Signed in as: {{user.email}}
-        i.icon.ion-log-out(ng-click='logout()')
-
       //- DEVELOPER OPTIONS
       .developer-options(ng-show="settings.developer")
 
@@ -25,6 +25,13 @@ ion-view(view-title='Settings')
           span Developer options enabled
           label.toggle.toogle-calm
             input(type='checkbox' ng-model='settings.developer')
+            .track
+              .handle
+
+        ion-item.item-toggle
+          span Play developer greeting
+          label.toggle.toogle-calm
+            input(type='checkbox' ng-model='settings.playDevGreeting')
             .track
               .handle
 
