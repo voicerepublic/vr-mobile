@@ -12,7 +12,7 @@ ion-view(view-title='Settings')
         i.icon.ion-android-refresh(ng-click='refreshCredits()')
 
       ion-item.item-toggle
-        span Use mobile data plan for downloads
+        span Use mobile plan for data
         label.toggle.toogle-calm
           input(type='checkbox' ng-model='settings.mobileDownload')
           .track
@@ -22,7 +22,7 @@ ion-view(view-title='Settings')
       .developer-options(ng-show="developerOptions")
 
         ion-item.item-toggle
-          span Developer options enabled
+          span Developer options
           label.toggle.toogle-calm
             input(type='checkbox' ng-model='settings.developer')
             .track
@@ -37,7 +37,7 @@ ion-view(view-title='Settings')
             .track
               .handle
 
-        ion-item.item-input.item-select
+        ion-item.item-select
           .input-label Target
           select(ng-options="t as t for t in targets()"
                  ng-model="settings.target")
