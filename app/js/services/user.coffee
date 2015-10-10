@@ -1,8 +1,17 @@
-userFn = ($log, $http, $localStorage, Settings) ->
+userFn = ($log, $http, $localstorage, Settings) ->
 
-  attributes = $localStorage.$default(user: {}).user
+  USER_DATA_CACHE_KEY = "user"
 
-  $log.info "setup User service #{JSON.stringify(attributes)}"
+  data = $localstorage.getObject USER_DATA_CACHE_KEY || {}
+
+  $log.info "setup User service #{JSON.stringify(data)}"
+
+
+  # TODO checkout if we can use data binding here
+  _store = (_data) ->
+    data = _data
+    $localstorage.setObject USER_DATA_CACHE_KEY, _data
+
 
   login = (email, password, success, error) ->
     $log.info "login #{email} with password"
@@ -11,7 +20,7 @@ userFn = ($log, $http, $localStorage, Settings) ->
     $http.post(url, { email, password })
       .success (data, status) ->
         $log.info "success: #{status} #{JSON.stringify(data)}"
-        attributes[key] = value for key, value of data
+        _store(data)
         $http.defaults.headers.common["X-User-Email"] = email
         $http.defaults.headers.common["X-User-Token"] = data.authentication_token
         success(data, status) if success?
@@ -22,7 +31,7 @@ userFn = ($log, $http, $localStorage, Settings) ->
   logout = ->
     delete $http.defaults.headers.common["X-User-Email"]
     delete $http.defaults.headers.common["X-User-Token"]
-    delete key for key, value of attributes
+    _store {}
 
   reload = ->
     $log.info "reload #{data.email}"
@@ -31,17 +40,17 @@ userFn = ($log, $http, $localStorage, Settings) ->
     $http.get(url)
       .success (data, status) ->
         $log.info "success: #{status} #{JSON.stringify(data)}"
-        attributes[key] = value for key, value of data
+        _store(data)
       .error (data, status) ->
         # TODO handle error properly
         $log.info "error: #{status} #{JSON.stringify(data)}"
 
   signedIn = ->
-    !!attributes.id?
+    !!data.id?
 
 
   {
-    attributes
+    data
     login
     logout
     reload

@@ -40,5 +40,5 @@ app.run ($rootScope, $state, $log, $localstorage, $timeout, $ionicPlatform, $ion
   # greet the user if we know him or her
   if User.signedIn()
     $timeout ->
-      $cordovaToast.showLongBottom "Welcome Back, #{User.attributes.firstname}!"
+      $cordovaToast.showLongBottom "Welcome Back, #{User.data.firstname}!"
     , 1337

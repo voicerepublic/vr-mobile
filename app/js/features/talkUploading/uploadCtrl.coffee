@@ -29,7 +29,7 @@ angular.module("voicerepublic")
   $scope.talk = TalkToUpload
 
   #get the series & init selections
-  $scope.list_of_series = User.attributes.list_of_series
+  $scope.list_of_series = User.data.list_of_series
   $scope.talk.series_id = $scope.list_of_series[0].id
   $scope.talk.language = "en"
 
