@@ -18,8 +18,17 @@ settingsFn = ($log, $window, $localStorage) ->
     target: GLOBALS.DEFAULT_TARGET
     developer: GLOBALS.DEVELOPER_OPTIONS
 
-  attributes = $localStorage.$default(settings: {}).settings
-  attributes[key] ||= val for key, val of _DEFAULTS
+  # attributes = $localStorage.$default(settings: {}).settings
+  # NOTE `$localStorage.$default` is buggy when used in multiple locations
+  # https://github.com/gsklee/ngStorage/issues/40#issuecomment-137503878
+  attributes = $localStorage.settings || {}
+  $localStorage.settings = attributes
+
+  # merge missing defaults
+  for key, val of _DEFAULTS
+    unless angular.isDefined(attributes[key])
+      attributes[key] = val
+
   attributes.startUps += 1
 
   # setup of service complete
