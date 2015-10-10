@@ -200,6 +200,7 @@ module.exports = new class GulpConfig
           "assets/components/humanize-duration/humanize-duration.js"
           "assets/components/momentjs/moment.js"
           "assets/components/SHA-1/sha1.js"
+          "assets/components/ngstorage/ngStorage.js"
 
           # Google Analytics support (for both in-browser and Cordova app)
           "assets/components/angulartics/src/angulartics.js"

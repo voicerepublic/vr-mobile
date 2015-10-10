@@ -28,7 +28,7 @@ loginCtrlFn = ( $scope,
                 User,
                 Settings ) ->
 
-  $scope.settings = Settings.data
+  $scope.settings = Settings.attributes
 
   $scope.user = {}
 

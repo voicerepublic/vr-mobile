@@ -1,8 +1,6 @@
-settingsFn = ($log, $localstorage, $window) ->
+settingsFn = ($log, $window, $localStorage) ->
 
-  SETTINGS_DATA_CACHE_KEY = "settings"
-
-  TARGETS =
+  _TARGETS =
     live:
       api:    'https://voicerepublic.com'
       upload: 'https://vr-audio-uploads-live.s3.amazonaws.com'
@@ -13,54 +11,38 @@ settingsFn = ($log, $localstorage, $window) ->
       api:    'http://localhost:3000'
       upload: 'https://vr-audio-uploads-dev.s3.amazonaws.com'
 
-  DEFAULTS =
+  _DEFAULTS =
     version: 1
     startUps: 0
-    limitDownloadToWifi: true
+    mobileDownload: false
     target: GLOBALS.DEFAULT_TARGET
     developer: GLOBALS.DEVELOPER_OPTIONS
 
-  data = {}
-  data[key] = val for key, val of DEFAULTS
-
-  # load an merge stored settings from local storage
-  if $window.localStorage[SETTINGS_DATA_CACHE_KEY]?
-    for key, val of $localstorage.getObject(SETTINGS_DATA_CACHE_KEY)
-      data[key] = val
-
-  # increment startups and store settings to local storage
-  data.startUps += 1
-  $localstorage.setObject SETTINGS_DATA_CACHE_KEY, data
+  attributes = $localStorage.$default(settings: {}).settings
+  attributes[key] ||= val for key, val of _DEFAULTS
+  attributes.startUps += 1
 
   # setup of service complete
-  $log.info "setup Settings service #{JSON.stringify(data)}"
+  $log.info "setup Settings service #{JSON.stringify(attributes)}"
 
-
-  set = (key, value) ->
-    data[key] = value
-    $localstorage.setObject SETTINGS_DATA_CACHE_KEY, data
 
   endpoints = ->
-    TARGETS[data.target]
+    _TARGETS[attributes.target]
 
   targets = ->
-    key for key, val of TARGETS
+    key for key, val of _TARGETS
 
   reset = ->
-    data = DEFAULTS
-    $localstorage.setObject SETTINGS_DATA_CACHE_KEY, data
-    # FIXME this restarts the app, which might not be nescessary
-    $window.location.reload(true)
+    attributes = {}
+    attributes[key] = val for key, val of _DEFAULTS
 
   # clear the localstorage -- not just settings!
   clear = ->
-    $window.localStorage.clear()
-    $window.location.reload(true)
+    $localStorage.$reset()
 
 
   {
-    data
-    set
+    attributes
     endpoints
     targets
     reset

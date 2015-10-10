@@ -8,4 +8,9 @@ app = angular.module(GLOBALS.ANGULAR_APP_NAME, [
   "ipCookie"
   "angulartics.google.analytics"
   "angulartics.google.analytics.cordova"
+  'ngStorage'
 ])
+
+app.config ['$localStorageProvider', ($localStorageProvider) ->
+  $localStorageProvider.setKeyPrefix('vr-')
+]
