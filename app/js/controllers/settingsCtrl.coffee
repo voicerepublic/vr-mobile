@@ -21,6 +21,7 @@ settingsFn = ( $scope,
   $scope.onSwipedRight = () ->
     $state.go "tab.talkList"
 
+
   # settings
   $scope.settings = Settings.attributes
   $scope.targets = Settings.targets
@@ -35,13 +36,14 @@ settingsFn = ( $scope,
     User.logout()
     $state.go "login"
 
+
   # user
+  $scope.user = User.attributes
+
   $scope.refreshCredits = ->
     User.reload()
-    $scope.user = User.data
     $cordovaToast.showLongBottom "Refreshed successfully."
 
-  $scope.user = User.data
 
   # logout
   $scope.logout = ->
