@@ -31,6 +31,9 @@ app.run ($rootScope, $state, $log, $localstorage, $timeout, $ionicPlatform, $ion
 
   $log.debug "Ionic app \"#{GLOBALS.ANGULAR_APP_NAME}\" has just started (app.run) in env #{GLOBALS.ENV}!" unless GLOBALS.ENV == "test"
 
+  if GLOBALS.ENV == 'development'
+    # play assets/hallo-hallo-hallo.mp3
+
   # Finally, let's show the app, by hiding the splashscreen
   # (it should be visible up until this moment)
   $timeout ->
