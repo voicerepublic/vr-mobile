@@ -19,7 +19,7 @@ ion-view(view-title='Settings')
             .handle
 
       //- DEVELOPER OPTIONS
-      .developer-options(ng-show="settings.developer")
+      .developer-options(ng-show="developerOptions")
 
         ion-item.item-toggle
           span Developer options enabled
@@ -28,10 +28,12 @@ ion-view(view-title='Settings')
             .track
               .handle
 
+      .developer-options(ng-show="settings.developer")
+
         ion-item.item-toggle
-          span Play developer greeting
+          span Suppress developer greeting
           label.toggle.toogle-calm
-            input(type='checkbox' ng-model='settings.playDevGreeting')
+            input(type='checkbox' ng-model='settings.suppressDevGreeting')
             .track
               .handle
 

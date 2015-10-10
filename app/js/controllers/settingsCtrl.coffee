@@ -21,6 +21,8 @@ settingsFn = ( $scope,
   $scope.onSwipedRight = () ->
     $state.go "tab.talkList"
 
+  $scope.developerOptions = GLOBALS.DEVELOPER_OPTIONS
+
 
   # settings
   $scope.settings = Settings.attributes
@@ -31,9 +33,9 @@ settingsFn = ( $scope,
     $cordovaToast.showLongBottom "Settings have been reset."
 
   $scope.clearStorage = ->
+    User.logout()
     Settings.clear()
     $cordovaToast.showLongBottom "Storage has been cleared, logout..."
-    User.logout()
     $state.go "login"
 
 

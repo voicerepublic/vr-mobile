@@ -43,8 +43,9 @@ runFn = ( $rootScope,
 
   $log.debug "Ionic app \"#{GLOBALS.ANGULAR_APP_NAME}\" has just started (app.run) in env #{GLOBALS.ENV}!" unless GLOBALS.ENV == "test"
 
-  if GLOBALS.ENV == 'development' && Settings.attributes.playDevGreeting
+  if GLOBALS.ENV == 'development' && !Settings.attributes.suppressDevGreeting
     # TODO fix the path to make it find the audio file
+    # http://stackoverflow.com/questions/13726030/relative-media-source-in-phonegap
     url = '/android_asset/www/audio/hallo-hallo-hallo.mp3'
     media = $cordovaMedia.newMedia(url)
     media.play()

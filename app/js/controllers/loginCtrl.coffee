@@ -29,6 +29,7 @@ loginCtrlFn = ( $scope,
                 Settings ) ->
 
   $scope.settings = Settings.attributes
+  $scope.developerOptions = GLOBALS.DEVELOPER_OPTIONS
 
   $scope.user = {}
 
