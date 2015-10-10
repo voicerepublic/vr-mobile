@@ -2,6 +2,15 @@ userFn = ($log, $http, $localStorage, Settings) ->
 
   attributes = $localStorage.$default(user: {}).user
 
+  signedIn = ->
+    attributes.id?
+
+  _set_headers = ->
+    $http.defaults.headers.common["X-User-Email"] = attributes.email
+    $http.defaults.headers.common["X-User-Token"] = attributes.authentication_token
+
+  _set_headers() if signedIn()
+
   $log.info "setup User service #{JSON.stringify(attributes)}"
 
 
@@ -13,8 +22,7 @@ userFn = ($log, $http, $localStorage, Settings) ->
       .success (data, status) ->
         $log.info "success: #{status} #{JSON.stringify(data)}"
         attributes[key] = value for key, value of data
-        $http.defaults.headers.common["X-User-Email"] = email
-        $http.defaults.headers.common["X-User-Token"] = data.authentication_token
+        _set_headers()
         success(data, status) if success?
       .error (data, status) ->
         $log.info "error: #{status} #{JSON.stringify(data)}"
@@ -37,8 +45,6 @@ userFn = ($log, $http, $localStorage, Settings) ->
         # TODO handle error properly
         $log.info "error: #{status} #{JSON.stringify(data)}"
 
-  signedIn = ->
-    !!attributes.id?
 
 
   {

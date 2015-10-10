@@ -145,6 +145,8 @@ uploadCtrlFn = ( $scope,
         "series_id": $scope.talk.series_id
         "duration": $scope.talk.duration.substring 3, 5
       #send metadata to VR Backend
+      $log.info "POST #{talk_create_url} with payload:"
+      $log.info { talk: payload }
       $http.post(talk_create_url, {talk: payload})
       .success (data, status) ->
         $ionicLoading.hide()
