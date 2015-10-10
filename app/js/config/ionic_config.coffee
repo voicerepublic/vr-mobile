@@ -1,3 +1,5 @@
+log 'setup ionic'
+
 app = angular.module(GLOBALS.ANGULAR_APP_NAME)
 
 

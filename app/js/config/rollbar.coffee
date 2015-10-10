@@ -1,3 +1,5 @@
+log 'setup rollbar'
+
 return unless window.Rollbar?
 app = angular.module(GLOBALS.ANGULAR_APP_NAME)
 

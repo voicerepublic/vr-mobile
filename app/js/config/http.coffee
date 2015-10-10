@@ -1,3 +1,5 @@
+log 'setup angular http stuff'
+
 app = angular.module(GLOBALS.ANGULAR_APP_NAME)
 ###angular should do vvv_this_vvv natively
 app.provider "myCSRF", ->

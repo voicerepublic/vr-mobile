@@ -1,3 +1,5 @@
+log 'setup angular app (run)'
+
 app = angular.module(GLOBALS.ANGULAR_APP_NAME)
 
 # Run the app only after cordova has been initialized
