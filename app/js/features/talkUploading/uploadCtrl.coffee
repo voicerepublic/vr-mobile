@@ -29,7 +29,9 @@ uploadCtrlFn = ( $scope,
                  $localstorage,
                  TalkToUpload,
                  TalkFactory,
-                 User ) ->
+                 User,
+                 Settings ) ->
+
   #the form
   $scope.form = {}
 
@@ -85,8 +87,8 @@ uploadCtrlFn = ( $scope,
       return
 
     # URL's
-    s3_audio_upload_url = "#{GLOBALS.S3_AUDIO_UPLOAD_BUCKET}"
-    talk_create_url = "#{GLOBALS.API_ROOT_URL}/api/uploads"
+    s3_audio_upload_url = Settings.endpoints().upload
+    talk_create_url = "#{Settings.endpoints().api}/api/uploads"
 
     #upload options
     options = {}
@@ -145,7 +147,7 @@ uploadCtrlFn = ( $scope,
       .success (data, status) ->
         $ionicLoading.hide()
         $cordovaToast.showShortBottom "Talk upload successfull!"
-        shareUrl = "#{GLOBALS.API_ROOT_URL}/talks/"
+        shareUrl = "#{Settings.endpoints().api}/talks/"
         #save slug etc.
         TalkFactory.setTalkUploaded $scope.talk, shareUrl + data.slug
         $state.go "tab.share", params
