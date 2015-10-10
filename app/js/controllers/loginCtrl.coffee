@@ -139,4 +139,8 @@ loginCtrlFn = ( $scope,
       #error
       $cordovaToast.showShortBottom "Something went wrong, please try again"
 
+  $scope.loginAsDev = ->
+    $scope.user.email = 'voicerepublic.device@gmail.com'
+    $scope.user.password = 'ohwahsh1ag1einoh'
+
 angular.module("voicerepublic").controller("loginCtrl", loginCtrlFn)

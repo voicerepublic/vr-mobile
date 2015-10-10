@@ -8,7 +8,7 @@ ion-view(hide-nav-bar='true')
       margin-top: 10%;\
       margin-right: auto', src='img/vr_400x400.png')
     .list.padding-vertical(style='margin-top:15%')
-      .developer(ng-show='settings.developer' style='text-align: center')
+      .developer(ng-show='settings.developer' style='text-align: center' ng-click='loginAsDev()')
         p developer edition, target: {{ settings.target }}
       label.item.item-input
         span.input-label Email
