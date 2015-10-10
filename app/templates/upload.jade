@@ -35,7 +35,7 @@ ion-view
         label.item.item-input.item-select
           .input-label
             | Attach it to one of your Series
-          select(ng-model='talk.series_id', ng-options='series.id as series.name for series in list_of_series')
+          select(ng-model='talk.series_id', ng-options='id as name for id, name in listOfSeries')
         label.item.item-input.item-select
           .input-label
             | Language

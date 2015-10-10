@@ -15,9 +15,23 @@
   - cordova.toast
   - cordovaFileTransfer
 ###
-angular.module("voicerepublic")
+uploadCtrlFn = ( $scope,
+                 $rootScope,
+                 $http,
+                 $window,
+                 $log,
+                 $state,
+                 $timeout,
+                 $ionicLoading,
+                 $ionicHistory,
+                 $cordovaToast,
+                 $cordovaFileTransfer,
+                 $localstorage,
+                 TalkToUpload,
+                 TalkFactory,
+                 User,
+                 Settings ) ->
 
-.controller "uploadCtrl", ($scope, $rootScope, $http, $cordovaFileTransfer, $ionicLoading, $window, $log, $state, $timeout, $ionicHistory, $cordovaToast, $localstorage, TalkToUpload, TalkFactory, User, Settings) ->
   #the form
   $scope.form = {}
 
@@ -29,8 +43,10 @@ angular.module("voicerepublic")
   $scope.talk = TalkToUpload
 
   #get the series & init selections
-  $scope.list_of_series = User.attributes.list_of_series
-  $scope.talk.series_id = $scope.list_of_series[0].id
+  $scope.listOfSeries = User.attributes.list_of_series
+  _keys = (key for key, value of $scope.listOfSeries)
+  $scope.talk.series_id = _keys[0]
+
   $scope.talk.language = "en"
 
   #uploadProgress
@@ -152,3 +168,6 @@ angular.module("voicerepublic")
       upProgress = $window.Math.round((upProgress + 0.00001) * 100) / 100
       $scope.uploadProgress = "#{upProgress}%"
     )
+
+
+angular.module("voicerepublic").controller("uploadCtrl", uploadCtrlFn)
