@@ -38,7 +38,9 @@ settingsFn = ($log, $window, $localStorage) ->
 
   # clear the localstorage -- not just settings!
   clear = ->
-    $localStorage.$reset()
+    # for some reason this doesn't work properly
+    # $localStorage.$reset()
+    $window.localStorage.clear()
 
 
   {
