@@ -1,6 +1,9 @@
 userFn = ($log, $http, $localStorage, Settings) ->
 
-  attributes = $localStorage.$default(user: {}).user
+  # NOTE $localStorage.$default is buggy when used in multiple places
+  # this is a workaround
+  attributes = $localStorage.user || {}
+  $localStorage.user = attributes
 
   signedIn = ->
     attributes.id?

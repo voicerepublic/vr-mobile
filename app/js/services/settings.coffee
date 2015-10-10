@@ -22,22 +22,18 @@ settingsFn = ($log, $window, $localStorage) ->
     developer: false
 
   # load settings from localstorage
-  attributes = $localStorage.$default(settings: {}).settings
-
-  $log.info "settings A: #{JSON.stringify(attributes)}"
+  # attributes = $localStorage.$default(settings: {}).settings
+  # NOTE `$localStorage.$default` is buggy when used in multiple locations
+  # https://github.com/gsklee/ngStorage/issues/40#issuecomment-137503878
+  attributes = $localStorage.settings || {}
+  $localStorage.settings = attributes
 
   # merge missing defaults
   for key, val of _DEFAULTS
-    $log.info "settings: check #{key} (#{val})"
-    if !attributes[key]?
-      $log.info "settings: set #{key} to #{val}"
+    unless angular.isDefined(attributes[key])
       attributes[key] = val
 
-  $log.info "settings B: #{JSON.stringify(attributes)}"
-
   attributes.startUps += 1
-
-  $log.info "settings C: #{JSON.stringify(attributes)}"
 
   # setup of service complete
   $log.info "setup Settings service #{JSON.stringify(attributes)}"
