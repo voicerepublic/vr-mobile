@@ -256,7 +256,7 @@ angular.module("voicerepublic")
 
       $localstorage.setObject "talks", talks
 
-    setTalkUploaded: (uploadedTalk, shareUrl, metadata...) ->
+    setTalkUploaded: (uploadedTalk, shareUrl) ->
       talks = $localstorage.getObject "talks"
 
       uploadedTalk.isUploaded = yes
@@ -266,22 +266,11 @@ angular.module("voicerepublic")
 
       $localstorage.setObject "talks", talks
 
-    setTalkShared: (sharedTalk, metadata...) ->
-      ###
-      via = metadata[0]
-
-      return unless sharedTalk.sharedVia.search(via) is -1
-      ###
-
+    setTalkShared: (sharedTalk) ->
       return if sharedTalk.isShared
       sharedTalk.isShared = yes
       talks = $localstorage.getObject "talks"
-      ###
-      if sharedTalk.sharedVia is ""
-        sharedTalk.sharedVia+=via
-      else
-        sharedTalk.sharedVia+=", #{via}"
-      ###
+
       talks[i] = sharedTalk for talk, i in talks when talk.id is sharedTalk.id
 
       $localstorage.setObject "talks", talks

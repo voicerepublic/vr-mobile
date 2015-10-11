@@ -16,7 +16,7 @@
 ###
 angular.module("voicerepublic")
 
-.controller "bookmarksCtrl", ($scope, $state, $stateParams, $window, $timeout, $interval, $ionicHistory, $ionicLoading, $ionicPopup, $cordovaSocialSharing, $cordovaToast, Auth, Fetcher, Player) ->
+.controller "bookmarksCtrl", ($scope, $state, $window, $timeout, $ionicHistory, $ionicLoading, $ionicContentBanner, $cordovaToast, $ionicPopup, $cordovaSocialSharing, Auth, Fetcher, Downloader, Player, BookmarksFactory) ->
   #bookmark container
   $scope.bookmarks = []
 
@@ -31,7 +31,12 @@ angular.module("voicerepublic")
   $scope.isRefresh = no
   $scope.isInfScroll = no
   $scope.isTalkLoading = no
+  $scope.isDownloading = no
+  $scope.downloadingId = -1
   progressChangedFromUser = no
+
+  #ionic content banner close
+  closeBanner = undefined
 
   #ionic loading template
   if $window.ionic.Platform.isAndroid()
@@ -44,40 +49,120 @@ angular.module("voicerepublic")
     template: condTemplate
     hideOnStateChange: yes
 
-  #events
+  #fetcher events
   #
   #fetched the bundle successfully
-  Fetcher.on 'bundleLoaded', (talks) ->
+  Fetcher.on 'bundleLoaded', (loadedTalks) ->
     $scope.bookmarks = [] if $scope.isRefresh
-    for talk in talks
-      talk.url = "#{Fetcher.baseUrl}#{talk.media_links.mp3}"
-      console.log talk
+    for talk in loadedTalks
+      talk.url = Fetcher.baseUrl + talk.media_links.mp3
       $scope.bookmarks.push talk
+    BookmarksFactory.mergeWithPersistedTalks $scope.bookmarks
     $scope.$broadcast 'scroll.infiniteScrollComplete' if $scope.isInfScroll
     $scope.$broadcast 'scroll.refreshComplete' if $scope.isRefresh
     $scope.isRefresh = no
     $scope.isInfScroll = no
 
   #error fetching bundle
-  Fetcher.on 'error', (err) ->
+  Fetcher.on 'error', (error) ->
+    $scope.$broadcast 'scroll.infiniteScrollComplete' if $scope.isInfScroll
+    $scope.$broadcast 'scroll.refreshComplete' if $scope.isRefresh
     $scope.isRefresh = no
     $scope.isInfScroll = no
-    console.log JSON.stringify err
+    #if offline or something happens show persisted talks only
+    if $scope.bookmarks.length is 0
+      $scope.bookmarks = BookmarksFactory.getAllPersistedTalks()
+      errorText = 'Offline Mode'
+      showErrorBanner errorText
+    else
+      errorText = 'Please check your connectivity'
+      showErrorBanner errorText, 10000
 
+  #bookmarksFactory events
+  #
+  #downloaded talk deleted
+  BookmarksFactory.on 'delete', (talk) ->
+    if talk.id is $scope.playedTalk?.id
+      $scope.stop()
+    #notify user
+    text = 'Removed from storage'
+    $cordovaToast.showLongBottom text
+    #get the external resources
+    $scope.refreshBookmarks()
+
+  #downloaded talk deleted
+  BookmarksFactory.on 'error', () ->
+    #nothing yet
+
+  #downloader events
+  #
+  #download finished
+  Downloader.on 'talkDownloaded', (downloadedTalk) ->
+    $scope.isDownloading = no
+    $scope.downloadingId = -1
+    $cordovaToast.showLongCenter 'Download successful'
+    #check if the current played talk was downloaded
+    if $scope.playedTalk?.id is downloadedTalk.id
+      isPaused = $scope.isTalkPaused
+      isPlaying = $scope.isTalkPlaying
+      isPausedOrPlaying = isPaused or isPlaying
+      return unless isPausedOrPlaying
+      index = $scope.playedTalk.index
+      pos = $scope.playedTalk.progress
+      Player.stop()
+      Player.once 'stopped', () ->
+        play downloadedTalk, index
+        Player.once 'loadEnd', () ->
+          Player.off 'loadEnd'
+          progressChangedFromUser = yes #not really, but implicit^^
+          Player.seekTo pos * 1000
+          $cordovaToast.showLongCenter 'Playing from storage...'
+
+  #offline while downloading
+  Downloader.on 'aborted', () ->
+    $scope.isDownloading = no
+    $scope.downloadingId = -1
+    errorText = 'Download aborted'
+    if $scope.isTalkPlaying
+      $cordovaToast.showLongCenter errorText
+    else
+      showErrorBanner errorText, 5000
+
+  #offline while downloading
+  Downloader.on 'offline', () ->
+    $scope.isDownloading = no
+    $scope.downloadingId = -1
+    errorText = 'You appear to be offline'
+    if $scope.isTalkPlaying
+      $cordovaToast.showLongCenter errorText
+    else
+      showErrorBanner errorText, 5000
+
+  #error while downloading
+  Downloader.on 'error', (error) ->
+    $scope.isDownloading = no
+    $scope.downloadingId = -1
+    #something went wrong
+    errorText = 'Something went wrong while downloading'
+    if $scope.isTalkPlaying
+      $cordovaToast.showLongCenter errorText
+    else
+      showErrorBanner errorText, 5000
+
+  #player events
+  #
   #loading resource
   Player.on 'loadStart', () ->
     #show the loading modal
     if $scope.isFooterExpanded
       $ionicLoading.show ionicLoadingOpts
     $scope.isTalkLoading = yes
-    console.log 'Loading...'
 
   #resource loaded
   Player.on 'loadEnd', () ->
     #hide the loading modal
     $ionicLoading.hide() if $scope.isFooterExpanded
     $scope.isTalkLoading = no
-    console.log 'Done loading!'
 
   #update the duration of the played talk
   Player.on 'duration', (duration) ->
@@ -92,10 +177,39 @@ angular.module("voicerepublic")
     progress = Math.floor parseInt progress, 10
     $scope.playedTalk.progress = progress
 
-  #something went wrong while playing
-  Player.on 'error', (err) ->
+  #device is offline cannot load talk
+  Player.on 'offline', () ->
+    #hide the loading modal
+    $ionicLoading.hide() if $scope.isFooterExpanded
     $scope.isTalkLoading = no
-    console.log JSON.stringify err
+    #stop everything
+    $scope.stop()
+    errorText = "Cannot load talk, please check connectivity"
+    if $scope.isFooterExpanded
+      $cordovaToast.showLongBottom errorText
+    else
+      showErrorBanner errorText, 5000
+
+  #something went wrong while playing
+  Player.on 'error', (error) ->
+    #hide the loading modal
+    $ionicLoading.hide() if $scope.isFooterExpanded
+    $scope.isTalkLoading = no
+    #stop everything
+    $scope.stop()
+    errorText = "Something went wrong while playing"
+    if $scope.isFooterExpanded
+      $cordovaToast.showLongBottom errorText
+    else
+      showErrorBanner errorText, 5000
+
+  showErrorBanner = (text, duration = undefined) ->
+    closeBanner?()
+    bannerOptionsError =
+      type: 'error'
+      text: [text]
+    bannerOptionsError.autoClose = duration if duration
+    closeBanner = $ionicContentBanner.show bannerOptionsError
 
   #Bookmarked talks list relevant
   #
@@ -110,64 +224,38 @@ angular.module("voicerepublic")
     $scope.isInfScroll = yes
     Fetcher.loadNextBundle()
 
-  #Footer handle
+  #Downloader relevant
   #
-  $scope.footerExpand = () ->
-    handleButton = $window.document.querySelector '#handle-button'
-    hasPauseButton = handleButton.classList.contains 'ion-ios-pause'
-    hasPlayButton = handleButton.classList.contains 'ion-ios-play'
+  $scope.download = (talk) ->
+    if $scope.isDownloading
+      if talk.id is $scope.downloadingId
+        Downloader.cancelDownload()
+      return
+    $scope.downloadingId = talk.id
+    $scope.isDownloading = yes
+    Downloader.downloadTalk talk
+    text = "Downloading #{talk.title}..."
+    $cordovaToast.showLongCenter text
 
-    if hasPlayButton
-      handleButton.classList.remove 'ion-ios-play'
-    else if hasPauseButton
-      handleButton.classList.remove 'ion-ios-pause'
-
-    handleButton.classList.add 'ion-close'
-
-    if $scope.isTalkLoading
-      $ionicLoading.show ionicLoadingOpts
-
-    $scope.isFooterExpanded = yes
-
-
-  $scope.footerCollapse = () ->
-    handleButton = $window.document.querySelector '#handle-button'
-    hasCloseButton = handleButton.classList.contains 'ion-close'
-
-    if !$scope.isTalkPaused and hasCloseButton
-      handleButton.classList.remove 'ion-close'
-      handleButton.classList.add 'ion-ios-pause'
-    else if $scope.isTalkPaused and hasCloseButton
-      handleButton.classList.remove 'ion-close'
-      handleButton.classList.add 'ion-ios-play'
-
-    $scope.isFooterExpanded = no
-
-  $scope.changeChevron = ($e) ->
-    el = $e.target
-    if el.classList.contains 'ion-chevron-up'
-      el.classList.remove 'ion-chevron-up'
-      el.classList.add 'ion-chevron-down'
-    else if el.classList.contains 'ion-chevron-down'
-      el.classList.remove 'ion-chevron-down'
-      el.classList.add 'ion-chevron-up'
+  #BookmarkFactory relevant
+  #
+  $scope.remove = (talk) ->
+    BookmarksFactory.delete talk
 
   #Player relevant
   #
   $scope.play = (talk, index) ->
     isSame = talk.id is $scope.playedTalk?.id
-    isSameAndPlaying = isSame and $scope.isTalkPlaying
-    shouldResume = isSame and $scope.isTalkPaused
-    #handle if talk is paused
-    $scope.resume() if shouldResume
-    #nothing to do if same talk
-    return if isSameAndPlaying
+    if isSame
+      $scope.handleAction()
+      return
     #if one is playing stop it to start the new
+    #bcs its not the same
     if $scope.isTalkPlaying
     #handle via event
+      Player.stop()
       Player.once 'stopped', () ->
         play talk, index
-      Player.stop()
     else
       play talk, index
 
@@ -290,6 +378,48 @@ angular.module("voicerepublic")
     backward = yes
     lastTalk = getNextOrLastTalk backward
     $scope.play lastTalk, lastTalk.index
+
+  #Footer handle relevant
+  #
+  $scope.footerExpand = () ->
+    handleButton = $window.document.querySelector '#handle-button'
+    hasPauseButton = handleButton.classList.contains 'ion-ios-pause'
+    hasPlayButton = handleButton.classList.contains 'ion-ios-play'
+
+    if hasPlayButton
+      handleButton.classList.remove 'ion-ios-play'
+    else if hasPauseButton
+      handleButton.classList.remove 'ion-ios-pause'
+
+    handleButton.classList.add 'ion-close'
+
+    if $scope.isTalkLoading
+      $ionicLoading.show ionicLoadingOpts
+
+    $scope.isFooterExpanded = yes
+
+
+  $scope.footerCollapse = () ->
+    handleButton = $window.document.querySelector '#handle-button'
+    hasCloseButton = handleButton.classList.contains 'ion-close'
+
+    if !$scope.isTalkPaused and hasCloseButton
+      handleButton.classList.remove 'ion-close'
+      handleButton.classList.add 'ion-ios-pause'
+    else if $scope.isTalkPaused and hasCloseButton
+      handleButton.classList.remove 'ion-close'
+      handleButton.classList.add 'ion-ios-play'
+
+    $scope.isFooterExpanded = no
+
+  $scope.changeChevron = ($e) ->
+    el = $e.target
+    if el.classList.contains 'ion-chevron-up'
+      el.classList.remove 'ion-chevron-up'
+      el.classList.add 'ion-chevron-down'
+    else if el.classList.contains 'ion-chevron-down'
+      el.classList.remove 'ion-chevron-down'
+      el.classList.add 'ion-chevron-up'
 
   #Load the share context
   #

@@ -5,7 +5,7 @@
 @object
 
 @description
-  The Player used to play talks in the List View.
+  The Player used to play talks in the Bookmarks View and List View.
 
   **Note:** 
     Using the following cordova plugins:
@@ -53,9 +53,11 @@ angular.module("voicerepublic")
           #notify that player stopped playing successfully
           self.fireEvent 'stopped'
         ), ((error) ->
-          self.fireEvent 'error', error
+          if MediaError.MEDIA_ERR_NETWORK
+            self.fireEvent 'offline'
+          else
+            self.fireEvent 'error', error
         ), (update) ->
-          console.log JSON.stringify update
           if update.duration
             if self.hasLoaded
               self.fireEvent 'duration', update.duration
@@ -64,15 +66,15 @@ angular.module("voicerepublic")
               self.fireEvent 'progress', update.position
           else if update.status
             switch update.status
-              when 1 # Media.MEDIA_STARTING
+              when Media.MEDIA_STARTING
                 self.fireEvent 'loadStart'
                 self.hasLoaded = false
-              when 2 # Media.MEDIA_RUNNING
+              when Media.MEDIA_RUNNING
                 if !self.hasLoaded
                   self.fireEvent 'loadEnd'
                   self.hasLoaded = true
-              #when 3 #Media.MEDIA_PAUSED
-              when 0, 4 # Media.MEDIA_NONE, Media.MEDIA_STOPPED
+              #when Media.MEDIA_PAUSED
+              when Media.MEDIA_NONE, Media.MEDIA_STOPPED
                 self.hasLoaded = false
 
     pause : () ->

@@ -1,4 +1,6 @@
-@import "ionic.css";
+@import "ionic";
+/* custom banner */
+@import "../../assets/components/ionic-content-banner/scss/ionic.content.banner";
 
 body {
   background-color: white;
@@ -25,20 +27,6 @@ ion-pull-up-handle {
 	transform: scale(3, 3) translateY(30%);
 	-webkit-transform: scale(3, 3) translateY(30%);
 	vertical-align: middle;
-}
-
-#rounded {
-	border-radius: 5px;
-}
-
-pic-container {
-	height: 50%;
-	z-index: 9999999;
-}
-
-pic-container img {
-	max-height: 100%;
-	max-width: 100%;
 }
 
 .blur {

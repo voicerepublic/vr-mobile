@@ -43,20 +43,21 @@ angular.module("voicerepublic")
         reverse: yes
 
       promise = $http.get "#{@baseUrl}/api/bookmarks", {params: data}
-      promise.then (response) ->
+      promise.then ((response) ->
         loadedTalks = response.data
         self.fireEvent 'bundleLoaded', loadedTalks
         self.canLoadMore = (loadedTalks.length == self.limit)
         self._shiftOffset() if self.canLoadMore
-      , (response) ->
-        self.fireEvent 'error', response
-        #error
+      ), ((error) ->
+        self.canLoadMore = no
+        self.fireEvent 'error', error
+      )
 
     loadNextBundle: ->
-      #simpy load next bundle of talks
       @_fetchNextBundle()
 
     refresh: ->
-      #reset counters and load as usual
+      #reset and load as usual
+      @canLoadMore = yes
       @_resetOffset()
       @_fetchNextBundle()

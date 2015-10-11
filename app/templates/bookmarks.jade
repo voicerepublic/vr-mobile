@@ -3,7 +3,7 @@ ion-view(view-title='Bookmarked talks')
     button.button.button-icon.icon.ion-log-out.button-clear.button-light(ng-click='logOut()')
   ion-content(scroll='true', on-swipe-left='onSwipedLeft()')
     ion-refresher(on-refresh='refreshBookmarks()', ng-attr-spinner='{{ isIOS ? "ios" : "circles" }}')
-    ion-item(ng-repeat='talk in bookmarks')
+    ion-item(ng-repeat='talk in bookmarks track by talk.id')
       .list.card
         .item.item-image
           img(ng-src='img/VR_Logo_rgb_4.png', actual-src='{{ talk.image_url }}')
@@ -14,18 +14,26 @@ ion-view(view-title='Bookmarked talks')
         .item.item-body
           h2 {{ talk.title }}
           p {{ talk.teaser }}
+          p(ng-show='isDownloading && !talk.isDownloaded && (talk.id == downloadingId)')
+            | Downloading
+            ion-spinner(icon='dots')
         .item.tabs.tabs-secondary.tabs-icon-left
           a.tab-item(ng-click='share(talk)')
             i.icon.ion-share(ng-show='isIOS')
             i.icon.ion-android-share-alt(ng-hide='isIOS')
             | Share
           a.tab-item(ng-click='download(talk)', ng-hide='talk.isDownloaded')
-            i.icon.ion-ios-download(ng-show='isIOS')
-            i.icon.ion-android-download(ng-hide='isIOS')
-            | Download
+            i.icon.ion-ios-download(ng-show='isIOS && (talk.id != downloadingId)')
+            i.icon.ion-android-download(ng-hide='isIOS || (talk.id == downloadingId)')
+            i.icon.ion-close-circled(ng-show='talk.id == downloadingId')
+            | {{ (talk.id == downloadingId) ? 'Cancel' : 'Download' }}
+          a.tab-item(ng-click='remove(talk)', ng-show='talk.isDownloaded')
+            i.icon.ion-trash-b
+            | Remove
           a.tab-item(ng-click='play(talk, $index)')
-            i.icon.ion-ios-play
-            | Play
+            i.icon.ion-ios-play(ng-hide='!isTalkPaused && (talk.id == playedTalk.id)')
+            i.icon.ion-ios-pause(ng-show='!isTalkPaused && (talk.id == playedTalk.id)')
+            | {{ (!isTalkPaused && (talk.id == playedTalk.id)) ? 'Pause' : 'Play' }}
     ion-infinite-scroll(ng-if="moreDataCanBeLoaded()",  
       on-infinite="loadMore()",
       distance='10%',
@@ -45,9 +53,10 @@ ion-view(view-title='Bookmarked talks')
       .controls(style='position: absolute; bottom: 5%; left: 0px; width: 100%;')
         .row.row-center.padding-horizontal(style='text-align:center;')
           .col-25
-            a.button.button-clear(ng-click='download(playedTalk)', ng-hide='{{ playedTalk.isDownloaded }}')
-              i.icon.ion-ios-download(ng-show='isIOS')
-              i.icon.ion-android-download(ng-hide='isIOS')
+            a.button.button-clear(ng-click='download(playedTalk)', ng-hide='playedTalk.isDownloaded')
+              i.icon.ion-ios-download(ng-show='isIOS && (playedTalk.id != downloadingId)')
+              i.icon.ion-android-download(ng-hide='isIOS || (playedTalk.id == downloadingId)')
+              i.icon.ion-close-circled(ng-show='playedTalk.id == downloadingId')
           .col-50
             p.light {{ playedTalk.teaser }}
           .col-25
