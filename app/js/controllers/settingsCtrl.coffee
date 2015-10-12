@@ -21,29 +21,29 @@ settingsFn = ( $scope,
   $scope.onSwipedRight = () ->
     $state.go "tab.talkList"
 
-  # settings
-  $scope.settings = Settings.data
-  $scope.targets = Settings.targets
 
-  $scope.toggleDownloadOption = ->
-    $scope.settings.limitDownloadToWifi = !$scope.settings.limitDownloadToWifi
-    Settings.set 'limitDownloadToWifi', $scope.settings.limitDownloadToWifi
+  # settings
+  $scope.settings = Settings.attributes
+  $scope.targets = Settings.targets
 
   $scope.resetSettings = ->
     Settings.reset()
-    $cordovaToast.showLongBottom "Settings have been reset, restarting..."
+    $cordovaToast.showLongBottom "Settings have been reset."
 
   $scope.clearStorage = ->
     Settings.clear()
-    $cordovaToast.showLongBottom "Storage has been cleared, restarting..."
+    $cordovaToast.showLongBottom "Storage has been cleared, logout..."
+    User.logout()
+    $state.go "login"
+
 
   # user
+  $scope.user = User.attributes
+
   $scope.refreshCredits = ->
     User.reload()
-    $scope.user = User.data
     $cordovaToast.showLongBottom "Refreshed successfully."
 
-  $scope.user = User.data
 
   # logout
   $scope.logout = ->

@@ -1,3 +1,5 @@
+log 'setup angular app (run)'
+
 app = angular.module(GLOBALS.ANGULAR_APP_NAME)
 
 # Run the app only after cordova has been initialized
@@ -38,5 +40,5 @@ app.run ($rootScope, $state, $log, $localstorage, $timeout, $ionicPlatform, $ion
   # greet the user if we know him or her
   if User.signedIn()
     $timeout ->
-      $cordovaToast.showLongBottom "Welcome Back, #{User.data.firstname}!"
+      $cordovaToast.showLongBottom "Welcome Back, #{User.attributes.firstname}!"
     , 1337

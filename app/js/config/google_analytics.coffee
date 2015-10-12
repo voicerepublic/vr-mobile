@@ -1,3 +1,5 @@
+log 'setup google analytics'
+
 return unless GLOBALS.CORDOVA_GOOGLE_ANALYTICS_ID
 app = angular.module(GLOBALS.ANGULAR_APP_NAME)
 

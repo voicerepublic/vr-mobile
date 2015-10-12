@@ -1,3 +1,5 @@
+log 'setup logging'
+
 app = angular.module(GLOBALS.ANGULAR_APP_NAME)
 
 

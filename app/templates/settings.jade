@@ -8,12 +8,9 @@ ion-view(view-title='Settings')
         i.icon.ion-android-refresh(ng-click='refreshCredits()')
 
       ion-item.item-toggle
-        span Download content only when on a Wifi
+        span Use mobile data plan for downloads
         label.toggle.toogle-calm
-          //- TODO check if we can use ng-model here
-          input(type='checkbox'
-                ng-click='toggleDownloadOption()'
-                ng-checked='settings.limitDownloadToWifi')
+          input(type='checkbox' ng-model='settings.mobileDownload')
           .track
             .handle
 
@@ -24,8 +21,12 @@ ion-view(view-title='Settings')
       //- DEVELOPER OPTIONS
       .developer-options(ng-show="settings.developer")
 
-        ion-item
-          h2 Developer Options
+        ion-item.item-toggle
+          span Developer options enabled
+          label.toggle.toogle-calm
+            input(type='checkbox' ng-model='settings.developer')
+            .track
+              .handle
 
         ion-item.item-input.item-select
           .input-label Target

@@ -42,8 +42,10 @@ uploadCtrlFn = ( $scope,
   #get the "resolved" talk
   $scope.talk = TalkToUpload
 
-  $scope.listOfSeries = User.data.list_of_series
-  $scope.talk.series_id = (key for key, value of $scope.listOfSeries)[0]
+  #get the series & init selections
+  $scope.listOfSeries = User.attributes.list_of_series
+  _keys = (key for key, value of $scope.listOfSeries)
+  $scope.talk.series_id = _keys[0]
 
   $scope.talk.language = "en"
 
@@ -143,6 +145,8 @@ uploadCtrlFn = ( $scope,
         "series_id": $scope.talk.series_id
         "duration": $scope.talk.duration.substring 3, 5
       #send metadata to VR Backend
+      $log.info "POST #{talk_create_url} with payload:"
+      $log.info { talk: payload }
       $http.post(talk_create_url, {talk: payload})
       .success (data, status) ->
         $ionicLoading.hide()
