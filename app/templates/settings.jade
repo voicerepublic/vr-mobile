@@ -4,31 +4,40 @@ ion-view(view-title='Settings')
     ion-list
 
       ion-item.item-icon-right
+        div Signed in as: {{user.email}}
+        i.icon.ion-log-out(ng-click='logout()')
+
+      ion-item.item-icon-right
         div Remaining Talk Credits: {{user.credits}}
         i.icon.ion-android-refresh(ng-click='refreshCredits()')
 
       ion-item.item-toggle
-        span Use mobile data plan for downloads
+        span Use mobile plan for data
         label.toggle.toogle-calm
           input(type='checkbox' ng-model='settings.mobileDownload')
           .track
             .handle
 
-      ion-item.item-icon-right
-        div Signed in as: {{user.email}}
-        i.icon.ion-log-out(ng-click='logout()')
-
       //- DEVELOPER OPTIONS
-      .developer-options(ng-show="settings.developer")
+      .developer-options(ng-show="developerOptions")
 
         ion-item.item-toggle
-          span Developer options enabled
+          span Developer options
           label.toggle.toogle-calm
             input(type='checkbox' ng-model='settings.developer')
             .track
               .handle
 
-        ion-item.item-input.item-select
+      .developer-options(ng-show="settings.developer")
+
+        ion-item.item-toggle
+          span Suppress developer greeting
+          label.toggle.toogle-calm
+            input(type='checkbox' ng-model='settings.suppressDevGreeting')
+            .track
+              .handle
+
+        ion-item.item-select
           .input-label Target
           select(ng-options="t as t for t in targets()"
                  ng-model="settings.target")

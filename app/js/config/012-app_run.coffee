@@ -5,10 +5,21 @@ app = angular.module(GLOBALS.ANGULAR_APP_NAME)
 # Run the app only after cordova has been initialized
 # (this is why we don't include ng-app in the index.jade)
 ionic.Platform.ready ->
-  console.log 'ionic.Platform is ready! Running `angular.bootstrap()`...' unless GLOBALS.ENV == "test"
+  unless GLOBALS.ENV == "test"
+    console.log 'ionic.Platform is ready! Running `angular.bootstrap()`...'
   angular.bootstrap document, [GLOBALS.ANGULAR_APP_NAME]
 
-app.run ($rootScope, $state, $log, $localstorage, $timeout, $ionicPlatform, $ionicLoading, User, $cordovaToast, $cordovaSplashscreen) ->
+runFn = ( $rootScope,
+          $state,
+          $log,
+          $timeout,
+          $ionicPlatform,
+          $ionicLoading,
+          $cordovaToast,
+          $cordovaSplashscreen,
+          $cordovaMedia,
+          User,
+          Settings ) ->
 
   $ionicPlatform.ready ->
     window.cordova?.plugins.Keyboard?.hideKeyboardAccessoryBar()
@@ -19,6 +30,7 @@ app.run ($rootScope, $state, $log, $localstorage, $timeout, $ionicPlatform, $ion
     $rootScope.$on '$stateChangeStart', (event, toState, toParams, fromState, fromParams) ->
       $ionicLoading.show template: 'Loading...'
       if toState.isLoginState and User.signedIn()
+        # TODO check why is 'tab.record' hardcoded here? rationale?
         $state.transitionTo 'tab.record'
         event.preventDefault()
       else if toState.authenticate and !User.signedIn()
@@ -31,6 +43,13 @@ app.run ($rootScope, $state, $log, $localstorage, $timeout, $ionicPlatform, $ion
 
   $log.debug "Ionic app \"#{GLOBALS.ANGULAR_APP_NAME}\" has just started (app.run) in env #{GLOBALS.ENV}!" unless GLOBALS.ENV == "test"
 
+  if GLOBALS.ENV == 'development' && !Settings.attributes.suppressDevGreeting
+    # TODO fix the path to make it find the audio file
+    # http://stackoverflow.com/questions/13726030/relative-media-source-in-phonegap
+    url = '/android_asset/www/audio/hallo-hallo-hallo.mp3'
+    media = $cordovaMedia.newMedia(url)
+    media.play()
+
   # Finally, let's show the app, by hiding the splashscreen
   # (it should be visible up until this moment)
   $timeout ->
@@ -42,3 +61,5 @@ app.run ($rootScope, $state, $log, $localstorage, $timeout, $ionicPlatform, $ion
     $timeout ->
       $cordovaToast.showLongBottom "Welcome Back, #{User.attributes.firstname}!"
     , 1337
+
+app.run(runFn)
