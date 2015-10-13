@@ -71,8 +71,7 @@ angular.module("voicerepublic")
     _removeImageFromFileSystem: (talkToDelete) ->
       path = @FILE_SYS_LOCATION
       path = path + @DIR_NAME_IMAGES + '/'
-      fileName = talkToDelete.title.trim " "
-      fileName = fileName.replace /\s+/g, "_"
+      fileName = talkToDelete.id
       fileName += '.png'
 
       #remove image from filesystem
@@ -87,8 +86,7 @@ angular.module("voicerepublic")
       self = @
       path = @FILE_SYS_LOCATION
       path = path + @DIR_NAME_BOOKMARKS + '/'
-      fileName = talkToDelete.title.trim " "
-      fileName = fileName.replace /\s+/g, "_"
+      fileName = talkToDelete.id
       fileName += '.mp3'
 
       #remove bookmarked talk from filesystem

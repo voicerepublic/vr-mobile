@@ -36,8 +36,7 @@ angular.module("voicerepublic")
 
     _downloadImageForTalk: (talk) ->
       self = @
-      fileName = talk.title.trim " "
-      fileName = fileName.replace /\s+/g, "_"
+      fileName = talk.id
       fileName += '.png'
       #needs a file bcs it opens a file via native file.open() to write download data
       targetPath = BookmarksFactory.FILE_SYS_LOCATION + BookmarksFactory.DIR_NAME_IMAGES + '/' + fileName
@@ -82,8 +81,7 @@ angular.module("voicerepublic")
     #depends on _downloadImageForTalk
     _downloadTalkResourceWithImage: (talk) ->
       self = @
-      fileName = talk.title.trim " "
-      fileName = fileName.replace /\s+/g, "_"
+      fileName = talk.id
       fileName += '.mp3'
       #needs a file bcs it opens a file via native file.open() to write download data
       targetPath = BookmarksFactory.FILE_SYS_LOCATION + BookmarksFactory.DIR_NAME_BOOKMARKS + '/' + fileName

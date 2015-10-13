@@ -3,6 +3,9 @@ ion-view(view-title='Bookmarked talks')
     button.button.button-icon.icon.ion-log-out.button-clear.button-light(ng-click='logOut()')
   ion-content(scroll='true', on-swipe-left='onSwipedLeft()')
     ion-refresher(on-refresh='refreshBookmarks()', ng-attr-spinner='{{ isIOS ? "ios" : "circles" }}')
+    .card(ng-show='isEmpty')
+      .item.item-text-wrap
+        | {{ emptyMessage }}
     ion-item(ng-repeat='talk in bookmarks track by talk.id')
       .list.card
         .item.item-image
@@ -14,9 +17,7 @@ ion-view(view-title='Bookmarked talks')
         .item.item-body
           h2 {{ talk.title }}
           p {{ talk.teaser }}
-          p(ng-show='isDownloading && !talk.isDownloaded && (talk.id == downloadingId)')
-            | Downloading
-            ion-spinner(icon='dots')
+          ion-spinner(icon='dots', ng-show='isDownloading && !talk.isDownloaded && (talk.id == downloadingId)', style='margin-left: 42%')
         .item.tabs.tabs-secondary.tabs-icon-left
           a.tab-item(ng-click='share(talk)')
             i.icon.ion-share(ng-show='isIOS')

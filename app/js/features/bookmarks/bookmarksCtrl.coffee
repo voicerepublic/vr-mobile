@@ -23,8 +23,12 @@ angular.module("voicerepublic")
   #played talks container
   $scope.playedTalk = null
 
+  #text to display when bookmarks empty
+  $scope.emptyMessage = ''
+
   #flags
   $scope.isIOS = $window.ionic.Platform.isIOS()
+  $scope.isEmpty = no
   $scope.isTalkPlaying = no
   $scope.isTalkPaused = no
   $scope.isFooterExpanded = no
@@ -48,18 +52,27 @@ angular.module("voicerepublic")
   ionicLoadingOpts =
     template: condTemplate
     hideOnStateChange: yes
+    duration: 10000
 
   #fetcher events
   #
   #fetched the bundle successfully
   Fetcher.on 'bundleLoaded', (loadedTalks) ->
+    $scope.$broadcast 'scroll.infiniteScrollComplete' if $scope.isInfScroll
+    $scope.$broadcast 'scroll.refreshComplete' if $scope.isRefresh
+    #if no talks fetched
+    if (loadedTalks.length | $scope.bookmarks.length) is 0
+      $scope.isEmpty = yes
+      $scope.emptyMessage = 'There are no bookmarked talks, please bookmark them on our Homepage'
+      return
+    #if back online hide the banner
+    closeBanner?()
+    $scope.isEmpty = no
     $scope.bookmarks = [] if $scope.isRefresh
     for talk in loadedTalks
       talk.url = Fetcher.baseUrl + talk.media_links.mp3
       $scope.bookmarks.push talk
     BookmarksFactory.mergeWithPersistedTalks $scope.bookmarks
-    $scope.$broadcast 'scroll.infiniteScrollComplete' if $scope.isInfScroll
-    $scope.$broadcast 'scroll.refreshComplete' if $scope.isRefresh
     $scope.isRefresh = no
     $scope.isInfScroll = no
 
@@ -74,6 +87,10 @@ angular.module("voicerepublic")
       $scope.bookmarks = BookmarksFactory.getAllPersistedTalks()
       errorText = 'Offline Mode'
       showErrorBanner errorText
+      #show some information rather than empty view
+      if $scope.bookmarks.length is 0
+        $scope.isEmpty = yes
+        $scope.emptyMessage = 'There are no downloaded Bookmarks, you can download them when you are online again'
     else
       errorText = 'Please check your connectivity'
       showErrorBanner errorText, 10000
@@ -87,10 +104,21 @@ angular.module("voicerepublic")
     #notify user
     text = 'Removed from storage'
     $cordovaToast.showLongBottom text
+    removeBookmarkFromList talk
+    #show some information rather than empty view
+    if $scope.bookmarks.length is 0
+      $scope.isEmpty = yes
+      $scope.emptyMessage = 'There are no downloaded Bookmarks, you can download them when you are online again'
     #get the external resources
     $scope.refreshBookmarks()
 
-  #downloaded talk deleted
+  removeBookmarkFromList = (talkToRemove) ->
+    id = talkToRemove.id
+    for talk, i in $scope.bookmarks when talk.id is id
+      $scope.bookmarks.splice i, 1
+      break
+
+  #downloaded talk deleted error
   BookmarksFactory.on 'error', () ->
     #nothing yet
 
@@ -179,11 +207,11 @@ angular.module("voicerepublic")
 
   #device is offline cannot load talk
   Player.on 'offline', () ->
+    #stop everything
+    $scope.stop()
     #hide the loading modal
     $ionicLoading.hide() if $scope.isFooterExpanded
     $scope.isTalkLoading = no
-    #stop everything
-    $scope.stop()
     errorText = "Cannot load talk, please check connectivity"
     if $scope.isFooterExpanded
       $cordovaToast.showLongBottom errorText
@@ -192,11 +220,11 @@ angular.module("voicerepublic")
 
   #something went wrong while playing
   Player.on 'error', (error) ->
+    #stop everything
+    $scope.stop()
     #hide the loading modal
     $ionicLoading.hide() if $scope.isFooterExpanded
     $scope.isTalkLoading = no
-    #stop everything
-    $scope.stop()
     errorText = "Something went wrong while playing"
     if $scope.isFooterExpanded
       $cordovaToast.showLongBottom errorText
@@ -278,8 +306,8 @@ angular.module("voicerepublic")
     $scope.playedTalk.duration = 0
     #assign index to know which is next or last
     $scope.playedTalk.index = index
-    Player.start talk
     $scope.isTalkPlaying = yes
+    Player.start talk
     Player.once 'stopped', () ->
       alternateButtons()
       Player.off 'stopped'

@@ -24,7 +24,7 @@
 ###
 angular.module("voicerepublic")
 
-.service 'Player', ($cordovaMedia, ObserverFactory, $window, $log) ->
+.service 'Player', ($cordovaMedia, ObserverFactory, $window) ->
   new class Player extends ObserverFactory
     constructor: ->
       @talkMedia = undefined
@@ -49,11 +49,10 @@ angular.module("voicerepublic")
       if typeof @talkMedia.play is 'function'
         #returning the promise
         @talkMedia.play().then ((success) ->
-          $log.debug 'Successfully played file!'
           #notify that player stopped playing successfully
           self.fireEvent 'stopped'
         ), ((error) ->
-          if MediaError.MEDIA_ERR_NETWORK
+          if error.code is MediaError.MEDIA_ERR_NETWORK
             self.fireEvent 'offline'
           else
             self.fireEvent 'error', error
