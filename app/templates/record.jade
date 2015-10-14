@@ -1,5 +1,5 @@
 ion-view(view-title='Record a talk')
-  ion-content(scroll='false', on-swipe-left='onSwipedLeft()')
+  ion-content(scroll='false', on-swipe-left='onSwipedLeft()', on-swipe-right='onSwipedRight()')
     img(src='img/vintage-microphone.jpg',
       ng-click="start()",
       ng-hide="isRecording",

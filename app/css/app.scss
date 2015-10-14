@@ -1,5 +1,35 @@
-@import "ionic.css";
+@import "ionic";
+/* custom banner */
+@import "../../assets/components/ionic-content-banner/scss/ionic.content.banner";
 
 body {
   background-color: white;
+}
+
+ion-pull-up-handle {
+	display: none !important;
+}
+
+.full-background {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.full-background img {
+	width: 100%;
+	filter: opacity(50%); 
+	-webkit-filter: opacity(50%);
+	transform: scale(3, 3) translateY(30%);
+	-webkit-transform: scale(3, 3) translateY(30%);
+	vertical-align: middle;
+}
+
+.blur {
+	-webkit-filter: url('#blur');
+	filter: url('#blur');
 }

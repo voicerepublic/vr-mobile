@@ -150,6 +150,10 @@ uploadCtrlFn = ( $scope,
       $http.post(talk_create_url, {talk: payload})
       .success (data, status) ->
         $ionicLoading.hide()
+        #avoid going back after upload
+        nextViewOpts =
+          disableBack: yes
+        $ionicHistory.nextViewOptions nextViewOpts
         $cordovaToast.showShortBottom "Talk upload successfull!"
         shareUrl = "#{Settings.endpoints().api}/talks/"
         #save slug etc.

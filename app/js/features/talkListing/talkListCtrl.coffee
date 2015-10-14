@@ -38,9 +38,9 @@ angular.module("voicerepublic")
 
   #events
   #
-  #refresh data if view rentered & loading
+  #refresh data if view reentered & loading
   $rootScope.$on "$viewContentLoading", (event, viewConfig) ->
-    #fix some bad behaviours of the list
+    #fix some bad behaviours of the list caused by templatecache
     $scope.talksToUpload = TalkFactory.getTalksToUpload()
     $scope.uploadedTalks = TalkFactory.getUploadedTalks()
     $scope.shouldShowDelete = no

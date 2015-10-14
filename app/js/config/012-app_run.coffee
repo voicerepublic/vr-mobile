@@ -30,8 +30,7 @@ runFn = ( $rootScope,
     $rootScope.$on '$stateChangeStart', (event, toState, toParams, fromState, fromParams) ->
       $ionicLoading.show template: 'Loading...'
       if toState.isLoginState and User.signedIn()
-        # TODO check why is 'tab.record' hardcoded here? rationale?
-        $state.transitionTo 'tab.record'
+        $state.transitionTo 'tab.bookmarks'
         event.preventDefault()
       else if toState.authenticate and !User.signedIn()
         # User isn’t authenticated
@@ -54,7 +53,6 @@ runFn = ( $rootScope,
   # (it should be visible up until this moment)
   $timeout ->
     $cordovaSplashscreen.hide()
-  , 1000
 
   # greet the user if we know him or her
   if User.signedIn()
