@@ -18,6 +18,7 @@ settingsFn = ($log, $window, $localStorage) ->
     startUps: 0
     mobileDownload: false
     suppressDevGreeting: false
+    experimentalFeatures: false
     target: GLOBALS.DEFAULT_TARGET
     developer: false
 

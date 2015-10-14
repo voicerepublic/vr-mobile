@@ -37,6 +37,13 @@ ion-view(view-title='Settings')
             .track
               .handle
 
+        ion-item.item-toggle
+          span Experimental features
+          label.toggle.toogle-calm
+            input(type='checkbox' ng-model='settings.experimentalFeatures')
+            .track
+              .handle
+
         ion-item.item-select
           .input-label Target
           select(ng-options="t as t for t in targets()"
