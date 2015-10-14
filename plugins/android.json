@@ -87,34 +87,34 @@
     },
     "installed_plugins": {
         "com.google.playservices": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
+            "PACKAGE_NAME": "com.voicerepublic.mobile"
         },
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
+            "PACKAGE_NAME": "com.voicerepublic.mobile"
         },
         "cordova-plugin-google-analytics": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
+            "PACKAGE_NAME": "com.voicerepublic.mobile"
         },
         "nl.x-services.plugins.socialsharing": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
+            "PACKAGE_NAME": "com.voicerepublic.mobile"
         },
         "nl.x-services.plugins.toast": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
+            "PACKAGE_NAME": "com.voicerepublic.mobile"
         },
         "org.apache.cordova.file": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
+            "PACKAGE_NAME": "com.voicerepublic.mobile"
         },
         "org.apache.cordova.file-transfer": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
+            "PACKAGE_NAME": "com.voicerepublic.mobile"
         },
         "org.apache.cordova.inappbrowser": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
+            "PACKAGE_NAME": "com.voicerepublic.mobile"
         },
         "org.apache.cordova.media": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
+            "PACKAGE_NAME": "com.voicerepublic.mobile"
         },
         "org.apache.cordova.splashscreen": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
+            "PACKAGE_NAME": "com.voicerepublic.mobile"
         }
     },
     "dependent_plugins": {}
