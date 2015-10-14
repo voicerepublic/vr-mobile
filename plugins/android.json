@@ -87,34 +87,34 @@
     },
     "installed_plugins": {
         "com.google.playservices": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
         },
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
         },
         "cordova-plugin-google-analytics": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
         },
         "nl.x-services.plugins.socialsharing": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
         },
         "nl.x-services.plugins.toast": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
         },
         "org.apache.cordova.file": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
         },
         "org.apache.cordova.file-transfer": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
         },
         "org.apache.cordova.inappbrowser": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
         },
         "org.apache.cordova.media": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
         },
         "org.apache.cordova.splashscreen": {
-            "PACKAGE_NAME": "com.voicerepublic.mobile.development.debug"
+            "PACKAGE_NAME": "com.voicerepublic.mobile.development"
         }
     },
     "dependent_plugins": {}

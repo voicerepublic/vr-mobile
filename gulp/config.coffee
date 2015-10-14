@@ -8,7 +8,7 @@ module.exports = new class GulpConfig
   constructor: ->
     @_GLOBALS_DEFAULTS = {
       defaults: {
-        BUNDLE_VERSION: "1.0.0"
+        BUNDLE_VERSION: "0.1.0"
 
         # Change to "1" if you want to use Crosswalk on Android.
         #
@@ -90,7 +90,8 @@ module.exports = new class GulpConfig
         UPLOAD_SOURCEMAPS_TO_ROLLBAR: false
 
         # If defined, we'll deploy the app to testfairy after compiling the release.
-        TESTFAIRY_API_KEY: "c7010fcf08d326cd4994331726a41b8510117da2"
+        #TESTFAIRY_API_KEY: "c7010fcf08d326cd4994331726a41b8510117da2"
+        TESTFAIRY_API_KEY: "c31e1b90467e029b9c130a049ad3ffc7d65d5bcc"
         # We will need that for our iOS apps.
         # TESTFAIRY_APP_TOKEN: "2074627b46c471f1daad428fee7a8d8708ee8912"
         # TESTFAIRY_TESTER_GROUPS: "IonicStarterTesters"
@@ -133,9 +134,9 @@ module.exports = new class GulpConfig
         # Required for the release to be signed with correct certificate.
         IOS_PROVISIONING_PROFILE: "keys/ios/voicerepublicstaging.mobileprovision"
 
-        CORDOVA_GOOGLE_ANALYTICS_ID: "UA-123123-2"
-        GOOGLE_ANALYTICS_ID: "UA-123123-1"
-        GOOGLE_ANALYTICS_HOST: "ionicstarter.com"
+        #CORDOVA_GOOGLE_ANALYTICS_ID: "UA-123123-2"
+        #GOOGLE_ANALYTICS_ID: "UA-123123-1"
+        #GOOGLE_ANALYTICS_HOST: "ionicstarter.com"
 
       }
     }
