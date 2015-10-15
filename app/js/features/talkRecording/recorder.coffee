@@ -41,7 +41,7 @@
 ###
 angular.module("voicerepublic")
 
-.service 'Recorder', ($q, $ionicPlatform, $cordovaToast, $cordovaMedia, ObserverFactory, TalkFactory, $window, $log) ->
+.service 'Recorder', ($q, $ionicPlatform, $cordovaToast, $cordovaMedia, ObserverFactory, TalkFactory, $window) ->
   new class Recorder extends ObserverFactory
     constructor: ->
       @talkMedia = undefined

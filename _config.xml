@@ -2,10 +2,10 @@
 <widget id="com.voicerepublic.mobile" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Voice Republic</name>
   <description>
-        An Ionic Framework and Cordova project.
+    An Ionic Framework and Cordova project.
   </description>
   <author email="dibran@voicerepublic.com" href="http://voicerepublic.com/">
-      Voicerepublic Media AG 
+    Voicerepublic Media AG
   </author>
   <content src="index.html"/>
   <access origin="*"/>

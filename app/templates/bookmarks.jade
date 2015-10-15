@@ -1,0 +1,80 @@
+ion-view(view-title='Bookmarks')
+  ion-content(scroll='true', on-swipe-left='onSwipedLeft()')
+    ion-refresher(on-refresh='refreshBookmarks()', ng-attr-spinner='{{ isIOS ? "ios" : "circles" }}')
+    .card(ng-show='isEmpty')
+      .item.item-text-wrap
+        | {{ emptyMessage }}
+    ion-item(ng-repeat='talk in bookmarks track by talk.id')
+      .list.card
+        .item.item-image
+          img(ng-src='img/VR_Logo_rgb_4.png', actual-src='{{ talk.image_url }}')
+          div(style='position:absolute; top:0px; right:0px; width: 0; height: 0; border-style: solid; border-width: 0 150px 170px 0; border-color: transparent #8AC007 transparent transparent;',
+            ng-show='talk.isDownloaded')
+          img(style='position:absolute; width:70px; height:70px; top:10px; right:10px;', src='img/ic_file_download.svg',
+            ng-show='talk.isDownloaded')
+        .item.item-body
+          h2 {{ talk.title }}
+          p {{ talk.teaser }}
+          ion-spinner(icon='dots', ng-show='isDownloading && !talk.isDownloaded && (talk.id == downloadingId)', style='margin-left: 42%')
+        .item.tabs.tabs-secondary.tabs-icon-left
+          a.tab-item(ng-click='share(talk)')
+            i.icon.ion-share(ng-show='isIOS')
+            i.icon.ion-android-share-alt(ng-hide='isIOS')
+            | Share
+          a.tab-item(ng-click='download(talk)', ng-hide='talk.isDownloaded')
+            i.icon.ion-ios-download(ng-show='isIOS && (talk.id != downloadingId)')
+            i.icon.ion-android-download(ng-hide='isIOS || (talk.id == downloadingId)')
+            i.icon.ion-close-circled(ng-show='talk.id == downloadingId')
+            | {{ (talk.id == downloadingId) ? 'Cancel' : 'Download' }}
+          a.tab-item(ng-click='remove(talk)', ng-show='talk.isDownloaded')
+            i.icon.ion-trash-b
+            | Remove
+          a.tab-item(ng-click='play(talk, $index)')
+            i.icon.ion-ios-play(ng-hide='!isTalkPaused && (talk.id == playedTalk.id)')
+            i.icon.ion-ios-pause(ng-show='!isTalkPaused && (talk.id == playedTalk.id)')
+            | {{ (!isTalkPaused && (talk.id == playedTalk.id)) ? 'Pause' : 'Play' }}
+    ion-infinite-scroll(ng-if="moreDataCanBeLoaded()",
+      on-infinite="loadMore()",
+      distance='10%',
+      ng-attr-spinner='{{ isIOS ? "ios" : "circles" }}')
+  ion-pull-up-footer.bar-assertive(ng-show='isTalkPlaying', on-expand='footerExpand()' on-collapse='footerCollapse()')
+    ion-pull-up-handle(width='100', height='0', style='border-radius: 0px 0px 0 0;')
+    ion-pull-up-bar
+      a.button.button-clear.icon.ion-chevron-up(ion-pull-up-trigger='', style='margin-left: 5px', ng-click='changeChevron($event)')
+      h1.title(style='width:50%; margin-left:25%') {{ playedTalk.title }}
+      a.button.button-clear.icon.ion-ios-pause#handle-button(style='margin-right: 10px', ng-click='handleAction()')
+    ion-pull-up-content(scroll='false')
+      .full-background.blur
+        img(ng-src='img/VR_Logo_rgb_4.png', actual-src='{{ playedTalk.image_url }}')
+      .list.card(style='display:inline-block; height: 50%; width: 80%; margin-right: 10%; margin-left: 10%;')
+        .item.item-image
+          img(ng-src='img/VR_Logo_rgb_4.png', actual-src='{{ playedTalk.image_url }}', style='max-height: 50%;')
+      .controls(style='position: absolute; bottom: 5%; left: 0px; width: 100%;')
+        .row.row-center.padding-horizontal(style='text-align:center;')
+          .col-25
+            a.button.button-clear(ng-click='download(playedTalk)', ng-hide='playedTalk.isDownloaded')
+              i.icon.ion-ios-download(ng-show='isIOS && (playedTalk.id != downloadingId)')
+              i.icon.ion-android-download(ng-hide='isIOS || (playedTalk.id == downloadingId)')
+              i.icon.ion-close-circled(ng-show='playedTalk.id == downloadingId')
+          .col-50
+            p.light {{ playedTalk.teaser }}
+          .col-25
+            a.button.button-clear(ng-click='share(playedTalk)')
+              i.icon.ion-share(ng-show='isIOS')
+              i.icon.ion-android-share-alt(ng-hide='isIOS')
+        .row.row-center
+          .item.range(style='background-color: transparent; border:none; width:100%')
+            p(style='color:white;') {{playedTalk.progress | time}}
+            input(type='range', name='progress', min='0', max='{{playedTalk.duration}}', ng-model='playedTalk.progress', on-release="sliderReleased()")
+            p(style='color:white;') {{playedTalk.duration | time}}
+        .row.row-center.padding-horizontal(style='text-align:center;')
+          .col-25
+            a.button.icon-left.ion-ios-skipbackward.button-clear(ng-click='playLast()')
+          .col-50(style='background-image: url(img/circle.svg); background-repeat: no-repeat; background-size: 80px; background-position:center center; overflow: visible;')
+            a.button.button-clear.icon.ion-ios-pause#pauseOrResume-button(ng-click='pauseOrResume($event)')
+          .col-25
+            a.button.icon-left.ion-ios-skipforward.button-clear(ng-click='playNext()')
+  svg
+    defs
+      filter#blur
+        feGaussianBlur(stddeviation='5')

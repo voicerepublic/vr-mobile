@@ -7,7 +7,8 @@ app = angular.module(GLOBALS.ANGULAR_APP_NAME, [
   "ionic"
   "#{GLOBALS.NGCORDOVA}"
   "timer"
-  "ipCookie"
+  "jett.ionic.content.banner"
+  "ionic-pullup"
   "angulartics.google.analytics"
   "angulartics.google.analytics.cordova"
   'ngStorage'

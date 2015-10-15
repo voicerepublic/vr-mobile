@@ -56,6 +56,7 @@ html
       GLOBALS = !{JSON.stringify(GLOBALS)};
 
     script(src="js/vendor.js?v=#{GLOBALS.DEPLOY_TIME}")
+    script(src="js/ion-pullup.js")
     //- make sure ngCordova is placed in the right order
     script(src="js/ng-cordova.js")
     script(src="js/app_templates.js?v=#{GLOBALS.DEPLOY_TIME}")

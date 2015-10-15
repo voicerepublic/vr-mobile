@@ -111,7 +111,11 @@ loginCtrlFn = ( $scope,
         historyRoot: yes
       $ionicHistory.nextViewOptions nextViewOpts
 
-      $state.go "tab.record"
+      params =
+        shouldAdjustPlayer: yes
+
+      $state.go "tab.bookmarks", params
+
       $cordovaToast.showShortBottom "Hello #{data.firstname}!"
 
     error = (data, status) ->
