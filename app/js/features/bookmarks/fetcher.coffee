@@ -20,10 +20,10 @@
 ###
 angular.module("voicerepublic")
 
-.factory 'Fetcher', ($window, $q, $http, $localstorage, $log, ObserverFactory) ->
+.factory 'Fetcher', ($window, $q, $http, $localstorage, $log, ObserverFactory, Settings) ->
   new class Fetcher extends ObserverFactory
     constructor: () ->
-      @baseUrl = 'https://voicerepublic.com'
+      @baseUrl = Settings.endpoints().api
       @offset = 0
       @limit = 10
       @canLoadMore = yes
@@ -36,7 +36,7 @@ angular.module("voicerepublic")
 
     _fetchNextBundle: ->
       self = @
-      data = 
+      data =
         limit: self.limit
         offset: self.offset
         order: 'processed_at'

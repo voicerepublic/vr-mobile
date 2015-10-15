@@ -34,7 +34,7 @@ userFn = ($log, $http, $localStorage, Settings) ->
   logout = ->
     delete $http.defaults.headers.common["X-User-Email"]
     delete $http.defaults.headers.common["X-User-Token"]
-    $localStorage.user = {}
+    $localStorage.user = attributes = {}
 
   reload = ->
     $log.info "reload #{attributes.email}"

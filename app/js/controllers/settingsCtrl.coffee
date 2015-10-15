@@ -15,7 +15,7 @@ settingsFn = ( $scope,
                $cordovaToast,
                User,
                Settings,
-               Player ) ->
+               $log ) ->
 
   # navigation
   $scope.onSwipedRight = () ->
@@ -62,7 +62,6 @@ settingsFn = ( $scope,
     popupPromise = $ionicPopup.confirm popupOpts
     popupPromise.then (logout) ->
       if logout
-        Player.stop()
         User.logout()
         $state.go "login"
 

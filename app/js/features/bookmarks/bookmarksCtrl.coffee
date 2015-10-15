@@ -10,13 +10,13 @@
   - Fetcher
   - Player
 
-  **Note:** 
+  **Note:**
   Using the following cordova plugins:
   - cordova.toast
 ###
 angular.module("voicerepublic")
 
-.controller "bookmarksCtrl", ($scope, $state, $window, $timeout, $ionicHistory, $ionicLoading, $ionicContentBanner, $cordovaToast, $ionicPopup, $cordovaSocialSharing, Auth, Fetcher, Downloader, Player, BookmarksFactory) ->
+.controller "bookmarksCtrl", ($scope, $state, $window, $timeout, $ionicHistory, $ionicLoading, $ionicContentBanner, $cordovaToast, $ionicPopup, $cordovaSocialSharing, Fetcher, Downloader, Player, BookmarksFactory) ->
   #bookmark container
   $scope.bookmarks = []
 
@@ -381,7 +381,7 @@ angular.module("voicerepublic")
     else
       $scope.pauseOrResume handleButton
       alternateButtonFromTarget pauseOrResumeButton
-    
+
   getNextOrLastTalk = (backward = false) ->
     index = $scope.playedTalk.index
     last = $scope.bookmarks.length - 1
@@ -473,21 +473,3 @@ angular.module("voicerepublic")
     if $scope.isTalkPlaying
       $scope.stop()
     $state.go "tab.record"
-
-  #Logout
-  $scope.logOut = () ->
-    nextViewOpts =
-      disableBack: yes
-      historyRoot: yes
-    $ionicHistory.nextViewOptions nextViewOpts
-    popupOpts =
-      title: "Logout"
-      template: "Do you really want to log out?"
-      cancelText: "No"
-      okText: "Yes"
-      okType: "button-assertive"
-    popupPromise = $ionicPopup.confirm popupOpts
-    popupPromise.then (logout) ->
-      if logout
-        Auth.setAuthToken null, null
-        $state.go "login"

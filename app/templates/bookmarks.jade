@@ -1,6 +1,4 @@
-ion-view(view-title='Bookmarked talks')
-  ion-nav-buttons(side='left')
-    button.button.button-icon.icon.ion-log-out.button-clear.button-light(ng-click='logOut()')
+ion-view(view-title='Bookmarks')
   ion-content(scroll='true', on-swipe-left='onSwipedLeft()')
     ion-refresher(on-refresh='refreshBookmarks()', ng-attr-spinner='{{ isIOS ? "ios" : "circles" }}')
     .card(ng-show='isEmpty')
@@ -35,7 +33,7 @@ ion-view(view-title='Bookmarked talks')
             i.icon.ion-ios-play(ng-hide='!isTalkPaused && (talk.id == playedTalk.id)')
             i.icon.ion-ios-pause(ng-show='!isTalkPaused && (talk.id == playedTalk.id)')
             | {{ (!isTalkPaused && (talk.id == playedTalk.id)) ? 'Pause' : 'Play' }}
-    ion-infinite-scroll(ng-if="moreDataCanBeLoaded()",  
+    ion-infinite-scroll(ng-if="moreDataCanBeLoaded()",
       on-infinite="loadMore()",
       distance='10%',
       ng-attr-spinner='{{ isIOS ? "ios" : "circles" }}')

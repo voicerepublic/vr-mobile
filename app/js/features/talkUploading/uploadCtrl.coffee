@@ -100,7 +100,8 @@ uploadCtrlFn = ( $scope,
     options.mimeType = "audio/wav" if $window.ionic.Platform.isIOS()
     options.mimeType = "audio/amr" if $window.ionic.Platform.isAndroid()
     optParams = {}
-    optParams.key = $window.sha1 "#{TalkToUpload.filename}:#{$localstorage.get 'user_email'}:#{$window.Math.random()*1337%1111}"
+    optParams.key = $window.sha1 "#{TalkToUpload.filename}:#{User.attributes.email}:#{$window.Math.random()*1337%1111}"
+    optParams.acl = 'public-read'
     options.params = optParams
 
     if $window.ionic.Platform.isIOS()
