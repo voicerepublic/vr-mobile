@@ -76,10 +76,6 @@ module.exports = new class GulpConfig
         # If true, we'll open the app in the browser after running the server.
         OPEN_IN_BROWSER: true
 
-        # Report errors to Rollbar (rollbar.com)
-        ROLLBAR_CLIENT_ACCESS_TOKEN: "a6fc227c9ba742ca92f7dca6a4cc2cba"
-        ROLLBAR_SERVER_ACCESS_TOKEN: "9689cb351f8d43ea94be888c19971698"
-
         # If you want to upload sourcemaps to Rollbar, just set a random URL prefix
         # (we'll modify payloads on iOS/Android so the URL to js scripts will be always the same)
         ROLLBAR_SOURCEMAPS_URL_PREFIX: "https://voicerepublic.com"
@@ -122,6 +118,10 @@ module.exports = new class GulpConfig
         DEVELOPER_OPTIONS: false
 
         COMPRESS_ASSETS: true
+
+        # Report errors to Rollbar (rollbar.com)
+        ROLLBAR_CLIENT_ACCESS_TOKEN: "a6fc227c9ba742ca92f7dca6a4cc2cba"
+        ROLLBAR_SERVER_ACCESS_TOKEN: "9689cb351f8d43ea94be888c19971698"
 
         # If those 2 variables are defined, the app will be deployed to the remote server after compiling the release.
         # ANDROID_DEPLOY_APPBIN_PATH: "deploy@ionicstarter.com:/u/apps/ionicstarter/shared/public/uploads/ionicstarter-production.apk"
