@@ -472,4 +472,7 @@ angular.module("voicerepublic")
   $scope.onSwipedLeft = () ->
     if $scope.isTalkPlaying
       $scope.stop()
-    $state.go "tab.record"
+    if (GLOBALS.ENV == 'development')
+      $state.go "tab.record"
+    else
+      $state.go "tab.settings"
