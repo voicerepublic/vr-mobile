@@ -19,7 +19,7 @@ html
     link(rel="apple-touch-icon", href="img/favicon.png" )
 
     //- notify about all errors
-    -if (GLOBALS.ROLLBAR_CLIENT_ACCESS_TOKE)
+    -if (GLOBALS.ROLLBAR_CLIENT_ACCESS_TOKEN)
       script(type="text/javascript").
         var _rollbarConfig = {
             accessToken: "#{GLOBALS.ROLLBAR_CLIENT_ACCESS_TOKEN}",
