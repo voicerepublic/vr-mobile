@@ -20,7 +20,7 @@
 ###
 angular.module("voicerepublic")
 
-.factory 'Fetcher', ($window, $q, $http, $localstorage, $log, ObserverFactory, Settings) ->
+.factory 'Fetcher', ($http, ObserverFactory, Settings) ->
   new class Fetcher extends ObserverFactory
     constructor: () ->
       @baseUrl = Settings.endpoints().api

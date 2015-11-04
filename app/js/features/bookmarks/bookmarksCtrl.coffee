@@ -70,7 +70,7 @@ angular.module("voicerepublic")
     $scope.isEmpty = no
     $scope.bookmarks = [] if $scope.isRefresh
     for talk in loadedTalks
-      talk.url = Fetcher.baseUrl + talk.media_links.mp3
+      talk.url = Fetcher.baseUrl + talk.media_url
       $scope.bookmarks.push talk
     BookmarksFactory.mergeWithPersistedTalks $scope.bookmarks
     $scope.isRefresh = no
